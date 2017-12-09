@@ -1,26 +1,995 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-UltraLight</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tax_Calculator_SE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-HJ-IK9">
+                                <rect key="frame" x="0.0" y="200" width="320" height="280"/>
+                                <subviews>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HF-Oh-bMz" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="1" width="105.5" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQI-96-j0n"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-bC-10M" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="107.5" y="1" width="105" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFS-EW-5On"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY7-Qa-4t8" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="213.5" y="1" width="105.5" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sx-4a-vIT"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-rS-ma3" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="71" width="105.5" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28P-98-Rx1"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-Ic-iEB" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="107.5" y="71" width="105" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dok-Ae-hEE"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-AY-hhc" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="213.5" y="71" width="105.5" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMR-w3-CuO"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-Oq-4nE" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="140.5" width="105.5" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhs-BX-cxs"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-K2-rZ0" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="107.5" y="140.5" width="105" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2g-Tq-HSp"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-Wp-dMY" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="213.5" y="140.5" width="105.5" height="69"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEJ-Eh-opi"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iE-w3-Uke" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="107.5" y="210.5" width="105" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKc-cY-Ly9"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-BS-zqx" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="213.5" y="210.5" width="105.5" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRa-aT-lzb"/>
+                                        </connections>
+                                    </button>
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2w-Zp-qoc" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="210.5" width="105.5" height="68.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="40" height="40"/>
+                                        <state key="normal" title="About">
+                                            <color key="titleColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.8377836044520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.067931292808219176" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mh-e2-ZYx"/>
+                                            <segue destination="4al-CU-djJ" kind="show" identifier="view2" id="s45-Mx-iox"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="leading" secondItem="2iE-w3-Uke" secondAttribute="trailing" constant="1" id="1Ib-py-tiW"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="3hy-Qb-PEV"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="4Bf-6n-ElC"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="1" id="57h-ae-ltB"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="5bn-Pk-3Bd"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="1" id="5ci-89-D2O"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="leading" secondItem="oFV-Oq-4nE" secondAttribute="trailing" constant="1" id="7Dd-Qq-nbe"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="leading" secondItem="kkn-rS-ma3" secondAttribute="trailing" constant="1" id="Awp-jZ-lel"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="leading" secondItem="0Xe-K2-rZ0" secondAttribute="trailing" constant="1" id="EHR-mx-u9l"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="top" secondItem="oFV-Oq-4nE" secondAttribute="bottom" constant="1" id="FYQ-3J-i4b"/>
+                                    <constraint firstItem="2HF-Oh-bMz" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="1" id="Fat-8T-upT"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="HjL-0K-Tk4"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="ISM-F8-R5w"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6l-Wp-dMY" secondAttribute="trailing" constant="1" id="JMh-Sz-lqL"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="JgG-XS-3D3"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="LaK-yN-v5b"/>
+                                    <constraint firstAttribute="bottom" secondItem="qgk-BS-zqx" secondAttribute="bottom" constant="1" id="M3O-N7-7K6"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="leading" secondItem="A2w-Zp-qoc" secondAttribute="trailing" constant="1" id="Mmi-dY-Qjp"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="top" secondItem="0Xe-K2-rZ0" secondAttribute="bottom" constant="1" id="MuA-Y2-d0X"/>
+                                    <constraint firstAttribute="trailing" secondItem="SzH-AY-hhc" secondAttribute="trailing" constant="1" id="MwY-wz-E5B"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="NAw-NR-L24"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="Prb-W1-Nvb"/>
+                                    <constraint firstAttribute="bottom" secondItem="2iE-w3-Uke" secondAttribute="bottom" constant="1" id="QYW-WH-Jay"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="top" secondItem="2HF-Oh-bMz" secondAttribute="bottom" constant="1" id="RtR-ql-Gwv"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="THT-GD-Pu7"/>
+                                    <constraint firstAttribute="trailing" secondItem="qgk-BS-zqx" secondAttribute="trailing" constant="1" id="UWW-46-bVL"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="top" secondItem="SzH-AY-hhc" secondAttribute="bottom" constant="1" id="UoJ-M2-SKD"/>
+                                    <constraint firstItem="kkn-rS-ma3" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="VVr-u6-an7"/>
+                                    <constraint firstItem="7wV-Ic-iEB" firstAttribute="top" secondItem="h8d-bC-10M" secondAttribute="bottom" constant="1" id="WJR-3s-i4O"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="leading" secondItem="2HF-Oh-bMz" secondAttribute="trailing" constant="1" id="Wzr-dg-jzX"/>
+                                    <constraint firstAttribute="trailing" secondItem="qY7-Qa-4t8" secondAttribute="trailing" constant="1" id="XsY-xI-b6f"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="YvW-ef-Qm6"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="ZCz-6k-wYi"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="1" id="Zh5-6y-MKR"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="a79-We-2PF"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="agL-1G-zoK"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="leading" secondItem="7wV-Ic-iEB" secondAttribute="trailing" constant="1" id="beS-TJ-oad"/>
+                                    <constraint firstItem="qY7-Qa-4t8" firstAttribute="leading" secondItem="h8d-bC-10M" secondAttribute="trailing" constant="1" id="chW-rj-9if"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="top" secondItem="qY7-Qa-4t8" secondAttribute="bottom" constant="1" id="d9L-Bi-18x"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="dSE-Cx-EpM"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="top" secondItem="f6l-Wp-dMY" secondAttribute="bottom" constant="1" id="eWs-9R-GeT"/>
+                                    <constraint firstItem="0Xe-K2-rZ0" firstAttribute="top" secondItem="7wV-Ic-iEB" secondAttribute="bottom" constant="1" id="fOv-gV-WgX"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="fYM-Wy-R3d"/>
+                                    <constraint firstItem="h8d-bC-10M" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="1" id="gad-et-6OT"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="h4M-gj-ReV"/>
+                                    <constraint firstItem="SzH-AY-hhc" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="hrB-Df-B4s"/>
+                                    <constraint firstItem="oFV-Oq-4nE" firstAttribute="top" secondItem="kkn-rS-ma3" secondAttribute="bottom" constant="1" id="j1O-3p-q5C"/>
+                                    <constraint firstItem="2iE-w3-Uke" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="kXF-lb-6go"/>
+                                    <constraint firstItem="f6l-Wp-dMY" firstAttribute="width" secondItem="2HF-Oh-bMz" secondAttribute="width" id="ncF-vs-pk5"/>
+                                    <constraint firstItem="2HF-Oh-bMz" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="top" constant="1" id="pgl-4M-uBu"/>
+                                    <constraint firstAttribute="bottom" secondItem="A2w-Zp-qoc" secondAttribute="bottom" constant="1" id="uiS-kR-yz3"/>
+                                    <constraint firstItem="qgk-BS-zqx" firstAttribute="height" secondItem="2HF-Oh-bMz" secondAttribute="height" id="waR-Jk-3vz"/>
+                                    <constraint firstItem="A2w-Zp-qoc" firstAttribute="leading" secondItem="jaS-HJ-IK9" secondAttribute="leading" constant="1" id="zLg-9Q-cJp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOC-oo-58I">
+                                <rect key="frame" x="0.0" y="44" width="320" height="156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNS-9i-0wK">
+                                        <rect key="frame" x="157" y="125" width="163" height="31"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-ET-jpM" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                                <rect key="frame" x="33" y="0.0" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="8uF-fB-zGc"/>
+                                                    <constraint firstAttribute="width" constant="31" id="aWU-CF-LfS"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="swedbank"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="secondCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YQx-R1-BEa"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-US-5F3" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="JpB-U4-0vU"/>
+                                                    <constraint firstAttribute="width" constant="31" id="o2B-yj-6va"/>
+                                                </constraints>
+                                                <state key="normal" image="spotifyIcon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="thirdCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5c-rd-xyY"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-2N-qE1" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                                <rect key="frame" x="99" y="0.0" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="9bg-OP-Klm"/>
+                                                    <constraint firstAttribute="width" constant="31" id="HlH-V7-t0q"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="volvo"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fourCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hf4-Xc-zQd"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f55-08-EDe" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="YmY-TK-F6q"/>
+                                                    <constraint firstAttribute="width" constant="31" id="lYP-cm-h6L"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="google"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fiveCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stQ-4Q-0JP"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-jK-ihf" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="kiQ-di-owU"/>
+                                                    <constraint firstAttribute="width" constant="31" id="scw-HA-XJo"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="tradedoubler"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYw-3H-bXj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="firstBaseline" secondItem="kB9-ET-jpM" secondAttribute="firstBaseline" id="1LE-51-DMr"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="3Bc-lG-ceP"/>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="leading" secondItem="XNS-9i-0wK" secondAttribute="leading" id="4rB-ay-i8E"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="leading" secondItem="9RV-2N-qE1" secondAttribute="trailing" constant="2" id="79x-B4-ES9"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="width" secondItem="MSH-jK-ihf" secondAttribute="width" id="7Ne-9a-Vav"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="f55-08-EDe" secondAttribute="trailing" constant="2" id="Ba0-l8-Z1h"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="width" secondItem="MSH-jK-ihf" secondAttribute="width" id="Cwt-lL-Jhc"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="bottom" secondItem="MSH-jK-ihf" secondAttribute="bottom" id="GFT-jg-UjI"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="bottom" secondItem="MSH-jK-ihf" secondAttribute="bottom" id="HXx-B1-9Wb"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="firstBaseline" secondItem="f55-08-EDe" secondAttribute="firstBaseline" id="Jc6-hT-jGz"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="height" secondItem="MSH-jK-ihf" secondAttribute="height" id="K2Q-gc-gHQ"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="centerY" secondItem="MSH-jK-ihf" secondAttribute="centerY" id="L6I-lF-aTf"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="leading" secondItem="Li0-US-5F3" secondAttribute="trailing" constant="2" id="LLA-zp-hk2"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="top" secondItem="MSH-jK-ihf" secondAttribute="top" id="NU0-wy-xOU"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kB9-ET-jpM" secondAttribute="trailing" constant="3" id="Now-nw-hzp"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="centerX" secondItem="XNS-9i-0wK" secondAttribute="centerX" id="O8b-Gd-bQf"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="baseline" secondItem="kB9-ET-jpM" secondAttribute="baseline" id="OSt-j2-NgN"/>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="centerY" secondItem="XNS-9i-0wK" secondAttribute="centerY" id="Pv6-E3-5zm"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="top" secondItem="MSH-jK-ihf" secondAttribute="top" id="RKA-hW-c0O"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="leading" secondItem="9RV-2N-qE1" secondAttribute="trailing" constant="2" id="Uig-Zd-UiY"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="width" relation="lessThanOrEqual" secondItem="MSH-jK-ihf" secondAttribute="width" id="VgQ-Zs-h5U"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="height" secondItem="MSH-jK-ihf" secondAttribute="height" id="YE9-qm-bml"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="baseline" secondItem="9RV-2N-qE1" secondAttribute="baseline" id="aWH-rJ-p47"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="adv-tx-dqn"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="leading" secondItem="kB9-ET-jpM" secondAttribute="trailing" constant="2" id="cka-5o-AGw"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="centerY" secondItem="MSH-jK-ihf" secondAttribute="centerY" id="dWc-6d-lMJ"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="bottom" secondItem="MSH-jK-ihf" secondAttribute="bottom" id="edq-nE-fEr"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="leading" secondItem="MSH-jK-ihf" secondAttribute="trailing" constant="2" id="fyU-P8-fw9"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="firstBaseline" secondItem="f55-08-EDe" secondAttribute="firstBaseline" id="g8z-tX-1kd"/>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="firstBaseline" secondItem="9RV-2N-qE1" secondAttribute="firstBaseline" id="gk7-Xw-bFd"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="height" secondItem="MSH-jK-ihf" secondAttribute="height" id="hm7-lF-HLZ"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="firstBaseline" secondItem="9RV-2N-qE1" secondAttribute="firstBaseline" id="kz1-9u-fI6"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="firstBaseline" secondItem="MSH-jK-ihf" secondAttribute="firstBaseline" id="laZ-5a-mQL"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="m2C-M3-Yif"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="centerY" secondItem="MSH-jK-ihf" secondAttribute="centerY" id="mt3-b6-ZFe"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="height" secondItem="MSH-jK-ihf" secondAttribute="height" id="mz6-hF-4kh"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="oDb-WH-L59"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="q31-JO-KlV"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f55-08-EDe" secondAttribute="trailing" id="rVB-SW-WMV"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="baseline" secondItem="MSH-jK-ihf" secondAttribute="baseline" id="tdV-sm-Kzi"/>
+                                            <constraint firstItem="kB9-ET-jpM" firstAttribute="baseline" secondItem="f55-08-EDe" secondAttribute="baseline" id="u9S-6l-Opv"/>
+                                            <constraint firstItem="9RV-2N-qE1" firstAttribute="bottom" secondItem="MSH-jK-ihf" secondAttribute="bottom" id="uGe-UI-zzy"/>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="baseline" secondItem="f55-08-EDe" secondAttribute="baseline" id="uY2-Dg-qaW"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="centerY" secondItem="MSH-jK-ihf" secondAttribute="centerY" id="unx-PD-rs9"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="width" secondItem="MSH-jK-ihf" secondAttribute="width" id="upH-fq-QdP"/>
+                                            <constraint firstItem="MSH-jK-ihf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="XNS-9i-0wK" secondAttribute="leading" constant="2" id="vnR-rp-Xf8"/>
+                                            <constraint firstItem="f55-08-EDe" firstAttribute="top" secondItem="MSH-jK-ihf" secondAttribute="top" id="xgI-z8-NnH"/>
+                                            <constraint firstItem="Li0-US-5F3" firstAttribute="top" secondItem="MSH-jK-ihf" secondAttribute="top" id="yaN-Hy-wR9"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-SN-Exy" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="31" width="163" height="31.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.21240903253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-vX-T7l" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="62.5" width="157" height="31"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.21240903253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-Qr-sbd" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="163" y="31" width="163" height="31.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.7286761558219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.47522474315068491" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual inc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-BE-SbM" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="93.5" width="163" height="31.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.7286761558219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.47522474315068491" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-TI-g4C" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="31"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.21240903253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Wz-92M" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="93.5" width="157" height="31.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.21240903253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-7H-ElE" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="62.5" width="163" height="31"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.7286761558219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.47522474315068491" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average salary in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28U-v3-EJM" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="-6" y="125" width="163" height="31"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="0.76401969178082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.21240903253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="Iwo-ky-NVs" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="163" y="0.0" width="157" height="31"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.7286761558219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.47522474315068491" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ciK-Wz-92M" firstAttribute="top" secondItem="rO4-vX-T7l" secondAttribute="bottom" id="060-Ma-u3d"/>
+                                    <constraint firstItem="Uhb-BE-SbM" firstAttribute="top" secondItem="OzT-7H-ElE" secondAttribute="bottom" id="4Rl-Y9-zHp"/>
+                                    <constraint firstItem="28U-v3-EJM" firstAttribute="top" secondItem="ciK-Wz-92M" secondAttribute="bottom" id="5Df-Kh-u4v"/>
+                                    <constraint firstItem="Iwo-ky-NVs" firstAttribute="leading" secondItem="aWV-TI-g4C" secondAttribute="trailing" id="5Z5-2r-MKz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uhb-BE-SbM" secondAttribute="trailing" id="7ur-rG-4OJ"/>
+                                    <constraint firstItem="Fsn-SN-Exy" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="8dF-Pb-P2m"/>
+                                    <constraint firstItem="Uhb-BE-SbM" firstAttribute="leading" secondItem="ciK-Wz-92M" secondAttribute="trailing" id="8mp-zC-ABR"/>
+                                    <constraint firstItem="rO4-vX-T7l" firstAttribute="width" relation="lessThanOrEqual" secondItem="aWV-TI-g4C" secondAttribute="width" id="9HG-dO-End"/>
+                                    <constraint firstItem="aWV-TI-g4C" firstAttribute="top" secondItem="BOC-oo-58I" secondAttribute="top" id="9j0-M3-9Su"/>
+                                    <constraint firstAttribute="trailing" secondItem="OzT-7H-ElE" secondAttribute="trailing" id="EFx-Bv-AQv"/>
+                                    <constraint firstItem="Iwo-ky-NVs" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="G1f-yB-H0Z"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mRV-Qr-sbd" secondAttribute="trailing" id="Gra-5b-TUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iwo-ky-NVs" secondAttribute="trailing" id="Hfc-Ie-ppF"/>
+                                    <constraint firstItem="XNS-9i-0wK" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="I05-ou-Zmf"/>
+                                    <constraint firstItem="Iwo-ky-NVs" firstAttribute="width" relation="lessThanOrEqual" secondItem="aWV-TI-g4C" secondAttribute="width" id="IWN-FQ-wZ6"/>
+                                    <constraint firstItem="rO4-vX-T7l" firstAttribute="leading" secondItem="BOC-oo-58I" secondAttribute="leading" id="JUr-Wc-9ad"/>
+                                    <constraint firstItem="rO4-vX-T7l" firstAttribute="top" secondItem="Fsn-SN-Exy" secondAttribute="bottom" id="L5D-Cs-pQQ"/>
+                                    <constraint firstItem="rO4-vX-T7l" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="NEW-M5-Hp9"/>
+                                    <constraint firstItem="OzT-7H-ElE" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="bottom" id="OY0-yL-NuP"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNS-9i-0wK" secondAttribute="trailing" id="Ot3-48-P14"/>
+                                    <constraint firstItem="Iwo-ky-NVs" firstAttribute="top" secondItem="BOC-oo-58I" secondAttribute="top" id="P56-Zw-fEo"/>
+                                    <constraint firstItem="28U-v3-EJM" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="Ree-N3-9j2"/>
+                                    <constraint firstItem="ciK-Wz-92M" firstAttribute="width" relation="lessThanOrEqual" secondItem="aWV-TI-g4C" secondAttribute="width" id="SdR-7n-h8L"/>
+                                    <constraint firstAttribute="bottom" secondItem="28U-v3-EJM" secondAttribute="bottom" id="Sff-Np-6kC"/>
+                                    <constraint firstItem="aWV-TI-g4C" firstAttribute="leading" secondItem="BOC-oo-58I" secondAttribute="leading" id="TtD-Bn-mdr"/>
+                                    <constraint firstItem="Uhb-BE-SbM" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="Us2-wN-7gN"/>
+                                    <constraint firstItem="mRV-Qr-sbd" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="aZi-hs-8N3"/>
+                                    <constraint firstItem="Uhb-BE-SbM" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="bJU-bc-XJD"/>
+                                    <constraint firstItem="XNS-9i-0wK" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="blz-JK-Ma2"/>
+                                    <constraint firstItem="mRV-Qr-sbd" firstAttribute="leading" secondItem="Fsn-SN-Exy" secondAttribute="trailing" id="dqm-gu-vQ8"/>
+                                    <constraint firstItem="OzT-7H-ElE" firstAttribute="leading" secondItem="rO4-vX-T7l" secondAttribute="trailing" id="hLR-lZ-dcK"/>
+                                    <constraint firstItem="Fsn-SN-Exy" firstAttribute="top" secondItem="aWV-TI-g4C" secondAttribute="bottom" id="kGC-Hz-QPI"/>
+                                    <constraint firstItem="Fsn-SN-Exy" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="kyQ-3p-sdP"/>
+                                    <constraint firstItem="OzT-7H-ElE" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="nmB-xH-Xs6"/>
+                                    <constraint firstItem="ciK-Wz-92M" firstAttribute="leading" secondItem="BOC-oo-58I" secondAttribute="leading" id="oR0-xl-pBu"/>
+                                    <constraint firstItem="28U-v3-EJM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="BOC-oo-58I" secondAttribute="leading" id="ppn-hh-FqQ"/>
+                                    <constraint firstItem="Fsn-SN-Exy" firstAttribute="leading" secondItem="BOC-oo-58I" secondAttribute="leading" id="pxm-ew-0fQ"/>
+                                    <constraint firstItem="28U-v3-EJM" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="rjt-tM-p0e"/>
+                                    <constraint firstItem="XNS-9i-0wK" firstAttribute="leading" secondItem="28U-v3-EJM" secondAttribute="trailing" id="tVx-fy-jFm"/>
+                                    <constraint firstItem="mRV-Qr-sbd" firstAttribute="top" secondItem="Iwo-ky-NVs" secondAttribute="bottom" id="tXj-Md-mxS"/>
+                                    <constraint firstItem="ciK-Wz-92M" firstAttribute="height" secondItem="aWV-TI-g4C" secondAttribute="height" id="tmk-5o-Z7c"/>
+                                    <constraint firstItem="mRV-Qr-sbd" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="wSA-Nh-E9c"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNS-9i-0wK" secondAttribute="bottom" id="y7Y-fb-OKi"/>
+                                    <constraint firstItem="XNS-9i-0wK" firstAttribute="top" secondItem="Uhb-BE-SbM" secondAttribute="bottom" id="zcA-cW-9Gz"/>
+                                    <constraint firstItem="OzT-7H-ElE" firstAttribute="width" secondItem="aWV-TI-g4C" secondAttribute="width" id="zkV-ck-a7l"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="pPu-rA-SAu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Let's calculate your taxes " id="VaZ-M8-27l"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pPu-rA-SAu" secondAttribute="trailing" id="FY8-WJ-xjg"/>
+                            <constraint firstItem="BOC-oo-58I" firstAttribute="top" secondItem="pPu-rA-SAu" secondAttribute="bottom" id="Gfd-tA-L42"/>
+                            <constraint firstAttribute="trailing" secondItem="jaS-HJ-IK9" secondAttribute="trailing" id="Hg0-FT-gNg"/>
+                            <constraint firstItem="pPu-rA-SAu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="O3n-6H-Oar"/>
+                            <constraint firstItem="pPu-rA-SAu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OYD-cb-Pml"/>
+                            <constraint firstAttribute="bottom" secondItem="BOC-oo-58I" secondAttribute="bottom" constant="280" id="RJQ-EX-lg6"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="BOC-oo-58I" secondAttribute="trailing" id="ZBP-jT-DUu"/>
+                            <constraint firstItem="BOC-oo-58I" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ehS-zI-HlO"/>
+                            <constraint firstItem="jaS-HJ-IK9" firstAttribute="top" secondItem="BOC-oo-58I" secondAttribute="bottom" id="jHe-B8-Xfk"/>
+                            <constraint firstItem="jaS-HJ-IK9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lHr-2C-SRE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jaS-HJ-IK9" secondAttribute="bottom" id="pWK-ZP-rr4"/>
+                            <constraint firstItem="pPu-rA-SAu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vW4-SH-E8T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aboutButton" destination="A2w-Zp-qoc" id="2y4-FK-lbO"/>
+                        <outlet property="addInfo" destination="ciK-Wz-92M" id="VLS-KG-HFc"/>
+                        <outlet property="annualLbl" destination="Uhb-BE-SbM" id="nAe-gf-W5A"/>
+                        <outlet property="clearButton" destination="qgk-BS-zqx" id="I50-9j-9cF"/>
+                        <outlet property="firstCompBut" destination="MSH-jK-ihf" id="bpc-zg-tkN"/>
+                        <outlet property="fiveCompBut" destination="f55-08-EDe" id="9F8-CD-pzu"/>
+                        <outlet property="fourCompBut" destination="9RV-2N-qE1" id="4ZT-mT-S3g"/>
+                        <outlet property="incomeLbl" destination="Iwo-ky-NVs" id="5cu-77-e3r"/>
+                        <outlet property="input" destination="aWV-TI-g4C" id="Qiz-kT-Ejf"/>
+                        <outlet property="middleSalaryLbl" destination="28U-v3-EJM" id="Ped-7d-naQ"/>
+                        <outlet property="nettLabel" destination="OzT-7H-ElE" id="X7X-jM-CLT"/>
+                        <outlet property="output" destination="rO4-vX-T7l" id="Q0N-CX-jbl"/>
+                        <outlet property="secondCompBut" destination="kB9-ET-jpM" id="Z34-R3-U6L"/>
+                        <outlet property="taxLbl" destination="Fsn-SN-Exy" id="F10-kf-SB9"/>
+                        <outlet property="taxResultLbl" destination="mRV-Qr-sbd" id="j88-CT-C7m"/>
+                        <outlet property="thirdCompBut" destination="Li0-US-5F3" id="Oeb-HR-xID"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="106.875" y="117.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hxV-kE-hF7">
+            <objects>
+                <viewController id="4al-CU-djJ" customClass="SecondViewController" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNB-aX-MpK"/>
+                        <viewControllerLayoutGuide type="bottom" id="CRu-Hj-fUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fjz-Z6-lhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uladzislau Daratsiuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-Kr-fdd">
+                                <rect key="frame" x="16" y="99.5" width="288" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5QN-rm-3r3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gF-dd5">
+                                <rect key="frame" x="16" y="66" width="288" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockholm is not your area? let us know if you want the same for your area." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-3C-Jkv">
+                                <rect key="frame" x="5" y="205.5" width="310" height="69"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="eLv-Q5-xGF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="About" id="aN5-Oh-DUQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="ouW-O0-KHU">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="4al-CU-djJ" id="uiz-AC-zJv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6O-F1-paG">
+                                <rect key="frame" x="16" y="345.5" width="288" height="94.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="123" y="12" width="70" height="70"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878424657535" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="TMs-AS-K8d"/>
+                                            <constraint firstAttribute="width" constant="70" id="aMV-iY-8o1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="emailIcon"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="33"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendEmail:" destination="4al-CU-djJ" eventType="touchUpInside" id="puD-cH-3Mu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-2F-l9k" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="12" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.12815710616438356" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="LK6-M0-LbR"/>
+                                            <constraint firstAttribute="width" constant="70" id="t8R-kK-u19"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="facebookIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="33"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="facebookButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="T2c-OJ-usZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-TC-dV3" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="12" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1346586044520548" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="2rW-rZ-vow"/>
+                                            <constraint firstAttribute="width" constant="70" id="iO7-Pk-bGy"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="twitterIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="33"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitterButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="buk-jW-Inc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1n0-bx-IRh" firstAttribute="leading" secondItem="s4r-2F-l9k" secondAttribute="trailing" constant="26" id="01M-Nw-WXB"/>
+                                    <constraint firstItem="o8l-TC-dV3" firstAttribute="height" secondItem="s4r-2F-l9k" secondAttribute="height" id="54c-YP-aQA"/>
+                                    <constraint firstItem="s4r-2F-l9k" firstAttribute="top" secondItem="1n0-bx-IRh" secondAttribute="top" id="89a-Qu-Kvn"/>
+                                    <constraint firstItem="1n0-bx-IRh" firstAttribute="height" secondItem="s4r-2F-l9k" secondAttribute="height" id="DD9-5Z-irI"/>
+                                    <constraint firstItem="s4r-2F-l9k" firstAttribute="leading" secondItem="N6O-F1-paG" secondAttribute="leading" constant="27" id="DYL-P3-9c0"/>
+                                    <constraint firstItem="s4r-2F-l9k" firstAttribute="centerY" secondItem="N6O-F1-paG" secondAttribute="centerY" id="ST6-ig-dpz"/>
+                                    <constraint firstItem="1n0-bx-IRh" firstAttribute="width" secondItem="s4r-2F-l9k" secondAttribute="width" id="VKy-1v-jIT"/>
+                                    <constraint firstItem="o8l-TC-dV3" firstAttribute="width" secondItem="s4r-2F-l9k" secondAttribute="width" id="fsw-Hk-xG4"/>
+                                    <constraint firstItem="1n0-bx-IRh" firstAttribute="top" secondItem="o8l-TC-dV3" secondAttribute="top" id="w98-I4-5dZ"/>
+                                    <constraint firstItem="o8l-TC-dV3" firstAttribute="leading" secondItem="1n0-bx-IRh" secondAttribute="trailing" constant="21" id="zVR-Mt-aSt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eLv-Q5-xGF" secondAttribute="trailing" id="5cV-fc-3Qq"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" constant="5" id="Ahi-KM-zbU"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="ELj-12-Qo8"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="centerY" secondItem="Fjz-Z6-lhG" secondAttribute="centerY" id="Fto-Sa-Sei"/>
+                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="trailing" secondItem="N6O-F1-paG" secondAttribute="trailing" id="G7w-DY-P4w"/>
+                            <constraint firstItem="eLv-Q5-xGF" firstAttribute="top" secondItem="Fjz-Z6-lhG" secondAttribute="top" id="HWG-Bw-jbg"/>
+                            <constraint firstItem="CRu-Hj-fUl" firstAttribute="top" secondItem="N6O-F1-paG" secondAttribute="bottom" constant="40" id="MRw-ZN-fxg"/>
+                            <constraint firstItem="N6O-F1-paG" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="MhD-co-hNP"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="O1f-Gc-z7X"/>
+                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="top" secondItem="X5t-gF-dd5" secondAttribute="bottom" constant="10" id="QRK-On-Ueo"/>
+                            <constraint firstItem="eLv-Q5-xGF" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="bhX-1f-NpG"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="leading" secondItem="tqj-Kr-fdd" secondAttribute="leading" id="bvQ-b6-qBV"/>
+                            <constraint firstItem="eLv-Q5-xGF" firstAttribute="centerX" secondItem="X5t-gF-dd5" secondAttribute="centerX" id="dtN-e5-9v1"/>
+                            <constraint firstItem="N6O-F1-paG" firstAttribute="top" secondItem="JoS-3C-Jkv" secondAttribute="bottom" constant="71" id="hjZ-Ag-eMd"/>
+                            <constraint firstItem="JoS-3C-Jkv" firstAttribute="top" secondItem="tqj-Kr-fdd" secondAttribute="bottom" constant="86.5" id="nYP-fx-Pkl"/>
+                            <constraint firstAttribute="trailing" secondItem="JoS-3C-Jkv" secondAttribute="trailing" constant="5" id="qUv-5L-Rqs"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="top" secondItem="eLv-Q5-xGF" secondAttribute="bottom" constant="22" id="sL3-G3-wej"/>
+                            <constraint firstItem="X5t-gF-dd5" firstAttribute="trailing" secondItem="tqj-Kr-fdd" secondAttribute="trailing" id="srg-pE-yKE"/>
+                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="leading" secondItem="N6O-F1-paG" secondAttribute="leading" id="tJ5-aW-LSa"/>
+                            <constraint firstItem="eLv-Q5-xGF" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="uP5-IP-MAl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createdlbl" destination="X5t-gF-dd5" id="gdN-zc-bLf"/>
+                        <outlet property="nameLbl" destination="tqj-Kr-fdd" id="evz-d0-jFQ"/>
+                        <outlet property="textLbl" destination="JoS-3C-Jkv" id="zsQ-1o-wxo"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Back" id="A1e-3t-u4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-LL-pS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.375" y="127.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="emailIcon" width="512" height="512"/>
+        <image name="facebookIcon" width="600" height="600"/>
+        <image name="google" width="512" height="512"/>
+        <image name="spotifyIcon" width="150" height="150"/>
+        <image name="swedbank" width="300" height="300"/>
+        <image name="tradedoubler" width="192" height="192"/>
+        <image name="twitterIcon" width="256" height="256"/>
+        <image name="volvo" width="660" height="660"/>
+    </resources>
 </document>
