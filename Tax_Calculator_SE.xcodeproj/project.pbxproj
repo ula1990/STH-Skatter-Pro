@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		750A30951F15765F00EF4B33 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A30941F15765F00EF4B33 /* AboutPage.swift */; };
+		7527ADBB1FE311E2001533F1 /* LimitLenght.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527ADBA1FE311E2001533F1 /* LimitLenght.swift */; };
+		7531B8391FE2CF2F00FD7ED4 /* StartWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */; };
+		7531B83B1FE2D64100FD7ED4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */; };
 		7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
 		7558F8D21F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
 		7558F8D31F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		750A30941F15765F00EF4B33 /* AboutPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
+		7527ADBA1FE311E2001533F1 /* LimitLenght.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitLenght.swift; sourceTree = "<group>"; };
+		7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWindow.swift; sourceTree = "<group>"; };
+		7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		7558F8D01F5EA36000F56E71 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundlabel.swift; sourceTree = "<group>"; };
 		75A742151F61548F00A7E932 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
@@ -111,12 +117,15 @@
 			isa = PBXGroup;
 			children = (
 				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
+				7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */,
 				750A30941F15765F00EF4B33 /* AboutPage.swift */,
 				75C864AA1F12CF7400661E82 /* MainWindow.swift */,
+				7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */,
 				75C864AC1F12CF7400661E82 /* Main.storyboard */,
 				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
 				75C864B41F12CF7400661E82 /* Info.plist */,
+				7527ADBA1FE311E2001533F1 /* LimitLenght.swift */,
 				7558F8D01F5EA36000F56E71 /* RoundButton.swift */,
 				7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */,
 				75A742151F61548F00A7E932 /* MailButton.swift */,
@@ -284,7 +293,10 @@
 			files = (
 				7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */,
 				750A30951F15765F00EF4B33 /* AboutPage.swift in Sources */,
+				7527ADBB1FE311E2001533F1 /* LimitLenght.swift in Sources */,
+				7531B83B1FE2D64100FD7ED4 /* TutorialViewController.swift in Sources */,
 				75A742161F61548F00A7E932 /* MailButton.swift in Sources */,
+				7531B8391FE2CF2F00FD7ED4 /* StartWindow.swift in Sources */,
 				75C864AB1F12CF7400661E82 /* MainWindow.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
 				7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */,

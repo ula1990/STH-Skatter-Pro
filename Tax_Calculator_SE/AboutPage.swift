@@ -11,7 +11,6 @@ import MessageUI
 
 @objc class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
-
     @IBOutlet weak var aboutLbl: UILabel!
     @IBOutlet weak var createdlbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
@@ -25,8 +24,7 @@ import MessageUI
     let nameLb = "nameLb"
     let textLb = "textLb"
     let switchLan = "switchLan"
-    
-    
+
     @IBAction func backButton(_ sender: Any) {
         self.performSegue(withIdentifier: "Back", sender: self.navigationController)
     }
@@ -35,7 +33,6 @@ import MessageUI
     //FacebookButton
     
     @IBAction func facebookButton(_ sender: Any) {
-        
        openButtonUrl(urlStr: "https://www.facebook.com/sthtaxes")
         
     }
@@ -43,14 +40,12 @@ import MessageUI
     
   //Twitter Button
     @IBAction func twitterButton(_ sender: Any) {
-        
         openButtonUrl(urlStr: "https://twitter.com/TaxesSth")
     }
     
     //Function to open URL
     
     func openButtonUrl(urlStr:String!) {
-        
         if let url = NSURL(string:urlStr) {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
@@ -65,13 +60,13 @@ import MessageUI
         }else{
         showMailError()}
             }
-    
+    //CONFIGURE EMAIL
         func configureMailController()-> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
             mailComposerVC.mailComposeDelegate = self
             mailComposerVC.setToRecipients(["uladzislau.daratsiuk@gmail.com"])
-            mailComposerVC.setSubject("Hi STH Taxes Team ")
-            mailComposerVC.setMessageBody("Hi Team,", isHTML: false)
+            mailComposerVC.setSubject("Hi Developer ")
+            mailComposerVC.setMessageBody("Hi Developer,", isHTML: false)
             
             return mailComposerVC
         }
@@ -90,18 +85,31 @@ import MessageUI
         controller.dismiss(animated: true, completion: nil )
     }
         
+    @IBAction func tutorialFromAbout(_ sender: Any) {
+        self.performSegue(withIdentifier: "TutorialAbout", sender: navigationController)
         
-
+    }
+    
     override var prefersStatusBarHidden: Bool
     {
         return true
+
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
+        let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
+        self.navigationItem.titleView = iconImageView
+        
+        
+     
     }
 
     override func didReceiveMemoryWarning() {

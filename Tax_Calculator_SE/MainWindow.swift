@@ -14,26 +14,13 @@ import Foundation
 
 @objc class ViewController: UIViewController {
     
-    
-    override var prefersStatusBarHidden: Bool
-        {
-    return true
-    
-    }
-    
-
-    
     @IBOutlet weak var output: UILabel!
-
-    @IBOutlet weak var input: UILabel!
     
     @IBOutlet weak var taxLbl: UILabel!
     
     @IBOutlet weak var nettLabel: UILabel!
     
     @IBOutlet weak var taxResultLbl: UILabel!
-    
-    @IBOutlet weak var incomeLbl: UILabel!
     
     @IBOutlet weak var addInfo: UILabel!
     
@@ -43,69 +30,113 @@ import Foundation
     
     @IBOutlet weak var middleSalaryLbl: UILabel!
     
-    @IBOutlet weak var aboutButton: RoundButton!
+    @IBOutlet weak var inputField: UITextField!
     
-    @IBOutlet weak var clearButton: RoundButton!
+    @IBOutlet weak var dollarLbl: UILabel!
     
-    //Input,output defaults
+    @IBOutlet weak var eurLbl: UILabel!
     
-    let outputL = "outputL"
-    let inputL = "inputL"
-    let taxL = "taxL"
-    let addI = "addI"
-
-
+    @IBOutlet weak var canadaLbl: UILabel!
     
+    @IBOutlet weak var yenLbl: UILabel!
     
-    //Icon label
+    @IBOutlet weak var poundLbl: UILabel!
+    
+    @IBOutlet weak var liraLbl: UILabel!
     
     @IBOutlet weak var firstCompBut: UIButton!
     
-    @IBAction func startBut(_ sender: Any) {
-        
-        openCareerUrl(urlStr: "https://sebgroup.com/career/career-at-seb/vacant-positions")
-        
-    }
-    
     @IBOutlet weak var secondCompBut: UIButton!
-    
-    @IBAction func secondCompBut(_ sender: Any) {
-        
-        openCareerUrl(urlStr: "https://www.swedbank.com/work-with-us/job-openings/index.htm")
-    }
     
     @IBOutlet weak var thirdCompBut: UIButton!
     
-    @IBAction func thirdCompBut(_ sender: Any) {
-        
-         openCareerUrl(urlStr: "https://www.spotifyjobs.com/")
-        
-    }
-    
     @IBOutlet weak var fourCompBut: UIButton!
     
-    @IBAction func fourCompBut(_ sender: Any) {
-        openCareerUrl(urlStr: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home")
-        
-    }
     @IBOutlet weak var fiveCompBut: UIButton!
     
-    @IBAction func fiveCompBut(_ sender: Any) {
+    
+    
+
+//URLs FOR COMPANIES BUTTONS
+    
+    @IBAction func startBut(_ sender: Any) {
         
-        openCareerUrl(urlStr: "https://careers.google.com/locations/")
+        if (Int(inputField.text!))! >= 35000 {
+            
+            openCareerUrl(urlStr: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/")
+            
+            
+            
+        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000
+        {
+            openCareerUrl(urlStr: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html")
+            
+            
+        }
+        else{
+            openCareerUrl(urlStr: "https://www.nordea.com/en/career/")
+        }
         
     }
+
+    @IBAction func secondCompBut(_ sender: Any) {
+        if (Int(inputField.text!))! >= 35000 {
+            
+            openCareerUrl(urlStr: "https://www.swedbank.com/work-with-us/job-openings/index.htm")
+            
+        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
+                
+                 openCareerUrl(urlStr: "https://www.uber.com/en-SE/careers/")
+        }else{
+            openCareerUrl(urlStr: "https://www.mcdonalds.com/se/sv-se/jobb/sok-jobb.html")
+        }
+    }
+
+    @IBAction func thirdCompBut(_ sender: Any) {
+        if (Int(inputField.text!))! >= 35000 {
+         openCareerUrl(urlStr: "https://www.spotifyjobs.com/")
+            
+        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
+        
+        openCareerUrl(urlStr: "https://www.hemkop.se/jobb")
+        }else{
+            
+            openCareerUrl(urlStr: "https://burgerking.se/jobb")
+        }
+        
+    }
+
+    @IBAction func fourCompBut(_ sender: Any) {
+               if (Int(inputField.text!))! >= 35000 {
+        openCareerUrl(urlStr: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home" )
+               }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
+              openCareerUrl(urlStr: "https://www.blocket.career/jobs" )
+                
+               }else{
+                openCareerUrl(urlStr: "https://polisen.se/Aktuellt/Lediga-jobb/" )
+        }
+    }
+
+    @IBAction func fiveCompBut(_ sender: Any) {
+        if (Int(inputField.text!))! >= 35000 {
+        openCareerUrl(urlStr: "https://careers.google.com/locations/")
+        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
+            openCareerUrl(urlStr: "https://www.ge.com/se/careers")
+        }else{
+            
+            openCareerUrl(urlStr: "https://www.uber.com/info/careers/eats/")
+        }
+    }
+    //SHARE BUTTON
     
-    //defaults for Company buttons
+    @IBAction func shareButton(_ sender: Any) {
+        
+        let activityVC = UIActivityViewController(activityItems: ["Take a look on this app. to calculate the Taxes in Stockholm area https://itunes.apple.com/us/app/sth-skatter/id1289164861?ls=1&mt=8"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+    }
     
-    let firstCompB = "firstCompB"
-    let secondCompB = "secondCompB"
-    let thirdCompB = "thirdCompB"
-    let fourCompB = "fourCompB"
-    let fiveCompB = "fiveCompB"
-    let mSL = "mSL"
-    
-    
+
     //function to open URL of the career page for different companies
     
     func openCareerUrl(urlStr:String!) {
@@ -116,58 +147,91 @@ import Foundation
         
     }
     //PART0 Coefficients for Netto and Tax
-    
-    var stillTyping = false
 
     var taxPercent = [0.15528, 0.15969, 0.16370, 0.1674,0.170,0.1742,0.1772, 0.180125,0.1827,0.18529,0.187714,0.18994,0.19205,0.19410,0.196,0.1978,0.19956,0.20119,0.20274,0.20427,0.20568,0.20704,0.20838,0.209625,0.210857,0.212,0.21309,0.2141,0.21520,0.216185,0.217163,0.21807,0.21894,0.219827,0.22064,0.221433,0.22236,0.223645,0.22488,0.22609,0.227230,0.22836,0.229462,0.230529,0.231536,0.23254,0.2335211,0.2344722,0.23536,0.23627,0.237146,0.239710,0.24309,0.246410,0.24964,0.2528,0.255851,0.25885,0.261783,0.26464,0.267411,0.270139,0.27280,0.275409,0.2779325,0.280422,0.28285,0.28523,0.2875483,0.28982,0.292063,0.29425,0.296371,0.2984693,0.30052,0.30254,0.304495,0.306431,0.308330,0.310192,0.312,0.31379,0.31555,0.317277,0.319137,0.3212545,0.32331,0.32535,0.3273628,0.32933,0.331252,0.333155,0.335025,0.3368644,0.338655,0.340433,0.34218,0.343901,0.345577,0.347241,0.34888,0.35049,0.352062,0.353625,0.3551627,0.356676,0.35815,0.3596212,0.361067,0.3624925,0.3638814,0.365264,0.366627,0.3679710,0.36928,0.37058,0.3718723,0.3731408,0.374377,0.375611,0.376827,0.378027,0.37919,0.380364,0.381516,0.38265,0.38376,0.38486,0.38596,0.387038,0.3880903,0.38914,0.39017,0.39120,0.392201,0.3932,0.394186,0.395160,0.3961104,0.39706,0.398,0.39892,0.39983,0.400738,0.401633,0.402517,0.4033801,0.40424,0.4050982,0.405942,0.406765,0.4075909,0.408406,0.409213,0.41,0.410788,0.411569,0.41234,0.413092,0.41384,0.41459,0.41533,0.416053,0.41677,0.41749,0.4182,0.41889,0.419583,0.420269,0.420948,0.421610,0.42227551,0.42293,0.42358,0.42422,0.42486,0.425492,0.426118]
     
     var nettoPercent = [0.84472, 0.84030, 0.83629, 0.832, 0.829, 0.8258, 0.8227,0.819875,0.81721,0.81470, 0.812285,0.81005,0.80794,0.805894,0.804,0.8022,0.8004,0.79880,0.79725,0.79572,0.79431,0.79295,0.79161,0.790375,0.78914,0.788,0.78690,0.78580,0.784792,0.78381,0.78283,0.78192,0.78105,0.78017,0.779355,0.778566,0.777639,0.776354,0.77511,0.77390,0.772769,0.77163,0.770537,0.769470,0.76846,0.767457,0.7664788,0.76552,0.764630,0.763729,0.762853,0.7602894,0.756909,0.75358,0.7503544,0.7472,0.74414,0.74114,0.73821,0.735357,0.73258,0.729860,0.72719,0.7245909,0.7220674,0.71957,0.71714,0.714760,0.712451,0.710170,0.707936,0.70575,0.7036288,0.7015306,0.69947,0.69746,0.695504,0.69356,0.691669,0.68980,0.688,0.68620,0.68444,0.68272,0.68086,0.678745,0.676684,0.67464,0.672637,0.67066,0.66874,0.666844,0.66497,0.663135,0.661344,0.65956,0.657818,0.656098,0.654422,0.65275,0.65112,0.64950,0.64793,0.646375,0.64483,0.64332,0.64184,0.6403787,0.63893,0.637507,0.63611851,0.634735,0.633372,0.63202,0.630719,0.629414,0.628127,0.626859,0.625622,0.624388,0.623172,0.621972,0.620802,0.6196351,0.61848,0.617346,0.61623,0.61513,0.614039,0.61296,0.6119096,0.61085,0.609821,0.6087974,0.607798,0.6068,0.6058136,0.604839,0.603889,0.602939,0.602,0.60107,0.600167,0.59926,0.59836,0.59748235,0.596619,0.59575,0.59490,0.59405,0.59323,0.592409,0.591593,0.590786,0.59,0.58921,0.588430,0.587659,0.586907,0.5861,0.585405,0.58466,0.58394,0.58322,0.58250,0.5818,0.581109,0.58041,0.579730,0.57905,0.578389,0.577724,0.577065,0.57641,0.57577,0.57514,0.57450,0.573881]
-    
-  //SWITCH
-    @IBOutlet weak var switchBut: UISwitch!
+
+    //CONFIGURATIONS FOR USERDEFAULTS
     
     let defaults = UserDefaults.standard
-    let switchPos = "switchPos"
-    let flagL = "flagL"
-    let incomeL = "incomeL"
     let taxResultL = "taxResultL"
     let nettL = "nettL"
     let annualL = "annualL"
     let middleSalaryL = "middleSalaryL"
-    let aboutB = "aboutB"
-    let clearB = "clearB"
+    let firstCompB = "firstCompB"
+    let secondCompB = "secondCompB"
+    let thirdCompB = "thirdCompB"
+    let fourCompB = "fourCompB"
+    let fiveCompB = "fiveCompB"
+    let mSL = "mSL"
+    let outputL = "outputL"
+    let taxL = "taxL"
+    let addI = "addI"
+    let dollarL = "dollarL"
+    let eurL = "eurL"
+    let canadaL = "canadaL"
+    let yenL = "yenL"
+    let poundL = "poundL"
+    let liraL = "liraL"
     
-   
     
-    
-    
-    
-    @IBAction func numButton(_ sender: UIButton) {
+    @IBAction func calculateAmount(_ sender: UIButton) {
         
-          let number = sender.currentTitle!
-          self.firstCompBut.isHidden = false
-         defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
-            self.secondCompBut.isHidden = false
-         defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
-                self.thirdCompBut.isHidden = false
-        defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
-                    self.fourCompBut.isHidden = false
-        defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-                        self.fiveCompBut.isHidden = false
-        defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
-                                self.middleSalaryLbl.isHidden = false
-        defaults.set(self.middleSalaryLbl.isHidden, forKey: mSL)
+        //HIDE KEYBOARD WHEN BUTTON WAS PRESSED
         
-        
-        
-                if stillTyping{
-                    
-                        if (input.text?.characters.count)! < 5 {
-        
-                            input.text = input.text! + number
+         inputField.resignFirstResponder()
+
+                        if (((inputField.text?.count )! < 6) && inputField.text != ""){
+       //PROCEDURE FOR ICONS
+                            let amount = (Int(inputField.text!))!
+                            
+                            if amount >= 35000 {
+                                self.firstCompBut.isHidden = false
+                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "tradedoubler"), for: .normal)
+                                self.secondCompBut.isHidden = false
+                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "swedbank"), for: .normal)
+                                self.thirdCompBut.isHidden = false
+                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "spotifyIcon"), for: .normal)
+                                self.fourCompBut.isHidden = false
+                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "volvo"), for: .normal)
+                                self.fiveCompBut.isHidden = false
+                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "google"), for: .normal)
+                            }else if amount < 35000 && amount >= 24000 {
+                                self.firstCompBut.isHidden = false
+                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "ikea"), for: .normal)
+                                self.secondCompBut.isHidden = false
+                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "social"), for: .normal)
+                                self.thirdCompBut.isHidden = false
+                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "hemkop"), for: .normal)
+                                self.fourCompBut.isHidden = false
+                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "blocket"), for: .normal)
+                                self.fiveCompBut.isHidden = false
+                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ge"), for: .normal)
+                            }else if amount < 24000 && amount >= 1{
+                                self.firstCompBut.isHidden = false
+                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "nordea"), for: .normal)
+                                self.secondCompBut.isHidden = false
+                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "mc"), for: .normal)
+                                self.thirdCompBut.isHidden = false
+                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "burger"), for: .normal)
+                                self.fourCompBut.isHidden = false
+                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "polisen"), for: .normal)
+                                self.fiveCompBut.isHidden = false
+                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ubereats"), for: .normal)
+                            }else{
+                                
+                                self.firstCompBut.isHidden = true
+                                self.secondCompBut.isHidden = true
+                                self.thirdCompBut.isHidden = true
+                                self.fourCompBut.isHidden = true
+                                self.fiveCompBut.isHidden = true
+                                
+                            }
+
         //PART1 to Calculate Netto amount
                            func sum()->Int{
-                                let b = Int(input.text!)
+                                let b = Int(inputField.text!)
                                 if b! < 12501 {
                                     let result = nettoPercent[0]*Double(b!)
                                     return Int(round(result))
@@ -803,7 +867,7 @@ import Foundation
       //PART2 to Calculation Taxes amount 
                             
                                 func sumTax()->Int{
-                                    let b = Int(input.text!)
+                                    let b = Int(inputField.text!)
                                     if b! < 12501 {
                                         let result = taxPercent[0]*Double(b!)
                                         return Int(round(result))
@@ -1435,10 +1499,6 @@ import Foundation
                                     }
                                     
                             }
-                            
-                            
-
-                            
        //Output to Labels
                             let numberFormatter = NumberFormatter()
                             numberFormatter.numberStyle = NumberFormatter.Style.currency
@@ -1446,19 +1506,42 @@ import Foundation
                             numberFormatter.currencyDecimalSeparator = "."
                             output.text = numberFormatter.string (from: NSNumber(value:(sum())))
                             taxLbl.text = numberFormatter.string (from: NSNumber(value:(sumTax())))
-                            addInfo.text = numberFormatter.string (from: NSNumber(value:(12*sum())))!
-                            
-                            
-                            
-                            defaults.set(input.text!, forKey: inputL)
+                            addInfo.text = numberFormatter.string (from: NSNumber(value:(12*Int(inputField.text!)!)))!
                             defaults.set(output.text!, forKey: outputL)
                             defaults.set(taxLbl.text!, forKey: taxL)
                             defaults.set(addInfo.text!, forKey: addI)
+                            dollarLbl.text = String(0.12*Double(inputField.text!)!) + " USD"
+                            canadaLbl.text = String(0.15*Double(inputField.text!)!) + " CAD"
+                            eurLbl.text = String(0.10*Double(inputField.text!)!) + " EUR"
+                            poundLbl.text = String(0.09*Double(inputField.text!)!) + " GBP"
+                            liraLbl.text = String(45.39*Double(inputField.text!)!) + " TRY"
+                            yenLbl.text = String(13.40*Double(inputField.text!)!) + " JPY"
+                            middleSalaryLbl.text = "Average salary in:"
+                            defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
+                            defaults.set(self.dollarLbl.text!, forKey: dollarL)
+                            defaults.set(self.eurLbl.text!, forKey: eurL)
+                            defaults.set(self.canadaLbl.text!, forKey: canadaL)
+                            defaults.set(self.poundLbl.text!, forKey: poundL)
+                            defaults.set(self.liraLbl.text!, forKey: liraL)
+                            defaults.set(self.yenLbl.text!, forKey: yenL)
+                            
+                            
                            
                     }
-        }else {
-                    input.text = number
-                    stillTyping = true
+                        else{
+                            middleSalaryLbl.text = "Incorrect amount"
+                            self.firstCompBut.isHidden = true
+                            defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
+                            self.secondCompBut.isHidden = true
+                            defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
+                            self.thirdCompBut.isHidden = true
+                            defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
+                            self.fourCompBut.isHidden = true
+                            defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
+                            self.fiveCompBut.isHidden = true
+                            defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
+                            defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
+                            
         }
     }
     
@@ -1474,23 +1557,36 @@ import Foundation
         numberFormatter.currencyDecimalSeparator = "."
         
         output.text = numberFormatter.string (from: NSNumber(value:0))!
-        defaults.set(output.text!, forKey: outputL)
-        input.text = output.text
-        defaults.set(input.text!, forKey: inputL)
         taxLbl.text = output.text
-        defaults.set(taxLbl.text!, forKey: taxL)
         addInfo.text = output.text
-        defaults.set(addInfo.text!, forKey: addI)
-        stillTyping = false
+        dollarLbl.text = ""
+        canadaLbl.text = ""
+        eurLbl.text = ""
+        poundLbl.text = ""
+        liraLbl.text = ""
+        yenLbl.text = ""
+        inputField.text = ""
+        middleSalaryLbl.text = "Average salary in:"
         self.firstCompBut.isHidden = true
-        defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
         self.secondCompBut.isHidden = true
-        defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
         self.thirdCompBut.isHidden = true
-        defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
         self.fourCompBut.isHidden = true
-        defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
         self.fiveCompBut.isHidden = true
+       
+        defaults.set(output.text!, forKey: outputL)
+        defaults.set(taxLbl.text!, forKey: taxL)
+        defaults.set(addInfo.text!, forKey: addI)
+        defaults.set(self.dollarLbl.text!, forKey: dollarL)
+        defaults.set(self.eurLbl.text!, forKey: eurL)
+        defaults.set(self.canadaLbl.text!, forKey: canadaL)
+        defaults.set(self.poundLbl.text!, forKey: poundL)
+        defaults.set(self.liraLbl.text!, forKey: liraL)
+        defaults.set(self.yenLbl.text!, forKey: yenL)
+        defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
+        defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
+        defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
+        defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
+        defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
         defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
     }
     
@@ -1504,14 +1600,7 @@ import Foundation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
-        
-        if let inputLb = defaults.value(forKey: inputL){
-            input.text = inputLb as? String
-            
-        }
+       
         if let outputLb = defaults.value(forKey: outputL){
             output.text = outputLb as? String
             
@@ -1525,10 +1614,53 @@ import Foundation
             
         }
         
-        if let firstCompBu = defaults.value(forKey: firstCompB){
+        if let middleSalaryLb = defaults.value(forKey: middleSalaryL){
+            middleSalaryLbl.text = middleSalaryLb as? String
+            
+        }
+        
+        //DEFAULTS FOR CURRENCIES
+        
+        if let dollarLb = defaults.value(forKey: dollarL){
+            dollarLbl.text = dollarLb as? String
+            
+        }
+        
+        if let eurLb = defaults.value(forKey: eurL){
+            eurLbl.text = eurLb as? String
+            
+        }
+        
+        if let canadaLb = defaults.value(forKey: canadaL){
+            canadaLbl.text = canadaLb as? String
+            
+        }
+        
+        if let yenLb = defaults.value(forKey: yenL){
+            yenLbl.text = yenLb as? String
+            
+        }
+        
+        if let poundLb = defaults.value(forKey: poundL){
+            poundLbl.text = poundLb as? String
+            
+        }
+        
+        if let liraLb = defaults.value(forKey: liraL){
+            liraLbl.text = liraLb as? String
+            
+        }
+        
+        
+        
+        //DEFAULTS FOR COMPANY BUTTONS
+        
+    /*    if let firstCompBu = defaults.value(forKey: firstCompB){
             self.firstCompBut.isHidden = firstCompBu as! Bool
             
         }
+        
+        
         if let secondCompBu = defaults.value(forKey: secondCompB){
             self.secondCompBut.isHidden = secondCompBu as! Bool
             
@@ -1546,11 +1678,30 @@ import Foundation
 
             
         }
+ 
+ */
         
+        //BAR TITLE
        
+        let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
+        self.navigationItem.titleView = iconImageView
+        
+        //CONFIGURE NAVIGATION CONTROLLER
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
   
 
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override var prefersStatusBarHidden: Bool
+    {
+        return true
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -1558,6 +1709,8 @@ import Foundation
         // Dispose of any resources that can be recreated.
                 }
     
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
