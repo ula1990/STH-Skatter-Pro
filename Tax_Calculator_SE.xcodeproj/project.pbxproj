@@ -474,7 +474,7 @@
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.sthskatterpro;
+				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.skatterpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -490,7 +490,7 @@
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.sthskatterpro;
+				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.skatterpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;

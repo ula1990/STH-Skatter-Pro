@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EUA-D2-irX">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,11 +26,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6Hx-GD-r18">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-ET-jpM" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
                                 <rect key="frame" x="200" y="340" width="40" height="40"/>
@@ -288,7 +288,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-mx-1iI">
-                                <rect key="frame" x="14" y="378" width="30" height="30"/>
+                                <rect key="frame" x="14" y="466" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="H73-FE-SGB"/>
                                     <constraint firstAttribute="height" constant="30" id="yyD-ON-Rsu"/>
@@ -296,7 +296,7 @@
                                 <state key="normal" backgroundImage="dollar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-4L-MXS">
-                                <rect key="frame" x="14" y="440" width="30" height="30"/>
+                                <rect key="frame" x="14" y="528" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="I9T-zQ-Ik6"/>
                                     <constraint firstAttribute="height" constant="30" id="yMF-lr-u6G"/>
@@ -304,7 +304,7 @@
                                 <state key="normal" image="canada"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkH-zV-Eqo">
-                                <rect key="frame" x="14" y="409" width="30" height="30"/>
+                                <rect key="frame" x="14" y="497" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QHj-jo-fgV"/>
                                     <constraint firstAttribute="width" constant="30" id="SGA-xR-pOa"/>
@@ -312,7 +312,7 @@
                                 <state key="normal" image="eur"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-2T-LUL">
-                                <rect key="frame" x="49" y="440" width="110" height="30"/>
+                                <rect key="frame" x="49" y="528" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="4IP-kA-4r3"/>
                                     <constraint firstAttribute="height" constant="30" id="jza-hO-7Zi"/>
@@ -322,7 +322,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-Ys-90p">
-                                <rect key="frame" x="49" y="409" width="110" height="30"/>
+                                <rect key="frame" x="49" y="497" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1H4-Ip-Gk3"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="YVp-vg-zBq"/>
@@ -334,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-9S-XbP">
-                                <rect key="frame" x="49" y="378" width="110" height="30"/>
+                                <rect key="frame" x="49" y="466" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6Kw-oH-gNc"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="6Lt-72-dqa"/>
@@ -348,7 +348,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Key-HO-Pk8">
-                                <rect key="frame" x="208" y="440" width="110" height="30"/>
+                                <rect key="frame" x="208" y="528" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="n60-GE-HkO"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="zWw-pu-gaO"/>
@@ -358,7 +358,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-hl-m6i">
-                                <rect key="frame" x="208" y="409" width="110" height="30"/>
+                                <rect key="frame" x="208" y="497" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="PZq-AS-M6d"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="f04-L6-VTN"/>
@@ -370,13 +370,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urm-IE-d1G">
-                                <rect key="frame" x="208" y="378" width="110" height="30"/>
+                                <rect key="frame" x="208" y="466" width="110" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13h-nS-sQF">
-                                <rect key="frame" x="177" y="378" width="30" height="30"/>
+                                <rect key="frame" x="177" y="466" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2lL-zx-G4M"/>
                                     <constraint firstAttribute="width" constant="30" id="emG-BF-j2L"/>
@@ -384,7 +384,7 @@
                                 <state key="normal" image="yen"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-8U-LBr">
-                                <rect key="frame" x="177" y="409" width="30" height="30"/>
+                                <rect key="frame" x="177" y="497" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="5bY-WT-zUp"/>
                                     <constraint firstAttribute="height" constant="30" id="Frx-PP-NRE"/>
@@ -394,7 +394,7 @@
                                 <state key="normal" image="pound"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r84-qy-gKC">
-                                <rect key="frame" x="177" y="440" width="30" height="30"/>
+                                <rect key="frame" x="177" y="528" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="4Yp-JM-2wi"/>
                                     <constraint firstAttribute="width" constant="30" id="EoR-rm-muj"/>
@@ -533,20 +533,20 @@
                         <viewControllerLayoutGuide type="bottom" id="CRu-Hj-fUl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fjz-Z6-lhG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" highlightedImage="background" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-Dm-oD6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockholm is not your area? let us know if you want the same for your area." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-3C-Jkv">
-                                <rect key="frame" x="5" y="205.5" width="310" height="69"/>
+                                <rect key="frame" x="5" y="249.5" width="310" height="69"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="125" y="281.5" width="70" height="70"/>
+                                <rect key="frame" x="125" y="325.5" width="70" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878424657535" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="USq-BB-Fsb"/>
@@ -570,7 +570,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-TC-dV3" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="214" y="355" width="70" height="70"/>
+                                <rect key="frame" x="214" y="399" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1346586044520548" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Vaz-QH-QWi"/>
@@ -596,7 +596,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-2F-l9k" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="36" y="355" width="70" height="70"/>
+                                <rect key="frame" x="36" y="399" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.12815710616438356" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="RxT-Na-pJa"/>
@@ -622,7 +622,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uladzislau Daratsiuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-Kr-fdd">
-                                <rect key="frame" x="16" y="115" width="288" height="20"/>
+                                <rect key="frame" x="16" y="159" width="288" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="5QN-rm-3r3"/>
                                 </constraints>
@@ -631,13 +631,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gF-dd5">
-                                <rect key="frame" x="16" y="82" width="288" height="23"/>
+                                <rect key="frame" x="16" y="126" width="288" height="23"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-SQ-6cy">
-                                <rect key="frame" x="71" y="437" width="178" height="35"/>
+                                <rect key="frame" x="71" y="525" width="178" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Check Out our Tutorial"/>
                                 <connections>
@@ -693,14 +693,14 @@
                         <viewControllerLayoutGuide type="bottom" id="EUx-l6-Ja2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xp7-cO-Hgk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-Ha-kNG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-AA-KWv" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="115" width="250" height="250"/>
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.18040988869863014" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="465-zy-NEv"/>
@@ -726,7 +726,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp9-si-nnY">
-                                <rect key="frame" x="71" y="425" width="178" height="35"/>
+                                <rect key="frame" x="71" y="513" width="178" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Check Out our Tutorial"/>
                                 <connections>
@@ -734,7 +734,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to STH Skatter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkn-Mf-60I">
-                                <rect key="frame" x="12" y="72" width="297.5" height="34.5"/>
+                                <rect key="frame" x="11.5" y="72" width="297.5" height="34.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -779,11 +779,11 @@
                         <viewControllerLayoutGuide type="bottom" id="612-ZI-EyV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="01X-Ae-DnG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jHE-m5-OEw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First put your income in the field max.  99.999 in kr. and Press that button to calculate income:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc6-E9-nCu">
                                 <rect key="frame" x="5" y="68" width="310" height="35.5"/>
@@ -831,7 +831,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-Jj-lpC">
-                                <rect key="frame" x="130.5" y="418.5" width="60" height="60"/>
+                                <rect key="frame" x="130" y="418.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="D1u-Ac-k4a"/>
                                     <constraint firstAttribute="height" constant="60" id="S0G-iG-hCx"/>
