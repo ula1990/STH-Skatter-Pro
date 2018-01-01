@@ -9,6 +9,7 @@
 import UIKit
 import ObjectiveC
 import Foundation
+import AVFoundation
 
 
 
@@ -54,12 +55,15 @@ import Foundation
     
     @IBOutlet weak var fiveCompBut: UIButton!
     
+    var audioPlayer = AVAudioPlayer()
     
     
 
 //URLs FOR COMPANIES BUTTONS
     
     @IBAction func startBut(_ sender: Any) {
+        
+        clickSound()
         
         if (Int(inputField.text!))! >= 35000 {
             
@@ -80,6 +84,8 @@ import Foundation
     }
 
     @IBAction func secondCompBut(_ sender: Any) {
+         clickSound()
+        
         if (Int(inputField.text!))! >= 35000 {
             
             openCareerUrl(urlStr: "https://www.swedbank.com/work-with-us/job-openings/index.htm")
@@ -93,6 +99,9 @@ import Foundation
     }
 
     @IBAction func thirdCompBut(_ sender: Any) {
+        
+         clickSound()
+        
         if (Int(inputField.text!))! >= 35000 {
          openCareerUrl(urlStr: "https://www.spotifyjobs.com/")
             
@@ -107,6 +116,9 @@ import Foundation
     }
 
     @IBAction func fourCompBut(_ sender: Any) {
+        
+         clickSound()
+        
                if (Int(inputField.text!))! >= 35000 {
         openCareerUrl(urlStr: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home" )
                }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
@@ -118,6 +130,9 @@ import Foundation
     }
 
     @IBAction func fiveCompBut(_ sender: Any) {
+        
+         clickSound()
+        
         if (Int(inputField.text!))! >= 35000 {
         openCareerUrl(urlStr: "https://careers.google.com/locations/")
         }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
@@ -131,7 +146,8 @@ import Foundation
     
     @IBAction func shareButton(_ sender: Any) {
         
-        let activityVC = UIActivityViewController(activityItems: ["Take a look on this app. to calculate the Taxes in Stockholm area https://itunes.apple.com/us/app/sth-skatter/id1289164861?ls=1&mt=8"], applicationActivities: nil)
+        
+        let activityVC = UIActivityViewController(activityItems: ["Take a look on this app. to calculate the Taxes in Stockholm area https://itunes.apple.com/us/app/skatter-pro/id1326491203?ls=1&mt=8"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
     }
@@ -177,6 +193,8 @@ import Foundation
     
     
     @IBAction func calculateAmount(_ sender: UIButton) {
+        
+         clickSound()
         
         //HIDE KEYBOARD WHEN BUTTON WAS PRESSED
         
@@ -1551,6 +1569,8 @@ import Foundation
     
     @IBAction func clearButton(_ sender: UIButton) {
         
+        clickSound()
+        
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.currency
         numberFormatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
@@ -1592,7 +1612,26 @@ import Foundation
     
     @IBAction func aboutButton(_ sender: UIButton) {
         
+       
         self.performSegue(withIdentifier: "view2", sender: self.navigationController)
+        
+    }
+    
+    
+    //CLICK SOUND FUNC
+    
+    func clickSound(){
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
         
     }
     

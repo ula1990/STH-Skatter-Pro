@@ -7,15 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StartWindow: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
 
     @IBAction func startButton(_ sender: Any) {
         self.performSegue(withIdentifier: "start", sender: navigationController)
+        clickSound()
+        
     }
     @IBAction func tutorialButton(_ sender: Any) {
         
         performSegue(withIdentifier: "tutorial", sender: navigationController)
+        
+        clickSound()
+    }
+    
+    //FUNCTION OF THE SOUND FOR BUTTONS
+    
+    func clickSound(){
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -23,6 +47,8 @@ class StartWindow: UIViewController {
         
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
+        
+        
 
         
         //CONFIGURE NAVIGATION CONTROLLER

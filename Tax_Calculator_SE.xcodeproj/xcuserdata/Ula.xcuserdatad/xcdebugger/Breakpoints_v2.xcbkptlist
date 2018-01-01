@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax_Calculator_SE/MainWindow.swift"
-            timestampString = "534984411.912566"
+            timestampString = "536537687.944934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1511"
-            endingLineNumber = "1511"
+            startingLineNumber = "1529"
+            endingLineNumber = "1529"
             landmarkName = "calculateAmount(_:)"
             landmarkType = "7">
          </BreakpointContent>

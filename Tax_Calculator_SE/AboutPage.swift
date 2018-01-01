@@ -8,8 +8,12 @@
 
 import UIKit
 import MessageUI
+import AVFoundation
 
 @objc class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
+    
+    var audioPlayer = AVAudioPlayer()
 
     @IBOutlet weak var aboutLbl: UILabel!
     @IBOutlet weak var createdlbl: UILabel!
@@ -33,6 +37,9 @@ import MessageUI
     //FacebookButton
     
     @IBAction func facebookButton(_ sender: Any) {
+        
+        clickSound()
+        
        openButtonUrl(urlStr: "https://www.facebook.com/sthtaxes")
         
     }
@@ -40,6 +47,9 @@ import MessageUI
     
   //Twitter Button
     @IBAction func twitterButton(_ sender: Any) {
+        
+        clickSound()
+        
         openButtonUrl(urlStr: "https://twitter.com/TaxesSth")
     }
     
@@ -54,6 +64,8 @@ import MessageUI
     
     
     @IBAction func sendEmail(_ sender: Any) {
+        
+        clickSound()
         let mailComposeViewController = configureMailController()
         if MFMailComposeViewController.canSendMail(){
         self.present(mailComposeViewController, animated: true, completion: nil)
@@ -86,9 +98,31 @@ import MessageUI
     }
         
     @IBAction func tutorialFromAbout(_ sender: Any) {
+        
+        clickSound()
         self.performSegue(withIdentifier: "TutorialAbout", sender: navigationController)
         
     }
+    
+    //CLICK SOUND FUNC
+    
+    func clickSound(){
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
+        
+    }
+    
+    
+    
     
     override var prefersStatusBarHidden: Bool
     {
