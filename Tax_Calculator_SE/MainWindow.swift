@@ -55,9 +55,18 @@ import AVFoundation
     
     @IBOutlet weak var fiveCompBut: UIButton!
     
+    @IBOutlet weak var sixthCompBut: UIButton!
+    
+    @IBOutlet weak var seventhCompBut: UIButton!
+    
+    
+    
+    
+    
+    
+    
+    
     var audioPlayer = AVAudioPlayer()
-    
-    
 
 //URLs FOR COMPANIES BUTTONS
     
@@ -65,83 +74,107 @@ import AVFoundation
         
         clickSound()
         
-        if (Int(inputField.text!))! >= 35000 {
-            
-            openCareerUrl(urlStr: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/")
-            
-            
-            
-        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000
-        {
-            openCareerUrl(urlStr: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html")
-            
-            
-        }
-        else{
-            openCareerUrl(urlStr: "https://www.nordea.com/en/career/")
-        }
+        updateButtonLink(firstLink: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/",
+                         secondLink: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html",
+                         thirdLink: "https://www.nordea.com/en/career/")
         
     }
 
     @IBAction func secondCompBut(_ sender: Any) {
          clickSound()
-        
-        if (Int(inputField.text!))! >= 35000 {
-            
-            openCareerUrl(urlStr: "https://www.swedbank.com/work-with-us/job-openings/index.htm")
-            
-        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
-                
-                 openCareerUrl(urlStr: "https://www.uber.com/en-SE/careers/")
-        }else{
-            openCareerUrl(urlStr: "https://www.mcdonalds.com/se/sv-se/jobb/sok-jobb.html")
-        }
+        updateButtonLink(firstLink: "https://www.swedbank.com/work-with-us/job-openings/index.htm",
+                         secondLink: "https://www.uber.com/en-SE/careers/",
+                         thirdLink: "https://www.mcdonalds.com/se/sv-se/jobb/sok-jobb.html")
     }
 
     @IBAction func thirdCompBut(_ sender: Any) {
         
          clickSound()
         
-        if (Int(inputField.text!))! >= 35000 {
-         openCareerUrl(urlStr: "https://www.spotifyjobs.com/")
-            
-        }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
-        
-        openCareerUrl(urlStr: "https://www.hemkop.se/jobb")
-        }else{
-            
-            openCareerUrl(urlStr: "https://burgerking.se/jobb")
-        }
-        
+        updateButtonLink(firstLink: "https://www.spotifyjobs.com/",
+                         secondLink: "https://www.hemkop.se/jobb",
+                         thirdLink: "https://burgerking.se/jobb")
     }
 
     @IBAction func fourCompBut(_ sender: Any) {
         
          clickSound()
-        
-               if (Int(inputField.text!))! >= 35000 {
-        openCareerUrl(urlStr: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home" )
-               }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
-              openCareerUrl(urlStr: "https://www.blocket.career/jobs" )
-                
-               }else{
-                openCareerUrl(urlStr: "https://polisen.se/Aktuellt/Lediga-jobb/" )
-        }
+        updateButtonLink(firstLink: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home",
+                         secondLink: "https://www.blocket.career/jobs",
+                         thirdLink: "https://polisen.se/Aktuellt/Lediga-jobb/")
+
     }
 
     @IBAction func fiveCompBut(_ sender: Any) {
-        
          clickSound()
+        updateButtonLink(firstLink: "https://careers.google.com/locations/",
+                         secondLink: "https://www.ge.com/se/careers",
+                         thirdLink: "https://www.uber.com/info/careers/eats/")
+    }
+    
+    @IBAction func sixthBut(_ sender: Any) {
+        clickSound()
+        updateButtonLink(firstLink: "https://careers.microsoft.com/",
+                         secondLink: "https://saabgroup.com/career/vacancies/",
+                         thirdLink: "https://career.hm.com/content/hmcareer/en_se/findjob.html")
+        
+        
+        
+    }
+    
+    
+    @IBAction func seventhBut(_ sender: Any) {
+        clickSound()
+        updateButtonLink(firstLink: "https://careers.microsoft.com/skype",
+                         secondLink: "https://www.sasgroup.net/en/category/career/",
+                         thirdLink: "https://www.circlek.se/sv_SE/pg1334072537742/privat/Jobba-hos-oss/circlek-lediga-jobb.html")
+    }
+    
+    
+    
+    
+    //FUNCTION TO UPDATE THE LINKS OF THE BUTTONS
+    
+    func updateButtonLink(firstLink: String, secondLink:String, thirdLink: String){
         
         if (Int(inputField.text!))! >= 35000 {
-        openCareerUrl(urlStr: "https://careers.google.com/locations/")
+            openCareerUrl(urlStr: firstLink)
         }else if (Int(inputField.text!))! < 35000 && (Int(inputField.text!))! >= 24000{
-            openCareerUrl(urlStr: "https://www.ge.com/se/careers")
+            openCareerUrl(urlStr: secondLink)
         }else{
             
-            openCareerUrl(urlStr: "https://www.uber.com/info/careers/eats/")
+            openCareerUrl(urlStr: thirdLink)
         }
+        
     }
+    
+    func updateButtonImage(image1: UIImage,
+                           image2: UIImage,
+                           image3: UIImage,
+                           image4: UIImage,
+                           image5: UIImage,
+                           image6: UIImage,
+                           image7: UIImage
+                           ){
+        
+        self.firstCompBut.isHidden = false
+        self.firstCompBut.setBackgroundImage(image1, for: .normal)
+        self.secondCompBut.isHidden = false
+        self.secondCompBut.setBackgroundImage(image2, for: .normal)
+        self.thirdCompBut.isHidden = false
+        self.thirdCompBut.setBackgroundImage(image3, for: .normal)
+        self.fourCompBut.isHidden = false
+        self.fourCompBut.setBackgroundImage(image4, for: .normal)
+        self.fiveCompBut.isHidden = false
+        self.fiveCompBut.setBackgroundImage(image5, for: .normal)
+        self.sixthCompBut.isHidden = false
+        self.sixthCompBut.setImage(image6, for: .normal)
+        self.seventhCompBut.isHidden = false
+        self.seventhCompBut.setBackgroundImage(image7, for: .normal)
+
+    }
+    
+    
     //SHARE BUTTON
     
     @IBAction func shareButton(_ sender: Any) {
@@ -180,6 +213,8 @@ import AVFoundation
     let thirdCompB = "thirdCompB"
     let fourCompB = "fourCompB"
     let fiveCompB = "fiveCompB"
+    let sixthB = "sixthB"
+    let seventhB = "seventhB"
     let mSL = "mSL"
     let outputL = "outputL"
     let taxL = "taxL"
@@ -204,18 +239,19 @@ import AVFoundation
        //PROCEDURE FOR ICONS
                             let amount = (Int(inputField.text!))!
                             
+                        
+                            
+                            
                             if amount >= 35000 {
-                                self.firstCompBut.isHidden = false
-                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "tradedoubler"), for: .normal)
-                                self.secondCompBut.isHidden = false
-                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "swedbank"), for: .normal)
-                                self.thirdCompBut.isHidden = false
-                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "spotifyIcon"), for: .normal)
-                                self.fourCompBut.isHidden = false
-                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "volvo"), for: .normal)
-                                self.fiveCompBut.isHidden = false
-                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "google"), for: .normal)
+                                
+                                updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotifyIcon"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
+                                
+                                
                             }else if amount < 35000 && amount >= 24000 {
+                                
+                                updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "social") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "sas"))
+                                
+                         /*
                                 self.firstCompBut.isHidden = false
                                 self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "ikea"), for: .normal)
                                 self.secondCompBut.isHidden = false
@@ -225,9 +261,14 @@ import AVFoundation
                                 self.fourCompBut.isHidden = false
                                 self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "blocket"), for: .normal)
                                 self.fiveCompBut.isHidden = false
-                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ge"), for: .normal)
+                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ge"), for: .normal) */
+                                
                             }else if amount < 24000 && amount >= 1{
-                                self.firstCompBut.isHidden = false
+                                
+                                updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "burger"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "ubereats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "circleK") )
+                                
+                                
+                           /*     self.firstCompBut.isHidden = false
                                 self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "nordea"), for: .normal)
                                 self.secondCompBut.isHidden = false
                                 self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "mc"), for: .normal)
@@ -237,6 +278,8 @@ import AVFoundation
                                 self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "polisen"), for: .normal)
                                 self.fiveCompBut.isHidden = false
                                 self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ubereats"), for: .normal)
+ */
+ 
                             }else{
                                 
                                 self.firstCompBut.isHidden = true
@@ -1728,6 +1771,7 @@ import AVFoundation
         //CONFIGURE NAVIGATION CONTROLLER
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
   
 
         // Do any additional setup after loading the view, typically from a nib.

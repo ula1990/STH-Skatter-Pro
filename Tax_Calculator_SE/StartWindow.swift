@@ -11,6 +11,12 @@ import AVFoundation
 
 class StartWindow: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var startBut: UIButton!
+    
+    
+    
     var audioPlayer = AVAudioPlayer()
 
     @IBAction func startButton(_ sender: Any) {
@@ -45,16 +51,37 @@ class StartWindow: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        welcomeLabel.alpha = 0
+        nameLabel.alpha = 0
+        startBut.alpha = 0
+        
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
-        
-        
 
-        
         //CONFIGURE NAVIGATION CONTROLLER
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.welcomeLabel.alpha = 0.9
+        }, completion: {(true) in
+            UIView.animate(withDuration: 1, animations: {
+                self.nameLabel.alpha = 0.9
+            }, completion: {(true) in
+                
+                UIView.animate(withDuration: 1, animations: {
+                    self.startBut.alpha = 1
+                }, completion: {(true) in })
+                
+            })
+            
+        })
     }
 
     override func didReceiveMemoryWarning() {

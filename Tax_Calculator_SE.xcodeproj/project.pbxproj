@@ -18,6 +18,7 @@
 		7558F8F21F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
 		7558F8F31F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
 		75A742161F61548F00A7E932 /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A742151F61548F00A7E932 /* MailButton.swift */; };
+		75C70DDA2006ADE0002B7AE4 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75C70DD92006ADE0002B7AE4 /* click.mp3 */; };
 		75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864A81F12CF7400661E82 /* AppDelegate.swift */; };
 		75C864AB1F12CF7400661E82 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864AA1F12CF7400661E82 /* MainWindow.swift */; };
 		75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864AC1F12CF7400661E82 /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */; };
 		75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864BD1F12CF7400661E82 /* Tax_Calculator_SETests.swift */; };
 		75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */; };
-		75F4195A1FFAE4F400463BA6 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75F419591FFAE4F400463BA6 /* click.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		7558F8D01F5EA36000F56E71 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundlabel.swift; sourceTree = "<group>"; };
 		75A742151F61548F00A7E932 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
+		75C70DD92006ADE0002B7AE4 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		75C864A51F12CF7400661E82 /* Tax_Calculator_SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tax_Calculator_SE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C864A81F12CF7400661E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C864AA1F12CF7400661E82 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Calculator_SEUITests.swift; sourceTree = "<group>"; };
 		75C864CA1F12CF7400661E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C865011F13AD8600661E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		75F419591FFAE4F400463BA6 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75C70DDB2006ADFB002B7AE4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				75C70DD92006ADE0002B7AE4 /* click.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		75C8649C1F12CF7400661E82 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +135,7 @@
 				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
 				75C864B41F12CF7400661E82 /* Info.plist */,
-				75F4195B1FFAE50600463BA6 /* Sounds */,
+				75C70DDB2006ADFB002B7AE4 /* Sounds */,
 				75F419581FFAE47F00463BA6 /* SubClasses */,
 			);
 			path = Tax_Calculator_SE;
@@ -160,14 +168,6 @@
 				75A742151F61548F00A7E932 /* MailButton.swift */,
 			);
 			path = SubClasses;
-			sourceTree = "<group>";
-		};
-		75F4195B1FFAE50600463BA6 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				75F419591FFAE4F400463BA6 /* click.mp3 */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C70DDA2006ADE0002B7AE4 /* click.mp3 in Resources */,
 				75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */,
 				75C864B01F12CF7400661E82 /* Assets.xcassets in Resources */,
-				75F4195A1FFAE4F400463BA6 /* click.mp3 in Resources */,
 				75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.skatterpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
 				INFOPLIST_FILE = Tax_Calculator_SE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uladzislau.daratsiuk.skatterpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";

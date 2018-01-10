@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import AVFoundation
+import StoreKit
 
 @objc class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -72,6 +73,20 @@ import AVFoundation
         }else{
         showMailError()}
             }
+    
+    //REVIEW BUTTON
+    
+    @IBAction func rateButton(_ sender: Any) {
+        
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            print("error")
+        }
+        
+    }
+    
+    
     //CONFIGURE EMAIL
         func configureMailController()-> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
