@@ -59,13 +59,6 @@ import AVFoundation
     
     @IBOutlet weak var seventhCompBut: UIButton!
     
-    
-    
-    
-    
-    
-    
-    
     var audioPlayer = AVAudioPlayer()
 
 //URLs FOR COMPANIES BUTTONS
@@ -174,6 +167,33 @@ import AVFoundation
 
     }
     
+    func hideCompButtons(){
+
+        self.firstCompBut.isHidden = true
+        self.secondCompBut.isHidden = true
+        self.thirdCompBut.isHidden = true
+        self.fourCompBut.isHidden = true
+        self.fiveCompBut.isHidden = true
+        self.sixthCompBut.isHidden = true
+        self.seventhCompBut.isHidden = true
+        
+    }
+    
+    //FUNC TO SAVE DEFAULTS FOR LABELS
+    
+    func defaultsSaveForLabels(){
+        defaults.set(output.text!, forKey: outputL)
+        defaults.set(taxLbl.text!, forKey: taxL)
+        defaults.set(addInfo.text!, forKey: addI)
+        defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
+        defaults.set(self.dollarLbl.text!, forKey: dollarL)
+        defaults.set(self.eurLbl.text!, forKey: eurL)
+        defaults.set(self.canadaLbl.text!, forKey: canadaL)
+        defaults.set(self.poundLbl.text!, forKey: poundL)
+        defaults.set(self.liraLbl.text!, forKey: liraL)
+        defaults.set(self.yenLbl.text!, forKey: yenL)
+    }
+    
     
     //SHARE BUTTON
     
@@ -238,55 +258,23 @@ import AVFoundation
                         if (((inputField.text?.count )! < 6) && inputField.text != ""){
        //PROCEDURE FOR ICONS
                             let amount = (Int(inputField.text!))!
-                            
-                        
-                            
-                            
+   
                             if amount >= 35000 {
                                 
                                 updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotifyIcon"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
-                                
                                 
                             }else if amount < 35000 && amount >= 24000 {
                                 
                                 updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "social") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "sas"))
                                 
-                         /*
-                                self.firstCompBut.isHidden = false
-                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "ikea"), for: .normal)
-                                self.secondCompBut.isHidden = false
-                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "social"), for: .normal)
-                                self.thirdCompBut.isHidden = false
-                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "hemkop"), for: .normal)
-                                self.fourCompBut.isHidden = false
-                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "blocket"), for: .normal)
-                                self.fiveCompBut.isHidden = false
-                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ge"), for: .normal) */
                                 
                             }else if amount < 24000 && amount >= 1{
                                 
                                 updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "burger"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "ubereats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "circleK") )
-                                
-                                
-                           /*     self.firstCompBut.isHidden = false
-                                self.firstCompBut.setBackgroundImage(#imageLiteral(resourceName: "nordea"), for: .normal)
-                                self.secondCompBut.isHidden = false
-                                self.secondCompBut.setBackgroundImage(#imageLiteral(resourceName: "mc"), for: .normal)
-                                self.thirdCompBut.isHidden = false
-                                self.thirdCompBut.setBackgroundImage(#imageLiteral(resourceName: "burger"), for: .normal)
-                                self.fourCompBut.isHidden = false
-                                self.fourCompBut.setBackgroundImage(#imageLiteral(resourceName: "polisen"), for: .normal)
-                                self.fiveCompBut.isHidden = false
-                                self.fiveCompBut.setBackgroundImage(#imageLiteral(resourceName: "ubereats"), for: .normal)
- */
  
                             }else{
                                 
-                                self.firstCompBut.isHidden = true
-                                self.secondCompBut.isHidden = true
-                                self.thirdCompBut.isHidden = true
-                                self.fourCompBut.isHidden = true
-                                self.fiveCompBut.isHidden = true
+                                hideCompButtons()
                                 
                             }
 
@@ -1568,9 +1556,6 @@ import AVFoundation
                             output.text = numberFormatter.string (from: NSNumber(value:(sum())))
                             taxLbl.text = numberFormatter.string (from: NSNumber(value:(sumTax())))
                             addInfo.text = numberFormatter.string (from: NSNumber(value:(12*Int(inputField.text!)!)))!
-                            defaults.set(output.text!, forKey: outputL)
-                            defaults.set(taxLbl.text!, forKey: taxL)
-                            defaults.set(addInfo.text!, forKey: addI)
                             dollarLbl.text = String(0.12*Double(inputField.text!)!) + " USD"
                             canadaLbl.text = String(0.15*Double(inputField.text!)!) + " CAD"
                             eurLbl.text = String(0.10*Double(inputField.text!)!) + " EUR"
@@ -1578,28 +1563,18 @@ import AVFoundation
                             liraLbl.text = String(45.39*Double(inputField.text!)!) + " TRY"
                             yenLbl.text = String(13.40*Double(inputField.text!)!) + " JPY"
                             middleSalaryLbl.text = "Average salary in:"
-                            defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
-                            defaults.set(self.dollarLbl.text!, forKey: dollarL)
-                            defaults.set(self.eurLbl.text!, forKey: eurL)
-                            defaults.set(self.canadaLbl.text!, forKey: canadaL)
-                            defaults.set(self.poundLbl.text!, forKey: poundL)
-                            defaults.set(self.liraLbl.text!, forKey: liraL)
-                            defaults.set(self.yenLbl.text!, forKey: yenL)
+                            defaultsSaveForLabels()
                             
                             
                            
                     }
                         else{
                             middleSalaryLbl.text = "Incorrect amount"
-                            self.firstCompBut.isHidden = true
+                            hideCompButtons()
                             defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
-                            self.secondCompBut.isHidden = true
                             defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
-                            self.thirdCompBut.isHidden = true
                             defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
-                            self.fourCompBut.isHidden = true
                             defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-                            self.fiveCompBut.isHidden = true
                             defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
                             defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
                             
@@ -1630,21 +1605,8 @@ import AVFoundation
         yenLbl.text = ""
         inputField.text = ""
         middleSalaryLbl.text = "Average salary in:"
-        self.firstCompBut.isHidden = true
-        self.secondCompBut.isHidden = true
-        self.thirdCompBut.isHidden = true
-        self.fourCompBut.isHidden = true
-        self.fiveCompBut.isHidden = true
-       
-        defaults.set(output.text!, forKey: outputL)
-        defaults.set(taxLbl.text!, forKey: taxL)
-        defaults.set(addInfo.text!, forKey: addI)
-        defaults.set(self.dollarLbl.text!, forKey: dollarL)
-        defaults.set(self.eurLbl.text!, forKey: eurL)
-        defaults.set(self.canadaLbl.text!, forKey: canadaL)
-        defaults.set(self.poundLbl.text!, forKey: poundL)
-        defaults.set(self.liraLbl.text!, forKey: liraL)
-        defaults.set(self.yenLbl.text!, forKey: yenL)
+        hideCompButtons()
+        defaultsSaveForLabels()
         defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
         defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
         defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
@@ -1654,13 +1616,9 @@ import AVFoundation
     }
     
     @IBAction func aboutButton(_ sender: UIButton) {
-        
-       
         self.performSegue(withIdentifier: "view2", sender: self.navigationController)
         
     }
-    
-    
     //CLICK SOUND FUNC
     
     func clickSound(){
