@@ -68,14 +68,14 @@ class StartWindow: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.welcomeLabel.alpha = 0.9
         }, completion: {(true) in
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.nameLabel.alpha = 0.9
             }, completion: {(true) in
                 
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.startBut.alpha = 1
                 }, completion: {(true) in })
                 

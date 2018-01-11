@@ -60,6 +60,9 @@ import AVFoundation
     @IBOutlet weak var seventhCompBut: UIButton!
     
     var audioPlayer = AVAudioPlayer()
+    
+    
+    
 
 //URLs FOR COMPANIES BUTTONS
     
@@ -150,22 +153,65 @@ import AVFoundation
                            image7: UIImage
                            ){
         
+        firstCompBut.alpha = 0
+        secondCompBut.alpha = 0
+        thirdCompBut.alpha = 0
+        fourCompBut.alpha = 0
+        fiveCompBut.alpha = 0
+        sixthCompBut.alpha = 0
+        seventhCompBut.alpha = 0
+        
+        
+        
         self.firstCompBut.isHidden = false
-        self.firstCompBut.setBackgroundImage(image1, for: .normal)
         self.secondCompBut.isHidden = false
-        self.secondCompBut.setBackgroundImage(image2, for: .normal)
         self.thirdCompBut.isHidden = false
-        self.thirdCompBut.setBackgroundImage(image3, for: .normal)
         self.fourCompBut.isHidden = false
-        self.fourCompBut.setBackgroundImage(image4, for: .normal)
         self.fiveCompBut.isHidden = false
-        self.fiveCompBut.setBackgroundImage(image5, for: .normal)
         self.sixthCompBut.isHidden = false
-        self.sixthCompBut.setImage(image6, for: .normal)
         self.seventhCompBut.isHidden = false
+        
+
+        
+     UIView.animate(withDuration: 0.5, animations: {
+            self.firstCompBut.alpha = 1
+        }, completion: {(true) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.fiveCompBut.alpha = 1
+            }, completion: {(true) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.thirdCompBut.alpha = 1 }, completion: {(true) in
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.seventhCompBut.alpha = 1
+                        }, completion: {(true) in
+                            UIView.animate(withDuration: 0.5, animations: {
+                                self.secondCompBut.alpha = 1
+                            }, completion: {(true) in
+                                UIView.animate(withDuration: 0.5, animations: {
+                                    self.fourCompBut.alpha = 1
+                                }, completion: {(true) in
+                                    UIView.animate(withDuration: 0.5, animations: {
+                                        self.sixthCompBut.alpha = 1
+                                    }, completion: {(true) in })
+                                })
+                            })
+                        })
+                })
+            })
+            
+        })
+        
+        self.firstCompBut.setBackgroundImage(image1, for: .normal)
+        self.secondCompBut.setBackgroundImage(image2, for: .normal)
+        self.thirdCompBut.setBackgroundImage(image3, for: .normal)
+        self.fourCompBut.setBackgroundImage(image4, for: .normal)
+        self.fiveCompBut.setBackgroundImage(image5, for: .normal)
+        self.sixthCompBut.setBackgroundImage(image6, for: .normal)
         self.seventhCompBut.setBackgroundImage(image7, for: .normal)
 
     }
+    
+    
     
     func hideCompButtons(){
 
@@ -215,7 +261,7 @@ import AVFoundation
         }
         
     }
-    //PART0 Coefficients for Netto and Tax
+    //PART0 RATES FOR NETTO AND TAX
 
     var taxPercent = [0.15528, 0.15969, 0.16370, 0.1674,0.170,0.1742,0.1772, 0.180125,0.1827,0.18529,0.187714,0.18994,0.19205,0.19410,0.196,0.1978,0.19956,0.20119,0.20274,0.20427,0.20568,0.20704,0.20838,0.209625,0.210857,0.212,0.21309,0.2141,0.21520,0.216185,0.217163,0.21807,0.21894,0.219827,0.22064,0.221433,0.22236,0.223645,0.22488,0.22609,0.227230,0.22836,0.229462,0.230529,0.231536,0.23254,0.2335211,0.2344722,0.23536,0.23627,0.237146,0.239710,0.24309,0.246410,0.24964,0.2528,0.255851,0.25885,0.261783,0.26464,0.267411,0.270139,0.27280,0.275409,0.2779325,0.280422,0.28285,0.28523,0.2875483,0.28982,0.292063,0.29425,0.296371,0.2984693,0.30052,0.30254,0.304495,0.306431,0.308330,0.310192,0.312,0.31379,0.31555,0.317277,0.319137,0.3212545,0.32331,0.32535,0.3273628,0.32933,0.331252,0.333155,0.335025,0.3368644,0.338655,0.340433,0.34218,0.343901,0.345577,0.347241,0.34888,0.35049,0.352062,0.353625,0.3551627,0.356676,0.35815,0.3596212,0.361067,0.3624925,0.3638814,0.365264,0.366627,0.3679710,0.36928,0.37058,0.3718723,0.3731408,0.374377,0.375611,0.376827,0.378027,0.37919,0.380364,0.381516,0.38265,0.38376,0.38486,0.38596,0.387038,0.3880903,0.38914,0.39017,0.39120,0.392201,0.3932,0.394186,0.395160,0.3961104,0.39706,0.398,0.39892,0.39983,0.400738,0.401633,0.402517,0.4033801,0.40424,0.4050982,0.405942,0.406765,0.4075909,0.408406,0.409213,0.41,0.410788,0.411569,0.41234,0.413092,0.41384,0.41459,0.41533,0.416053,0.41677,0.41749,0.4182,0.41889,0.419583,0.420269,0.420948,0.421610,0.42227551,0.42293,0.42358,0.42422,0.42486,0.425492,0.426118]
     
@@ -1571,11 +1617,11 @@ import AVFoundation
                         else{
                             middleSalaryLbl.text = "Incorrect amount"
                             hideCompButtons()
-                            defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
+                         /*   defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
                             defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
                             defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
                             defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-                            defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
+                            defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB) */
                             defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
                             
         }
@@ -1608,11 +1654,11 @@ import AVFoundation
         hideCompButtons()
         defaultsSaveForLabels()
         defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
-        defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
+    /*    defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
         defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
         defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
         defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-        defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB)
+        defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB) */
     }
     
     @IBAction func aboutButton(_ sender: UIButton) {
