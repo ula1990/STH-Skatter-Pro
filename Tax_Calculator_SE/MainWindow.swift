@@ -161,8 +161,6 @@ import AVFoundation
         sixthCompBut.alpha = 0
         seventhCompBut.alpha = 0
         
-        
-        
         self.firstCompBut.isHidden = false
         self.secondCompBut.isHidden = false
         self.thirdCompBut.isHidden = false
@@ -173,24 +171,24 @@ import AVFoundation
         
 
         
-     UIView.animate(withDuration: 0.5, animations: {
+     UIView.animate(withDuration: 0.4, animations: {
             self.firstCompBut.alpha = 1
         }, completion: {(true) in
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.4, animations: {
                 self.fiveCompBut.alpha = 1
             }, completion: {(true) in
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
                     self.thirdCompBut.alpha = 1 }, completion: {(true) in
-                        UIView.animate(withDuration: 0.5, animations: {
+                        UIView.animate(withDuration: 0.4, animations: {
                             self.seventhCompBut.alpha = 1
                         }, completion: {(true) in
-                            UIView.animate(withDuration: 0.5, animations: {
+                            UIView.animate(withDuration: 0.4, animations: {
                                 self.secondCompBut.alpha = 1
                             }, completion: {(true) in
-                                UIView.animate(withDuration: 0.5, animations: {
+                                UIView.animate(withDuration: 0.4, animations: {
                                     self.fourCompBut.alpha = 1
                                 }, completion: {(true) in
-                                    UIView.animate(withDuration: 0.5, animations: {
+                                    UIView.animate(withDuration: 0.4, animations: {
                                         self.sixthCompBut.alpha = 1
                                     }, completion: {(true) in })
                                 })
