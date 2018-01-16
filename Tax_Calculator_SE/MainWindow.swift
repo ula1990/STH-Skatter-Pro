@@ -1684,6 +1684,8 @@ import AVFoundation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
        
         if let outputLb = defaults.value(forKey: outputL){
             output.text = outputLb as? String
