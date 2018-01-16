@@ -171,24 +171,24 @@ import AVFoundation
         
 
         
-     UIView.animate(withDuration: 0.4, animations: {
+     UIView.animate(withDuration: 0.3, animations: {
             self.firstCompBut.alpha = 1
         }, completion: {(true) in
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.fiveCompBut.alpha = 1
             }, completion: {(true) in
-                UIView.animate(withDuration: 0.4, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     self.thirdCompBut.alpha = 1 }, completion: {(true) in
-                        UIView.animate(withDuration: 0.4, animations: {
+                        UIView.animate(withDuration: 0.3, animations: {
                             self.seventhCompBut.alpha = 1
                         }, completion: {(true) in
-                            UIView.animate(withDuration: 0.4, animations: {
+                            UIView.animate(withDuration: 0.3, animations: {
                                 self.secondCompBut.alpha = 1
                             }, completion: {(true) in
-                                UIView.animate(withDuration: 0.4, animations: {
+                                UIView.animate(withDuration: 0.3, animations: {
                                     self.fourCompBut.alpha = 1
                                 }, completion: {(true) in
-                                    UIView.animate(withDuration: 0.4, animations: {
+                                    UIView.animate(withDuration: 0.3, animations: {
                                         self.sixthCompBut.alpha = 1
                                     }, completion: {(true) in })
                                 })
@@ -1615,20 +1615,11 @@ import AVFoundation
                         else{
                             middleSalaryLbl.text = "Incorrect amount"
                             hideCompButtons()
-                         /*   defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
-                            defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
-                            defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
-                            defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-                            defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB) */
                             defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
                             
         }
     }
-    
 
-    
-//Clear Button
-    
     @IBAction func clearButton(_ sender: UIButton) {
         
         clickSound()
@@ -1652,11 +1643,7 @@ import AVFoundation
         hideCompButtons()
         defaultsSaveForLabels()
         defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
-    /*    defaults.set(self.firstCompBut.isHidden, forKey: firstCompB)
-        defaults.set(self.secondCompBut.isHidden, forKey: secondCompB)
-        defaults.set(self.thirdCompBut.isHidden, forKey: thirdCompB)
-        defaults.set(self.fourCompBut.isHidden, forKey: fourCompB)
-        defaults.set(self.fiveCompBut.isHidden, forKey: fiveCompB) */
+
     }
     
     @IBAction func aboutButton(_ sender: UIButton) {
