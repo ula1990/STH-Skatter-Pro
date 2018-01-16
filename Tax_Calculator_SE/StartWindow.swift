@@ -7,51 +7,33 @@
 //
 
 import UIKit
-import AVFoundation
 
 class StartWindow: UIViewController {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var startBut: UIButton!
     
     
+
     
-    var audioPlayer = AVAudioPlayer()
 
     @IBAction func startButton(_ sender: Any) {
         self.performSegue(withIdentifier: "start", sender: navigationController)
-        clickSound()
-        
+
     }
     @IBAction func tutorialButton(_ sender: Any) {
         
         performSegue(withIdentifier: "tutorial", sender: navigationController)
-        
-        clickSound()
     }
     
-    //FUNCTION OF THE SOUND FOR BUTTONS
-    
-    func clickSound(){
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
-            
-            
-        }catch {
-            
-            print(error)
-            
-        }
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.alpha = 0
+        
+        startBut.layer.shadowOpacity = 1
+        startBut.layer.shadowRadius = 6
         nameLabel.alpha = 0
         startBut.alpha = 0
         
@@ -66,11 +48,10 @@ class StartWindow: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+  
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.5, animations: {
-            self.welcomeLabel.alpha = 0.9
-        }, completion: {(true) in
+        
             UIView.animate(withDuration: 0.5, animations: {
                 self.nameLabel.alpha = 0.9
             }, completion: {(true) in
@@ -80,8 +61,7 @@ class StartWindow: UIViewController {
                 }, completion: {(true) in })
                 
             })
-            
-        })
+
     }
 
     override func didReceiveMemoryWarning() {

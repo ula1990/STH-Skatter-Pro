@@ -10,9 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-            <string>HelveticaNeue-UltraLight</string>
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+        <array key="Optima.ttc">
+            <string>Optima-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -28,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6Hx-GD-r18">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1ab7fa426cdd753fa0b6795054e56f11" translatesAutoresizingMaskIntoConstraints="NO" id="6Hx-GD-r18">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urO-3k-Wiv" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
@@ -125,14 +127,14 @@
                                     <action selector="fiveCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stQ-4Q-0JP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net pay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-7H-ElE" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="14" y="199" width="95" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Net pay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-7H-ElE" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
+                                <rect key="frame" x="14" y="199" width="105" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="0vD-pN-tVO"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="105" id="0vD-pN-tVO"/>
                                     <constraint firstAttribute="height" constant="31" id="ppj-xE-H9c"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -145,7 +147,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-SN-Exy" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
                                 <rect key="frame" x="155" y="148" width="160" height="31"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -158,13 +160,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual inc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-BE-SbM" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="14" y="250" width="124" height="31"/>
+                                <rect key="frame" x="14" y="250" width="129" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="RBq-fy-rfC"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="135" id="Xhb-Dv-Z77"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -177,7 +179,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Wz-92M" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
                                 <rect key="frame" x="155" y="245" width="160" height="31"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -190,23 +192,22 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Income in kr." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-py-MBU" customClass="LimitLenght" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="85" y="98" width="150" height="30"/>
+                                <rect key="frame" x="85" y="98" width="151" height="30"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.09669306506849315" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Z3-Gz-is8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="VFX-cE-ZcK"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" smartInsertDeleteType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your income:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ5-gX-gUq">
-                                <rect key="frame" x="70.5" y="72" width="179" height="18"/>
+                                <rect key="frame" x="68" y="72" width="185" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="J4W-fU-5Bf"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="183" id="WBb-CK-W1A"/>
+                                    <constraint firstAttribute="height" constant="18" id="hld-4J-jFn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -216,8 +217,8 @@
                                     <constraint firstAttribute="height" constant="31" id="JzT-x8-Cs6"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="T7T-43-wuK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -234,7 +235,7 @@
                                     <constraint firstAttribute="height" constant="31" id="4VC-pN-RQK"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hH2-D8-vPY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -266,7 +267,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-zA-aiy">
-                                <rect key="frame" x="242" y="96" width="35" height="35"/>
+                                <rect key="frame" x="243" y="96" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="KVl-AR-wcu"/>
                                     <constraint firstAttribute="width" constant="35" id="Vp8-nx-D1J"/>
@@ -281,7 +282,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="YUl-Gm-p93"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -293,7 +294,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-7g-dTZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-7g-dTZ">
                                 <rect key="frame" x="43" y="96" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="aMC-aZ-DY9"/>
@@ -334,7 +335,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="4IP-kA-4r3"/>
                                     <constraint firstAttribute="height" constant="30" id="jza-hO-7Zi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -346,7 +347,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="h9t-nM-GWJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="zh8-Hc-MsX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -360,7 +361,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="K8Z-Yf-G2l"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="VEt-G5-1FJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -370,7 +371,7 @@
                                     <constraint firstAttribute="height" constant="30" id="n60-GE-HkO"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="zWw-pu-gaO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -382,13 +383,13 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="jcQ-dE-nDy"/>
                                     <constraint firstAttribute="height" constant="30" id="tmX-Sk-I7p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urm-IE-d1G">
                                 <rect key="frame" x="208" y="378" width="110" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -444,11 +445,10 @@
                         <constraints>
                             <constraint firstItem="DkH-zV-Eqo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="0uI-bb-yUT"/>
                             <constraint firstItem="urO-3k-Wiv" firstAttribute="leading" secondItem="Li0-US-5F3" secondAttribute="trailing" constant="7" id="1F2-Bj-WSY"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OzT-7H-ElE" secondAttribute="trailing" constant="211" id="1bo-Kb-SE6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OzT-7H-ElE" secondAttribute="trailing" constant="201" id="1bo-Kb-SE6"/>
                             <constraint firstItem="Fsn-SN-Exy" firstAttribute="trailing" secondItem="rO4-vX-T7l" secondAttribute="trailing" id="1eu-3J-e1c"/>
                             <constraint firstItem="rLC-2T-LUL" firstAttribute="top" secondItem="nDt-Ys-90p" secondAttribute="bottom" constant="1" id="1lO-eB-ZIg"/>
                             <constraint firstItem="f55-08-EDe" firstAttribute="leading" secondItem="MSH-jK-ihf" secondAttribute="trailing" constant="7" id="2yj-rG-gPf"/>
-                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3bn-m6-tJX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="28U-v3-EJM" secondAttribute="trailing" id="3rv-OM-s3M"/>
                             <constraint firstItem="nDt-Ys-90p" firstAttribute="leading" secondItem="DkH-zV-Eqo" secondAttribute="trailing" constant="5" id="40Z-x1-bwq"/>
                             <constraint firstItem="Key-HO-Pk8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="14" id="4cd-B3-KeU"/>
@@ -475,7 +475,6 @@
                             <constraint firstItem="urO-3k-Wiv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nza-XD-GhP"/>
                             <constraint firstItem="Ycf-8U-LBr" firstAttribute="top" secondItem="13h-nS-sQF" secondAttribute="bottom" constant="1" id="OZM-Ot-hxZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r84-qy-gKC" secondAttribute="bottom" constant="10" id="PHV-aN-3tU"/>
-                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qp0-be-Eg9"/>
                             <constraint firstItem="Urm-IE-d1G" firstAttribute="leading" secondItem="lEf-hl-m6i" secondAttribute="leading" id="S8U-ck-Gw7"/>
                             <constraint firstItem="mRV-Qr-sbd" firstAttribute="top" secondItem="Je0-py-MBU" secondAttribute="bottom" constant="20" id="SWg-0B-v6N"/>
                             <constraint firstItem="OzT-7H-ElE" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="bottom" constant="20" id="Skb-ag-ey2"/>
@@ -485,10 +484,12 @@
                             <constraint firstAttribute="trailing" secondItem="lEf-hl-m6i" secondAttribute="trailing" constant="2" id="VyK-rc-KfP"/>
                             <constraint firstItem="Fsn-SN-Exy" firstAttribute="baseline" secondItem="mRV-Qr-sbd" secondAttribute="baseline" id="WN4-jv-921"/>
                             <constraint firstItem="Uhb-BE-SbM" firstAttribute="top" secondItem="OzT-7H-ElE" secondAttribute="bottom" constant="20" id="XST-GI-2bc"/>
+                            <constraint firstItem="Je0-py-MBU" firstAttribute="top" secondItem="IJ5-gX-gUq" secondAttribute="bottom" constant="8" symbolic="YES" id="XYn-Np-wWi"/>
                             <constraint firstItem="MSH-jK-ihf" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="XkA-PL-sUs"/>
                             <constraint firstItem="OzT-7H-ElE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="YUP-Zg-bE3"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Fsn-SN-Exy" secondAttribute="trailing" constant="-11" id="Ytw-dZ-xM7"/>
                             <constraint firstItem="Je0-py-MBU" firstAttribute="leading" secondItem="Wnr-7g-dTZ" secondAttribute="trailing" constant="7" id="Z7i-PR-jLR"/>
+                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="aLc-O6-uoV"/>
                             <constraint firstItem="28U-v3-EJM" firstAttribute="top" secondItem="ciK-Wz-92M" secondAttribute="bottom" constant="25" id="bS8-rz-7Jq"/>
                             <constraint firstItem="Je0-py-MBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1j-vg-HNA"/>
                             <constraint firstItem="Urm-IE-d1G" firstAttribute="leading" secondItem="13h-nS-sQF" secondAttribute="trailing" constant="1" id="coG-RM-1ht"/>
@@ -504,6 +505,7 @@
                             <constraint firstItem="ciK-Wz-92M" firstAttribute="top" secondItem="rO4-vX-T7l" secondAttribute="bottom" constant="17" id="keX-Ph-R4D"/>
                             <constraint firstItem="Uhb-BE-SbM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="lD8-HW-9hb"/>
                             <constraint firstItem="Jff-4L-MXS" firstAttribute="top" secondItem="DkH-zV-Eqo" secondAttribute="bottom" constant="1" id="my4-0X-y2D"/>
+                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="centerX" secondItem="Je0-py-MBU" secondAttribute="centerX" id="nLP-Y0-DSn"/>
                             <constraint firstItem="Urm-IE-d1G" firstAttribute="trailing" secondItem="lEf-hl-m6i" secondAttribute="trailing" id="pDE-aY-u7v"/>
                             <constraint firstItem="DkH-zV-Eqo" firstAttribute="top" secondItem="fCu-mx-1iI" secondAttribute="bottom" constant="1" id="q5v-gB-Zdj"/>
                             <constraint firstItem="St2-oQ-7Bo" firstAttribute="leading" secondItem="9RV-2N-qE1" secondAttribute="trailing" constant="7" id="r6o-YJ-QDb"/>
@@ -512,11 +514,9 @@
                             <constraint firstItem="f55-08-EDe" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="tSf-ah-4gY"/>
                             <constraint firstItem="Urm-IE-d1G" firstAttribute="top" secondItem="eQg-9S-XbP" secondAttribute="top" id="tWg-vw-5qj"/>
                             <constraint firstItem="28U-v3-EJM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVD-99-LQK"/>
-                            <constraint firstItem="Je0-py-MBU" firstAttribute="top" secondItem="IJ5-gX-gUq" secondAttribute="bottom" constant="8" id="uym-vN-nFp"/>
                             <constraint firstItem="kB9-ET-jpM" firstAttribute="leading" secondItem="urO-3k-Wiv" secondAttribute="trailing" constant="7" id="vcW-5J-2pt"/>
                             <constraint firstItem="rO4-vX-T7l" firstAttribute="trailing" secondItem="ciK-Wz-92M" secondAttribute="trailing" id="vrO-FS-det"/>
                             <constraint firstItem="Li0-US-5F3" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="w35-mL-UsT"/>
-                            <constraint firstItem="Wnr-7g-dTZ" firstAttribute="top" secondItem="IJ5-gX-gUq" secondAttribute="bottom" constant="6" id="wZE-Pq-4Zl"/>
                             <constraint firstItem="mRV-Qr-sbd" firstAttribute="leading" secondItem="OzT-7H-ElE" secondAttribute="leading" id="xCg-3S-kmI"/>
                             <constraint firstItem="Fsn-SN-Exy" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="top" id="yGc-8i-gSe"/>
                         </constraints>
@@ -573,17 +573,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" highlightedImage="background" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-Dm-oD6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1ab7fa426cdd753fa0b6795054e56f11" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-Dm-oD6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockholm is not your area? let us know if you want the same for your area." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-3C-Jkv">
-                                <rect key="frame" x="5" y="205.5" width="310" height="69"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="5" y="199" width="310" height="82"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="125" y="281.5" width="70" height="70"/>
+                                <rect key="frame" x="125" y="288" width="70" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878424657535" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="USq-BB-Fsb"/>
@@ -607,7 +607,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-TC-dV3" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="214" y="354.5" width="70" height="70"/>
+                                <rect key="frame" x="214" y="361" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1346586044520548" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Vaz-QH-QWi"/>
@@ -633,7 +633,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-2F-l9k" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="36" y="354.5" width="70" height="70"/>
+                                <rect key="frame" x="36" y="361" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.12815710616438356" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="RxT-Na-pJa"/>
@@ -659,30 +659,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uladzislau Daratsiuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-Kr-fdd">
-                                <rect key="frame" x="16" y="114.5" width="288" height="20"/>
+                                <rect key="frame" x="16" y="108" width="288" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="5QN-rm-3r3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gF-dd5">
-                                <rect key="frame" x="16" y="81.5" width="288" height="23"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="70.5" width="288" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-SQ-6cy">
-                                <rect key="frame" x="83" y="439" width="154" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Check out our tutorial"/>
+                                <rect key="frame" x="72.5" y="435" width="175" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Check out our tutorial">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="tutorialFromAbout:" destination="4al-CU-djJ" eventType="touchUpInside" id="xp8-Az-h7A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-rr-QO5" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="125" y="372.5" width="70" height="70"/>
+                                <rect key="frame" x="125" y="379" width="70" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878419999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="10V-fj-c1d"/>
@@ -761,49 +763,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-Ha-kNG">
-                                <rect key="frame" x="0.0" y="0.0" width="318.5" height="480"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1ab7fa426cdd753fa0b6795054e56f11" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-Ha-kNG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp9-si-nnY">
-                                <rect key="frame" x="83" y="427" width="154" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                <rect key="frame" x="72.5" y="430" width="175" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Check out our tutorial"/>
                                 <connections>
                                     <action selector="tutorialButton:" destination="02M-rW-obe" eventType="touchUpInside" id="bGL-OB-soU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkn-Mf-60I">
-                                <rect key="frame" x="75.5" y="72" width="169" height="41"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatter Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-vj-FIB">
-                                <rect key="frame" x="16" y="123" width="288" height="46"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="74" width="288" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.77260809075342463" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-AA-KWv" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="169" width="250" height="250"/>
-                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.18040988869863014" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="7" y="125" width="306" height="306"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.11231806506849315" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="465-zy-NEv"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="xAN-7c-BBb"/>
+                                    <constraint firstAttribute="height" constant="306" id="5xE-j3-2Js"/>
+                                    <constraint firstAttribute="width" constant="306" id="cNZ-uf-oYi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
                                 <state key="normal" title="Let's start..">
-                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.74796660958904104" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="125"/>
+                                        <real key="value" value="150"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.25163206335616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="1" alpha="0.049309717465753425" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -813,27 +809,27 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vkn-Mf-60I" firstAttribute="top" secondItem="tfB-Kb-OgT" secondAttribute="bottom" constant="8" id="0kg-I4-PFS"/>
+                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="top" secondItem="Xp7-cO-Hgk" secondAttribute="top" id="27Q-XS-qHv"/>
                             <constraint firstItem="WnJ-Ha-kNG" firstAttribute="top" secondItem="Xp7-cO-Hgk" secondAttribute="top" id="9ln-hr-zt9"/>
-                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerX" secondItem="lp9-si-nnY" secondAttribute="centerX" id="Gl9-3d-79e"/>
-                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerY" secondItem="Xp7-cO-Hgk" secondAttribute="centerY" constant="54" id="MbW-U3-M9s"/>
-                            <constraint firstItem="vkn-Mf-60I" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="ThO-fW-ojc"/>
+                            <constraint firstItem="qo6-vj-FIB" firstAttribute="top" secondItem="tfB-Kb-OgT" secondAttribute="bottom" constant="10" id="Tpd-KM-d1e"/>
                             <constraint firstItem="WnJ-Ha-kNG" firstAttribute="bottom" secondItem="EUx-l6-Ja2" secondAttribute="top" id="YHh-iq-rCA"/>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="centerX" secondItem="O2l-AA-KWv" secondAttribute="centerX" id="cy9-U6-wAF"/>
+                            <constraint firstAttribute="trailing" secondItem="WnJ-Ha-kNG" secondAttribute="trailing" id="fiD-qm-lgd"/>
                             <constraint firstItem="qo6-vj-FIB" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leadingMargin" id="g4W-Bq-toN"/>
+                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerY" secondItem="Xp7-cO-Hgk" secondAttribute="centerY" constant="38" id="jtC-Rp-Fqi"/>
+                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leading" id="jxB-kC-k36"/>
                             <constraint firstItem="lp9-si-nnY" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="k3W-p3-Pyv"/>
                             <constraint firstItem="WnJ-Ha-kNG" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leading" id="mVf-yw-Ax4"/>
-                            <constraint firstItem="qo6-vj-FIB" firstAttribute="top" secondItem="vkn-Mf-60I" secondAttribute="bottom" constant="10" id="o2w-jK-wMD"/>
-                            <constraint firstItem="EUx-l6-Ja2" firstAttribute="top" secondItem="lp9-si-nnY" secondAttribute="bottom" constant="20" id="p25-Ue-gHV"/>
+                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="nUr-5y-G40"/>
+                            <constraint firstItem="EUx-l6-Ja2" firstAttribute="top" secondItem="lp9-si-nnY" secondAttribute="bottom" constant="13" id="p25-Ue-gHV"/>
+                            <constraint firstItem="EUx-l6-Ja2" firstAttribute="top" secondItem="WnJ-Ha-kNG" secondAttribute="bottom" id="qIZ-bd-weC"/>
                             <constraint firstItem="qo6-vj-FIB" firstAttribute="trailing" secondItem="Xp7-cO-Hgk" secondAttribute="trailingMargin" id="rdP-z2-hWG"/>
-                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="zQ2-Pg-uBW"/>
+                            <constraint firstItem="qo6-vj-FIB" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="sRM-KT-TWj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y9E-Dp-hXc"/>
                     <connections>
                         <outlet property="nameLabel" destination="qo6-vj-FIB" id="6i1-6H-nu7"/>
                         <outlet property="startBut" destination="O2l-AA-KWv" id="guK-wa-Esh"/>
-                        <outlet property="welcomeLabel" destination="vkn-Mf-60I" id="tvT-6r-iho"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="start" id="W4G-gT-RxA"/>
                         <segue destination="noJ-TF-c9Q" kind="show" identifier="tutorial" id="w0m-L9-eJw"/>
                     </connections>
@@ -854,7 +850,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KnL-BU-fTP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1ab7fa426cdd753fa0b6795054e56f11" translatesAutoresizingMaskIntoConstraints="NO" id="KnL-BU-fTP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="684"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-w9-Ewp">
@@ -864,60 +860,60 @@
                                         <rect key="frame" x="0.0" y="-14" width="320" height="586"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculate" translatesAutoresizingMaskIntoConstraints="NO" id="JcW-Ee-tqg">
-                                                <rect key="frame" x="130" y="81.5" width="60" height="60"/>
+                                                <rect key="frame" x="130" y="91" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="Cs3-Vs-6nu"/>
                                                     <constraint firstAttribute="height" constant="60" id="hV8-1P-bVU"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To clear the results press next button:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-mg-n6z">
-                                                <rect key="frame" x="3" y="151.5" width="314" height="20.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="3" y="161" width="314" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="njg-3V-Zmg">
-                                                <rect key="frame" x="130" y="178" width="60" height="60"/>
+                                                <rect key="frame" x="130" y="190.5" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="76x-4d-pop"/>
                                                     <constraint firstAttribute="height" constant="60" id="glJ-9X-RV3"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next icons can provide for you the links on companies job boards,which have the similar salaries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Z-q1-fJ8">
-                                                <rect key="frame" x="3" y="248" width="314" height="60.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="3" y="260.5" width="314" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-Wy-riy">
-                                                <rect key="frame" x="130" y="314.5" width="60" height="60"/>
+                                                <rect key="frame" x="130" y="336.5" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="Np3-vH-XmY"/>
                                                     <constraint firstAttribute="height" constant="60" id="OXh-sa-Mjh"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label can give information about your salary before taxes in the different currencies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPk-lI-6UY">
-                                                <rect key="frame" x="3" y="384.5" width="314" height="60.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="3" y="406.5" width="314" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-Jj-lpC">
-                                                <rect key="frame" x="130" y="451" width="60" height="60"/>
+                                                <rect key="frame" x="130" y="482.5" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="37N-fq-XMW"/>
                                                     <constraint firstAttribute="width" constant="60" id="ZRa-cp-yv4"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First put your income in the field max.  99.999 in kr. and Press that button to calculate income:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc6-E9-nCu">
-                                                <rect key="frame" x="3" y="15" width="314" height="60.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="3" y="15" width="314" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information about average salary was collected from the feedbacks of users from the portal Glassdoor." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcJ-fJ-JwO">
-                                                <rect key="frame" x="3" y="521" width="314" height="60.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="3" y="552.5" width="314" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1008,7 +1004,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="236" height="441"/>
+        <image name="1ab7fa426cdd753fa0b6795054e56f11" width="640" height="1136"/>
         <image name="calculate" width="48" height="48"/>
         <image name="canada" width="120" height="120"/>
         <image name="clear" width="48" height="48"/>
