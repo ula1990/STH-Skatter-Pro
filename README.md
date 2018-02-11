@@ -5,10 +5,5 @@ Pro version of the tool which can provide information about your clean income af
 
 
 <br></br>
-![Screenshot](screen1.png)
-<br></br>
-![Screenshot](screen2.png)
-<br></br>
-![Screenshot](screen3.png)
-<br></br>
-![Screenshot](screen4.png)
+![Screenshot](Skatter_Pro.jpg)
+
