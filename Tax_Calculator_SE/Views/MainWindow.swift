@@ -248,7 +248,7 @@ import AVFoundation
     
     @IBAction func calculateAmount(_ sender: UIButton) {
             calculateRates()
-            clickSound()
+         //   clickSound()
         
         //HIDE KEYBOARD WHEN BUTTON WAS PRESSED
         
@@ -1641,8 +1641,6 @@ import AVFoundation
                                     self.receivedTitle.append((key as? String)!)
                                     self.receivedRates.append((value as? Double)!)
                                     self.calculateRates()
-                                    print(self.receivedTitle)
-                                    print(self.receivedRates)
                                 }
                             }
                         }
