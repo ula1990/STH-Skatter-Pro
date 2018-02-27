@@ -1575,7 +1575,7 @@ import AVFoundation
         formatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
         formatter.currencyDecimalSeparator = "."
         
-        output.text = numberFormatter.string (from: NSNumber(value:0))!
+        output.text = formatter.string (from: NSNumber(value:0))!
         taxLbl.text = output.text
         addInfo.text = output.text
         inputField.text = ""
@@ -1633,7 +1633,6 @@ import AVFoundation
                             }
  
  */
-                            
                             if let rates = myJson["rates"] as? NSDictionary
                             {
                                 
