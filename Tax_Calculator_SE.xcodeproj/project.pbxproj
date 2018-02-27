@@ -126,17 +126,14 @@
 		75C864A71F12CF7400661E82 /* Tax_Calculator_SE */ = {
 			isa = PBXGroup;
 			children = (
-				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
-				7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */,
-				75C864AA1F12CF7400661E82 /* MainWindow.swift */,
-				750A30941F15765F00EF4B33 /* AboutPage.swift */,
-				7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */,
-				75C864AC1F12CF7400661E82 /* Main.storyboard */,
-				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
-				75C864B41F12CF7400661E82 /* Info.plist */,
-				75C70DDB2006ADFB002B7AE4 /* Sounds */,
+				75C864AC1F12CF7400661E82 /* Main.storyboard */,
+				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
+				C0AF257820455E9C00FD789C /* Views */,
 				75F419581FFAE47F00463BA6 /* SubClasses */,
+				75C70DDB2006ADFB002B7AE4 /* Sounds */,
+				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
+				75C864B41F12CF7400661E82 /* Info.plist */,
 			);
 			path = Tax_Calculator_SE;
 			sourceTree = "<group>";
@@ -168,6 +165,17 @@
 				75A742151F61548F00A7E932 /* MailButton.swift */,
 			);
 			path = SubClasses;
+			sourceTree = "<group>";
+		};
+		C0AF257820455E9C00FD789C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */,
+				75C864AA1F12CF7400661E82 /* MainWindow.swift */,
+				750A30941F15765F00EF4B33 /* AboutPage.swift */,
+				7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
