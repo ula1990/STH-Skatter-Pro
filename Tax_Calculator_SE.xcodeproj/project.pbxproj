@@ -26,6 +26,8 @@
 		75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */; };
 		75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864BD1F12CF7400661E82 /* Tax_Calculator_SETests.swift */; };
 		75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */; };
+		C0AF257A2045617B00FD789C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF25792045617B00FD789C /* Cell.swift */; };
+		C0AF257C204574D000FD789C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Calculator_SEUITests.swift; sourceTree = "<group>"; };
 		75C864CA1F12CF7400661E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C865011F13AD8600661E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C0AF25792045617B00FD789C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		C0AF257B204574D000FD789C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +166,9 @@
 				7527ADBA1FE311E2001533F1 /* LimitLenght.swift */,
 				7558F8D01F5EA36000F56E71 /* RoundButton.swift */,
 				7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */,
+				C0AF257B204574D000FD789C /* Alert.swift */,
 				75A742151F61548F00A7E932 /* MailButton.swift */,
+				C0AF25792045617B00FD789C /* Cell.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 				75A742161F61548F00A7E932 /* MailButton.swift in Sources */,
 				7531B8391FE2CF2F00FD7ED4 /* StartWindow.swift in Sources */,
 				75C864AB1F12CF7400661E82 /* MainWindow.swift in Sources */,
+				C0AF257A2045617B00FD789C /* Cell.swift in Sources */,
+				C0AF257C204574D000FD789C /* Alert.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
 				7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 			);

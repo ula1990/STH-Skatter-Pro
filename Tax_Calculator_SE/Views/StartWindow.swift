@@ -21,8 +21,7 @@ class StartWindow: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         startBut.layer.shadowOpacity = 1
         startBut.layer.shadowRadius = 6
         nameLabel.alpha = 0
@@ -48,7 +47,6 @@ class StartWindow: UIViewController {
                 }, completion: {(true) in })
                 
             })
-
     }
 
     override var prefersStatusBarHidden: Bool

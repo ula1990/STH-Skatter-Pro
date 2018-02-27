@@ -11,65 +11,39 @@ import ObjectiveC
 import Foundation
 import AVFoundation
 
-
-
 @objc class ViewController: UIViewController {
     
     @IBOutlet weak var output: UILabel!
-    
     @IBOutlet weak var taxLbl: UILabel!
-    
     @IBOutlet weak var nettLabel: UILabel!
-    
     @IBOutlet weak var taxResultLbl: UILabel!
-    
     @IBOutlet weak var addInfo: UILabel!
-    
     @IBOutlet weak var annualLbl: UILabel!
-    
-    @IBOutlet weak var flagLbl: UILabel!
-    
     @IBOutlet weak var middleSalaryLbl: UILabel!
-    
     @IBOutlet weak var inputField: UITextField!
-    
-    @IBOutlet weak var dollarLbl: UILabel!
-    
-    @IBOutlet weak var eurLbl: UILabel!
-    
-    @IBOutlet weak var canadaLbl: UILabel!
-    
-    @IBOutlet weak var yenLbl: UILabel!
-    
-    @IBOutlet weak var poundLbl: UILabel!
-    
-    @IBOutlet weak var liraLbl: UILabel!
-    
+
     @IBOutlet weak var firstCompBut: UIButton!
-    
     @IBOutlet weak var secondCompBut: UIButton!
-    
     @IBOutlet weak var thirdCompBut: UIButton!
-    
     @IBOutlet weak var fourCompBut: UIButton!
-    
     @IBOutlet weak var fiveCompBut: UIButton!
-    
     @IBOutlet weak var sixthCompBut: UIButton!
-    
     @IBOutlet weak var seventhCompBut: UIButton!
+    
+    @IBOutlet weak var currencyTable: UITableView!
     
     var audioPlayer = AVAudioPlayer()
     
+    var receivedRates: [Double] = []
+    var receivedTitle: [String] = []
+    var currentAmount: [Double] = []
+    let formatter = NumberFormatter()
     
-    
-
 //URLs FOR COMPANIES BUTTONS
     
     @IBAction func startBut(_ sender: Any) {
         
         clickSound()
-        
         updateButtonLink(firstLink: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/",
                          secondLink: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html",
                          thirdLink: "https://www.nordea.com/en/career/")
@@ -86,7 +60,6 @@ import AVFoundation
     @IBAction func thirdCompBut(_ sender: Any) {
         
          clickSound()
-        
         updateButtonLink(firstLink: "https://www.spotifyjobs.com/",
                          secondLink: "https://www.hemkop.se/jobb",
                          thirdLink: "https://burgerking.se/jobb")
@@ -113,9 +86,6 @@ import AVFoundation
         updateButtonLink(firstLink: "https://careers.microsoft.com/",
                          secondLink: "https://saabgroup.com/career/vacancies/",
                          thirdLink: "https://career.hm.com/content/hmcareer/en_se/findjob.html")
-        
-        
-        
     }
     
     
@@ -125,9 +95,6 @@ import AVFoundation
                          secondLink: "https://www.sasgroup.net/en/category/career/",
                          thirdLink: "https://www.circlek.se/sv_SE/pg1334072537742/privat/Jobba-hos-oss/circlek-lediga-jobb.html")
     }
-    
-    
-    
     
     //FUNCTION TO UPDATE THE LINKS OF THE BUTTONS
     
@@ -208,9 +175,7 @@ import AVFoundation
         self.seventhCompBut.setBackgroundImage(image7, for: .normal)
 
     }
-    
-    
-    
+
     func hideCompButtons(){
 
         self.firstCompBut.isHidden = true
@@ -229,13 +194,8 @@ import AVFoundation
         defaults.set(output.text!, forKey: outputL)
         defaults.set(taxLbl.text!, forKey: taxL)
         defaults.set(addInfo.text!, forKey: addI)
-        defaults.set(self.middleSalaryLbl.text!, forKey: middleSalaryL)
-        defaults.set(self.dollarLbl.text!, forKey: dollarL)
-        defaults.set(self.eurLbl.text!, forKey: eurL)
-        defaults.set(self.canadaLbl.text!, forKey: canadaL)
-        defaults.set(self.poundLbl.text!, forKey: poundL)
-        defaults.set(self.liraLbl.text!, forKey: liraL)
-        defaults.set(self.yenLbl.text!, forKey: yenL)
+        defaults.set(middleSalaryLbl.text!, forKey: middleSalaryL)
+
     }
     
     
@@ -283,17 +243,12 @@ import AVFoundation
     let outputL = "outputL"
     let taxL = "taxL"
     let addI = "addI"
-    let dollarL = "dollarL"
-    let eurL = "eurL"
-    let canadaL = "canadaL"
-    let yenL = "yenL"
-    let poundL = "poundL"
-    let liraL = "liraL"
+
     
     
     @IBAction func calculateAmount(_ sender: UIButton) {
-        
-         clickSound()
+            calculateRates()
+            clickSound()
         
         //HIDE KEYBOARD WHEN BUTTON WAS PRESSED
         
@@ -1600,17 +1555,9 @@ import AVFoundation
                             output.text = numberFormatter.string (from: NSNumber(value:(sum())))
                             taxLbl.text = numberFormatter.string (from: NSNumber(value:(sumTax())))
                             addInfo.text = numberFormatter.string (from: NSNumber(value:(12*Int(inputField.text!)!)))!
-                            dollarLbl.text = String(0.12*Double(inputField.text!)!) + " USD"
-                            canadaLbl.text = String(0.15*Double(inputField.text!)!) + " CAD"
-                            eurLbl.text = String(0.10*Double(inputField.text!)!) + " EUR"
-                            poundLbl.text = String(0.09*Double(inputField.text!)!) + " GBP"
-                            liraLbl.text = String(45.39*Double(inputField.text!)!) + " TRY"
-                            yenLbl.text = String(13.40*Double(inputField.text!)!) + " JPY"
                             middleSalaryLbl.text = "Average salary in:"
                             defaultsSaveForLabels()
-                            
-                            
-                           
+
                     }
                         else{
                             middleSalaryLbl.text = "Incorrect amount"
@@ -1632,12 +1579,6 @@ import AVFoundation
         output.text = numberFormatter.string (from: NSNumber(value:0))!
         taxLbl.text = output.text
         addInfo.text = output.text
-        dollarLbl.text = ""
-        canadaLbl.text = ""
-        eurLbl.text = ""
-        poundLbl.text = ""
-        liraLbl.text = ""
-        yenLbl.text = ""
         inputField.text = ""
         middleSalaryLbl.text = "Average salary in:"
         hideCompButtons()
@@ -1660,71 +1601,98 @@ import AVFoundation
             
             
         }catch {
-            
             print(error)
-            
         }
         
     }
     
     
+    //JSON FOR CURRENCY TABLE
+    
+    func getCurrencyRates (nameOfCurrency: String?){
+        
+        receivedRates.removeAll()
+        receivedTitle.removeAll()
+        let url = URL(string: "https://api.fixer.io/latest?base=" + nameOfCurrency!)
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            //FOR FASTER WORK OF PICKERVIEW
+            DispatchQueue.main.async {
+                if error != nil
+                {
+                    Alert.showBasic(title: "No Internet", msg: "Please check connection and update the rates", vc: self)
+                }
+                else{
+                    if let content = data
+                    {
+                        do{
+                            let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                            
+                      /*      if let date = myJson["date"] as? NSString
+                            {
+                                self.lastUpdateLabel.text = "Last update: " + (date as String)
+                                
+                            }
+ 
+ */
+                            
+                            if let rates = myJson["rates"] as? NSDictionary
+                            {
+                                
+                                for (key,value ) in rates
+                                {
+                                    self.receivedTitle.append((key as? String)!)
+                                    self.receivedRates.append((value as? Double)!)
+                                    self.calculateRates()
+                                    print(self.receivedTitle)
+                                    print(self.receivedRates)
+                                }
+                            }
+                        }
+                        catch{
+                           self.getCurrencyRates(nameOfCurrency: "SEK")
+                        }
+                    }
+                }
+                self.currencyTable.reloadData()
+            }
+        }
+        task.resume()
+    }
+    
+    
+func calculateRates(){
+        if inputField.text?.isEmpty == true {
+            print(Error.self)
+        }else{
+            currentAmount.removeAll()
+            currentAmount = receivedRates.map{ $0 * Double(inputField.text!)! }
+            self.currencyTable.reloadData()
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputField.text = "0"
+        getCurrencyRates(nameOfCurrency: "SEK")
+        currencyTable.delegate = self
+        currencyTable.dataSource = self
         
-        
-       
         if let outputLb = defaults.value(forKey: outputL){
             output.text = outputLb as? String
-            
         }
         if let taxLb = defaults.value(forKey: taxL){
             taxLbl.text = taxLb as? String
-            
         }
         if let addIn = defaults.value(forKey: addI){
             addInfo.text = addIn as? String
-            
         }
-        
         if let middleSalaryLb = defaults.value(forKey: middleSalaryL){
             middleSalaryLbl.text = middleSalaryLb as? String
-            
         }
-        
-        //DEFAULTS FOR CURRENCIES
-        
-        if let dollarLb = defaults.value(forKey: dollarL){
-            dollarLbl.text = dollarLb as? String
-            
-        }
-        
-        if let eurLb = defaults.value(forKey: eurL){
-            eurLbl.text = eurLb as? String
-            
-        }
-        
-        if let canadaLb = defaults.value(forKey: canadaL){
-            canadaLbl.text = canadaLb as? String
-            
-        }
-        
-        if let yenLb = defaults.value(forKey: yenL){
-            yenLbl.text = yenLb as? String
-            
-        }
-        
-        if let poundLb = defaults.value(forKey: poundL){
-            poundLbl.text = poundLb as? String
-            
-        }
-        
-        if let liraLb = defaults.value(forKey: liraL){
-            liraLbl.text = liraLb as? String
-            
-        }
-        
-        
+ 
+
         
         //DEFAULTS FOR COMPANY BUTTONS
         
@@ -1753,19 +1721,14 @@ import AVFoundation
         }
  
  */
-        
         //BAR TITLE
-       
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
         
         //CONFIGURE NAVIGATION CONTROLLER
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        
-  
 
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override var prefersStatusBarHidden: Bool
@@ -1774,17 +1737,75 @@ import AVFoundation
         
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-                }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
 }
+
+
+// CURRENCIES TABLE
+
+ extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return receivedTitle.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let title = receivedTitle[indexPath.row]
+        let rates = currentAmount[indexPath.row]
+        
+        let cell = currencyTable.dequeueReusableCell(withIdentifier: "cell") as! Cell
+        cell.nameOfCurrency.text = title
+        formatter.numberStyle = .decimal
+        cell.amountLabel.text = (formatter.string(from:rates as NSNumber))
+        cell.flagOfCurrency(image: title)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currencyTable.deselectRow(at: indexPath, animated: true)
+    }
+    
+}
+
+// CONFIGURATION OF THE TEXTFIELD
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        
+        //Prevent "0" characters as the first characters. (i.e.: There should not be values like "003" "01" "000012" etc.)
+        if inputField.text?.count == 0 && string == "0" {
+            Alert.showBasic(title: "Incorrect input", msg: "First number can't be 0", vc: self)
+            return false
+        }
+        
+        //Limit the character count to 10.
+        if ((inputField.text!) + string).count > 10 {
+            Alert.showBasic(title: "Max Length", msg: "Maximum amount of numbers in the field is 10", vc: self)
+            return false
+        }
+        
+        //Have a decimal keypad. Which means user will be able to enter Double values. (Needless to say "." will be limited one)
+        if (inputField.text?.contains("."))! && string == "." {
+            Alert.showBasic(title: "Incorrect input", msg: "Please check the field", vc: self)
+            return false
+        }
+        
+        //Only allow numbers. No Copy-Paste text values.
+        let allowedCharacterSet = CharacterSet.init(charactersIn: "0123456789.")
+        let textCharacterSet = CharacterSet.init(charactersIn: inputField.text! + string)
+        if !allowedCharacterSet.isSuperset(of: textCharacterSet) {
+            return false
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+        
+    }
+}
+
 

@@ -71,7 +71,7 @@ import StoreKit
         if MFMailComposeViewController.canSendMail(){
         self.present(mailComposeViewController, animated: true, completion: nil)
         }else{
-        showMailError()}
+            Alert.showBasic(title: "Could not send email", msg: "Your device could not send email", vc: self ) }
             }
     
     //REVIEW BUTTON
@@ -97,26 +97,14 @@ import StoreKit
             
             return mailComposerVC
         }
-        
-    func showMailError(){
-    
-        let sendMailErrorAlert = UIAlertController (title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
-        let dismiss = UIAlertAction(title:"OK",style: .default, handler: nil)
-        sendMailErrorAlert.addAction(dismiss)
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
-        
-    }
-    
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil )
     }
         
     @IBAction func tutorialFromAbout(_ sender: Any) {
-        
         clickSound()
         self.performSegue(withIdentifier: "TutorialAbout", sender: navigationController)
-        
     }
     
     //CLICK SOUND FUNC
@@ -135,15 +123,10 @@ import StoreKit
         }
         
     }
-    
-    
-    
-    
+
     override var prefersStatusBarHidden: Bool
     {
         return true
-
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -152,12 +135,9 @@ import StoreKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
-        
-        
      
     }
 
