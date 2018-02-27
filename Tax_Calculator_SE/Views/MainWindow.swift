@@ -1548,13 +1548,13 @@ import AVFoundation
                                     
                             }
        //Output to Labels
-                            let numberFormatter = NumberFormatter()
-                            numberFormatter.numberStyle = NumberFormatter.Style.currency
-                            numberFormatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
-                            numberFormatter.currencyDecimalSeparator = "."
-                            output.text = numberFormatter.string (from: NSNumber(value:(sum())))
-                            taxLbl.text = numberFormatter.string (from: NSNumber(value:(sumTax())))
-                            addInfo.text = numberFormatter.string (from: NSNumber(value:(12*Int(inputField.text!)!)))!
+                            
+                            formatter.numberStyle = NumberFormatter.Style.currency
+                            formatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
+                            formatter.currencyDecimalSeparator = "."
+                            output.text = formatter.string (from: NSNumber(value:(sum())))
+                            taxLbl.text = formatter.string (from: NSNumber(value:(sumTax())))
+                            addInfo.text = formatter.string (from: NSNumber(value:(12*Int(inputField.text!)!)))!
                             middleSalaryLbl.text = "Average salary in:"
                             defaultsSaveForLabels()
 
@@ -1571,10 +1571,9 @@ import AVFoundation
         
         clickSound()
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.currency
-        numberFormatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
-        numberFormatter.currencyDecimalSeparator = "."
+        formatter.numberStyle = NumberFormatter.Style.currency
+        formatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
+        formatter.currencyDecimalSeparator = "."
         
         output.text = numberFormatter.string (from: NSNumber(value:0))!
         taxLbl.text = output.text
@@ -1674,6 +1673,7 @@ func calculateRates(){
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currencyTable.separatorStyle = UITableViewCellSeparatorStyle.none
         inputField.text = "0"
         getCurrencyRates(nameOfCurrency: "SEK")
         currencyTable.delegate = self
@@ -1716,11 +1716,9 @@ func calculateRates(){
         }
         if let fiveCompBu = defaults.value(forKey: fiveCompB){
             self.fiveCompBut.isHidden = fiveCompBu as! Bool
-
-            
         }
- 
  */
+        
         //BAR TITLE
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
