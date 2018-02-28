@@ -936,7 +936,7 @@
         <image name="emailIcon" width="512" height="512"/>
         <image name="facebookIcon" width="600" height="600"/>
         <image name="google" width="512" height="512"/>
-        <image name="new7" width="1440" height="2560"/>
+        <image name="new7" width="480" height="853"/>
         <image name="rate" width="96" height="96"/>
         <image name="skype" width="300" height="300"/>
         <image name="spotifyIcon" width="150" height="150"/>
