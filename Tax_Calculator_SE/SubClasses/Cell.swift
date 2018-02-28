@@ -13,6 +13,7 @@ class Cell: UITableViewCell {
     @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var nameOfCurrency: UILabel!
+    @IBOutlet weak var rate: UILabel!
     
     
     //FUNCTION TO FLAG IMAGE
@@ -22,6 +23,10 @@ class Cell: UITableViewCell {
         self.flagImage.image = UIImage(named: image)
         self.flagImage.layer.shadowOpacity = 2
         
+    }
+    
+    func rateInfo(Rate: Double){
+        rate.text = String(Rate)
     }
     
     override func awakeFromNib() {

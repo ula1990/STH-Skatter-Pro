@@ -37,6 +37,7 @@ import Foundation
     var receivedTitle: [String] = ["CNY", "PLN", "THB", "BGN", "AUD", "TRY", "ILS", "BRL", "DKK", "GBP", "RUB", "CHF", "ISK", "HRK", "MXN", "RON", "SGD", "EUR", "NOK", "HUF", "NZD", "USD", "MYR", "IDR", "KRW", "JPY", "INR", "PHP", "CZK", "HKD", "ZAR", "CAD"]
     var currentAmount: [Double] = []
     let formatter = NumberFormatter()
+    var justOnce: Bool =  true
     
 //URLs FOR COMPANIES BUTTONS
     
@@ -1592,8 +1593,13 @@ import Foundation
             DispatchQueue.main.async {
                 if error != nil
                 {
+                    if self.justOnce{
+                        Alert.showBasic(title: "No Internet", msg: "Possible you are working in offline mode and rates information can be old. Please check connection.", vc: self)
+                        self.justOnce = false
+                        
+                    }
                     self.offlineModeCalculation()
-                    Alert.showBasic(title: "No Internet", msg: "Possible you are working in offline mode and rates information can be old. Please check connection.", vc: self)
+                    
                 }
                 else{
                     if let content = data
@@ -1616,10 +1622,9 @@ import Foundation
                                     self.receivedTitle.append((key as? String)!)
                                     self.receivedRates.append((value as? Double)!)
                                     self.calculateRates()
+                                    self.justOnce = true
                                 }
                             }
-                            print(self.receivedTitle)
-                            print(self.receivedRates)
                         }
                         catch{
                            self.getCurrencyRates(nameOfCurrency: "SEK")
@@ -1650,6 +1655,8 @@ func calculateRates(){
     }
     
     
+    
+    //FUNCTION FOR OFFLINE MODE
     func offlineModeCalculation(){
         self.receivedTitle = ["CNY", "PLN", "THB", "BGN", "AUD", "TRY", "ILS", "BRL", "DKK", "GBP", "RUB", "CHF", "ISK", "HRK", "MXN", "RON", "SGD", "EUR", "NOK", "HUF", "NZD", "USD", "MYR", "IDR", "KRW", "JPY", "INR", "PHP", "CZK", "HKD", "ZAR", "CAD"]
         
@@ -1748,12 +1755,14 @@ func calculateRates(){
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let title = receivedTitle[indexPath.row]
         let rates = currentAmount[indexPath.row]
+        let ratesInfo = receivedRates[indexPath.row]
 
         let cell = currencyTable.dequeueReusableCell(withIdentifier: "cell") as! Cell
         cell.nameOfCurrency.text = title
         formatter.numberStyle = .decimal
         cell.amountLabel.text = (formatter.string(from:rates as NSNumber))
         cell.flagOfCurrency(image: title)
+        cell.rateInfo(Rate: ratesInfo)
         return cell
     }
     
@@ -1761,6 +1770,30 @@ func calculateRates(){
         currencyTable.deselectRow(at: indexPath, animated: true)
     }
     
+    
+    
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let closeAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            
+            let cell = self.currencyTable.cellForRow(at: indexPath) as! Cell
+            UIPasteboard.general.string = cell.amountLabel.text
+            
+            success(true)
+        })
+        closeAction.title = "Copy"
+        closeAction.backgroundColor = .orange
+        
+        return UISwipeActionsConfiguration(actions: [closeAction])
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
 }
 
 // CONFIGURATION OF THE TEXTFIELD
