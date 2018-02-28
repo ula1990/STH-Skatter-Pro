@@ -321,15 +321,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uv7-xH-1aG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uv7-xH-1aG">
                                 <rect key="frame" x="0.0" y="385" width="320" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="BAw-7Y-mbH" customClass="Cell" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BAw-7Y-mbH" id="xg1-qo-lJv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knP-aT-ynr">
@@ -340,12 +340,12 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3H-Oq-rkl">
-                                                    <rect key="frame" x="137" y="-1" width="159" height="51"/>
+                                                    <rect key="frame" x="137" y="-1" width="168" height="51"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="159" id="REV-ED-H0N"/>
+                                                        <constraint firstAttribute="width" constant="168" id="REV-ED-H0N"/>
                                                         <constraint firstAttribute="height" constant="51" id="ogw-jE-1I2"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -355,7 +355,7 @@
                                                         <constraint firstAttribute="width" constant="64" id="7UL-J4-QV8"/>
                                                         <constraint firstAttribute="height" constant="21" id="kVN-O7-uRf"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -363,7 +363,7 @@
                                             <constraints>
                                                 <constraint firstItem="ilS-xI-Uya" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="KrG-AN-NHf"/>
                                                 <constraint firstItem="knP-aT-ynr" firstAttribute="leading" secondItem="xg1-qo-lJv" secondAttribute="leading" constant="10" id="XEQ-m6-hbe"/>
-                                                <constraint firstAttribute="trailing" secondItem="C3H-Oq-rkl" secondAttribute="trailing" constant="24" id="Zz4-Ef-k3c"/>
+                                                <constraint firstAttribute="trailing" secondItem="C3H-Oq-rkl" secondAttribute="trailing" constant="15" id="Zz4-Ef-k3c"/>
                                                 <constraint firstItem="knP-aT-ynr" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="g96-Hr-KNO"/>
                                                 <constraint firstItem="ilS-xI-Uya" firstAttribute="leading" secondItem="knP-aT-ynr" secondAttribute="trailing" constant="15" id="i1a-zG-PeR"/>
                                                 <constraint firstItem="C3H-Oq-rkl" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="xQe-Se-4kt"/>
