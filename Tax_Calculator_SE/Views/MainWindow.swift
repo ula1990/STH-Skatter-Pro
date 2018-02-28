@@ -9,7 +9,7 @@
 import UIKit
 import ObjectiveC
 import Foundation
-import AVFoundation
+
 
 @objc class ViewController: UIViewController {
     
@@ -31,19 +31,18 @@ import AVFoundation
     @IBOutlet weak var seventhCompBut: UIButton!
     
     @IBOutlet weak var currencyTable: UITableView!
-    
-    var audioPlayer = AVAudioPlayer()
+
     
     var receivedRates: [Double] = []
-    var receivedTitle: [String] = []
-    var currentAmount: [Double] = []
+    var receivedTitle: [String] = ["CNY", "PLN", "THB", "BGN", "AUD", "TRY", "ILS", "BRL", "DKK", "GBP", "RUB", "CHF", "ISK", "HRK", "MXN", "RON", "SGD", "EUR", "NOK", "HUF", "NZD", "USD", "MYR", "IDR", "KRW", "JPY", "INR", "PHP", "CZK", "HKD", "ZAR", "CAD"]
+    var currentAmount: [Double] = [0.77383000000000002, 0.41514000000000001, 3.8416999999999999, 0.19472, 0.15640999999999999, 0.46375, 0.42845, 0.39682000000000001, 0.74133000000000004, 0.087434999999999999, 6.8638000000000003, 0.11479, 12.316000000000001, 0.74109000000000003, 2.2818000000000001, 0.46421000000000001, 0.16156000000000001, 0.099561999999999998, 0.95881000000000005, 31.222000000000001, 0.16772999999999999, 0.12266000000000001, 0.47954000000000002, 1676.0, 131.44, 13.102, 7.9452999999999996, 6.3655999999999997, 2.528, 0.95965, 1.4219999999999999, 0.15548999999999999]
     let formatter = NumberFormatter()
     
 //URLs FOR COMPANIES BUTTONS
     
     @IBAction func startBut(_ sender: Any) {
         
-        clickSound()
+
         updateButtonLink(firstLink: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/",
                          secondLink: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html",
                          thirdLink: "https://www.nordea.com/en/career/")
@@ -51,7 +50,6 @@ import AVFoundation
     }
 
     @IBAction func secondCompBut(_ sender: Any) {
-         clickSound()
         updateButtonLink(firstLink: "https://www.swedbank.com/work-with-us/job-openings/index.htm",
                          secondLink: "https://www.uber.com/en-SE/careers/",
                          thirdLink: "https://www.mcdonalds.com/se/sv-se/jobb/sok-jobb.html")
@@ -59,15 +57,12 @@ import AVFoundation
 
     @IBAction func thirdCompBut(_ sender: Any) {
         
-         clickSound()
         updateButtonLink(firstLink: "https://www.spotifyjobs.com/",
                          secondLink: "https://www.hemkop.se/jobb",
                          thirdLink: "https://burgerking.se/jobb")
     }
 
     @IBAction func fourCompBut(_ sender: Any) {
-        
-         clickSound()
         updateButtonLink(firstLink: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home",
                          secondLink: "https://www.blocket.career/jobs",
                          thirdLink: "https://polisen.se/Aktuellt/Lediga-jobb/")
@@ -75,14 +70,12 @@ import AVFoundation
     }
 
     @IBAction func fiveCompBut(_ sender: Any) {
-         clickSound()
         updateButtonLink(firstLink: "https://careers.google.com/locations/",
                          secondLink: "https://www.ge.com/se/careers",
                          thirdLink: "https://www.uber.com/info/careers/eats/")
     }
     
     @IBAction func sixthBut(_ sender: Any) {
-        clickSound()
         updateButtonLink(firstLink: "https://careers.microsoft.com/",
                          secondLink: "https://saabgroup.com/career/vacancies/",
                          thirdLink: "https://career.hm.com/content/hmcareer/en_se/findjob.html")
@@ -90,7 +83,6 @@ import AVFoundation
     
     
     @IBAction func seventhBut(_ sender: Any) {
-        clickSound()
         updateButtonLink(firstLink: "https://careers.microsoft.com/skype",
                          secondLink: "https://www.sasgroup.net/en/category/career/",
                          thirdLink: "https://www.circlek.se/sv_SE/pg1334072537742/privat/Jobba-hos-oss/circlek-lediga-jobb.html")
@@ -248,7 +240,6 @@ import AVFoundation
     
     @IBAction func calculateAmount(_ sender: UIButton) {
             calculateRates()
-         //   clickSound()
         
         //HIDE KEYBOARD WHEN BUTTON WAS PRESSED
         
@@ -1568,9 +1559,6 @@ import AVFoundation
     }
 
     @IBAction func clearButton(_ sender: UIButton) {
-        
-        clickSound()
-        
         formatter.numberStyle = NumberFormatter.Style.currency
         formatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale!
         formatter.currencyDecimalSeparator = "."
@@ -1590,21 +1578,6 @@ import AVFoundation
         self.performSegue(withIdentifier: "view2", sender: self.navigationController)
         
     }
-    //CLICK SOUND FUNC
-    
-    func clickSound(){
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
-            
-            
-        }catch {
-            print(error)
-        }
-        
-    }
-    
     
     //JSON FOR CURRENCY TABLE
     
@@ -1643,6 +1616,8 @@ import AVFoundation
                                     self.calculateRates()
                                 }
                             }
+                            print(self.receivedTitle)
+                            print(self.receivedRates)
                         }
                         catch{
                            self.getCurrencyRates(nameOfCurrency: "SEK")
@@ -1671,6 +1646,7 @@ func calculateRates(){
     override func viewDidLoad() {
         super.viewDidLoad()
         self.currencyTable.separatorStyle = UITableViewCellSeparatorStyle.none
+        inputField.delegate = self
         inputField.text = "0"
         getCurrencyRates(nameOfCurrency: "SEK")
         currencyTable.delegate = self
@@ -1749,7 +1725,7 @@ func calculateRates(){
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let title = receivedTitle[indexPath.row]
         let rates = currentAmount[indexPath.row]
-        
+
         let cell = currencyTable.dequeueReusableCell(withIdentifier: "cell") as! Cell
         cell.nameOfCurrency.text = title
         formatter.numberStyle = .decimal
