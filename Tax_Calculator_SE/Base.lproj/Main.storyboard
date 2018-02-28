@@ -604,7 +604,7 @@
                                 <rect key="frame" x="5" y="176.5" width="310" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="0Ds-VH-pzI"/>
-                                    <constraint firstAttribute="width" constant="310" id="uev-Rn-Izy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="uev-Rn-Izy"/>
                                 </constraints>
                                 <string key="text">Information about the rates was provided by lightweight API for current and historical foreign exchange (forex) rates published by the European Central Bank. If Stockholm is not your area,just let us know and we can made the same for your area.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
