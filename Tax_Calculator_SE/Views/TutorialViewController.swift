@@ -21,12 +21,8 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var thirdImage: UIImageView!
     @IBOutlet weak var fourthImage: UIImageView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         textFirst.alpha = 0
         textSecond.alpha = 0
@@ -39,19 +35,14 @@ class TutorialViewController: UIViewController {
         thirdImage.alpha = 0
         fourthImage.alpha = 0
         
-        
-        
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
-        
         
         //CONFIGURE NAVIGATION CONTROLLER
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
 
-        // Do any additional setup after loading the view.
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -93,7 +84,6 @@ class TutorialViewController: UIViewController {
             })
         })
         
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,22 +93,11 @@ class TutorialViewController: UIViewController {
     override var prefersStatusBarHidden: Bool
     {
         return true
-        
+    
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
