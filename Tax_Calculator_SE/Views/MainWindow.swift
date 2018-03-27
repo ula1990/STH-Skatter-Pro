@@ -1770,8 +1770,6 @@ func calculateRates(){
         currencyTable.deselectRow(at: indexPath, animated: true)
     }
     
-    
-    
     @available(iOS 11.0, *)
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let closeAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
