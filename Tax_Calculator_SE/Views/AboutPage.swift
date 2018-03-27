@@ -12,8 +12,7 @@ import AVFoundation
 import StoreKit
 
 @objc class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
-    
-    
+
     var audioPlayer = AVAudioPlayer()
 
     @IBOutlet weak var aboutLbl: UILabel!
@@ -34,23 +33,19 @@ import StoreKit
         self.performSegue(withIdentifier: "Back", sender: self.navigationController)
     }
     
-    
     //FacebookButton
     
     @IBAction func facebookButton(_ sender: Any) {
         
         clickSound()
-        
        openButtonUrl(urlStr: "https://www.facebook.com/sthtaxes")
         
     }
-    
     
   //Twitter Button
     @IBAction func twitterButton(_ sender: Any) {
         
         clickSound()
-        
         openButtonUrl(urlStr: "https://twitter.com/TaxesSth")
     }
     
@@ -60,9 +55,7 @@ import StoreKit
         if let url = NSURL(string:urlStr) {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
-        
     }
-    
     
     @IBAction func sendEmail(_ sender: Any) {
         
@@ -74,20 +67,16 @@ import StoreKit
             Alert.showBasic(title: "Could not send email", msg: "Your device could not send email", vc: self ) }
             }
     
-    //REVIEW BUTTON
-    
     @IBAction func rateButton(_ sender: Any) {
         
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
-            print("error")
+            Alert.showBasic(title: "Option not available", msg: "Minimum requirements for this function,that's iOS 10.3. Please update your device", vc: self)
         }
         
     }
     
-    
-    //CONFIGURE EMAIL
         func configureMailController()-> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
             mailComposerVC.mailComposeDelegate = self
@@ -114,15 +103,11 @@ import StoreKit
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-            
-            
         }catch {
-            
             print(error)
-            
         }
-        
     }
+    
 
     override var prefersStatusBarHidden: Bool
     {
@@ -135,26 +120,8 @@ import StoreKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
         self.navigationItem.titleView = iconImageView
      
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
