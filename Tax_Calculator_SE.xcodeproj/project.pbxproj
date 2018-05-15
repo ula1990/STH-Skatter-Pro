@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		750A30951F15765F00EF4B33 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A30941F15765F00EF4B33 /* AboutPage.swift */; };
-		7527ADBB1FE311E2001533F1 /* LimitLenght.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527ADBA1FE311E2001533F1 /* LimitLenght.swift */; };
-		7531B8391FE2CF2F00FD7ED4 /* StartWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */; };
-		7531B83B1FE2D64100FD7ED4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */; };
-		7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
-		7558F8D21F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
-		7558F8D31F5EA36000F56E71 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8D01F5EA36000F56E71 /* RoundButton.swift */; };
+		750A30951F15765F00EF4B33 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A30941F15765F00EF4B33 /* AboutVC.swift */; };
+		7531B83B1FE2D64100FD7ED4 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531B83A1FE2D64100FD7ED4 /* TutorialVC.swift */; };
 		7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
 		7558F8F21F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
 		7558F8F31F5FF9F900F56E71 /* Roundlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */; };
 		75A742161F61548F00A7E932 /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A742151F61548F00A7E932 /* MailButton.swift */; };
-		75C70DDA2006ADE0002B7AE4 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75C70DD92006ADE0002B7AE4 /* click.mp3 */; };
 		75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864A81F12CF7400661E82 /* AppDelegate.swift */; };
-		75C864AB1F12CF7400661E82 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864AA1F12CF7400661E82 /* MainWindow.swift */; };
+		75C864AB1F12CF7400661E82 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864AA1F12CF7400661E82 /* MainVC.swift */; };
 		75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864AC1F12CF7400661E82 /* Main.storyboard */; };
 		75C864B01F12CF7400661E82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C864AF1F12CF7400661E82 /* Assets.xcassets */; };
 		75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */; };
 		75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864BD1F12CF7400661E82 /* Tax_Calculator_SETests.swift */; };
 		75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */; };
+		C048623620AAC95E00A40967 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623520AAC95E00A40967 /* TextFieldExtension.swift */; };
+		C048623920AAC9CC00A40967 /* CurrenciesTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */; };
+		C048623B20AACA6A00A40967 /* UploadDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623A20AACA6A00A40967 /* UploadDataExtension.swift */; };
+		C048623D20AACB3C00A40967 /* OfflineModeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623C20AACB3C00A40967 /* OfflineModeCalculation.swift */; };
+		C048624020AACBBF00A40967 /* NettoCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623F20AACBBF00A40967 /* NettoCalculation.swift */; };
+		C048624220AACCE200A40967 /* TaxCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048624120AACCE200A40967 /* TaxCalculation.swift */; };
 		C0AF257A2045617B00FD789C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF25792045617B00FD789C /* Cell.swift */; };
-		C0AF257C204574D000FD789C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* Alert.swift */; };
+		C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* AlertExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,17 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		750A30941F15765F00EF4B33 /* AboutPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
-		7527ADBA1FE311E2001533F1 /* LimitLenght.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitLenght.swift; sourceTree = "<group>"; };
-		7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWindow.swift; sourceTree = "<group>"; };
-		7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		7558F8D01F5EA36000F56E71 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		750A30941F15765F00EF4B33 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		7531B83A1FE2D64100FD7ED4 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundlabel.swift; sourceTree = "<group>"; };
 		75A742151F61548F00A7E932 /* MailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
-		75C70DD92006ADE0002B7AE4 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		75C864A51F12CF7400661E82 /* Tax_Calculator_SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tax_Calculator_SE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C864A81F12CF7400661E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75C864AA1F12CF7400661E82 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		75C864AA1F12CF7400661E82 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		75C864AD1F12CF7400661E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75C864AF1F12CF7400661E82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C864B21F12CF7400661E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,8 +66,14 @@
 		75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Calculator_SEUITests.swift; sourceTree = "<group>"; };
 		75C864CA1F12CF7400661E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C865011F13AD8600661E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C048623520AAC95E00A40967 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableExtension.swift; sourceTree = "<group>"; };
+		C048623A20AACA6A00A40967 /* UploadDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataExtension.swift; sourceTree = "<group>"; };
+		C048623C20AACB3C00A40967 /* OfflineModeCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineModeCalculation.swift; sourceTree = "<group>"; };
+		C048623F20AACBBF00A40967 /* NettoCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NettoCalculation.swift; sourceTree = "<group>"; };
+		C048624120AACCE200A40967 /* TaxCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculation.swift; sourceTree = "<group>"; };
 		C0AF25792045617B00FD789C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		C0AF257B204574D000FD789C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C0AF257B204574D000FD789C /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75C70DDB2006ADFB002B7AE4 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				75C70DD92006ADE0002B7AE4 /* click.mp3 */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		75C8649C1F12CF7400661E82 = {
 			isa = PBXGroup;
 			children = (
@@ -133,9 +127,10 @@
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
 				75C864AC1F12CF7400661E82 /* Main.storyboard */,
 				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
-				C0AF257820455E9C00FD789C /* Views */,
+				C048623E20AACB4500A40967 /* Functions */,
+				C048623720AAC96D00A40967 /* Extensions */,
+				C0AF257820455E9C00FD789C /* VC */,
 				75F419581FFAE47F00463BA6 /* SubClasses */,
-				75C70DDB2006ADFB002B7AE4 /* Sounds */,
 				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B41F12CF7400661E82 /* Info.plist */,
 			);
@@ -163,25 +158,42 @@
 		75F419581FFAE47F00463BA6 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				7527ADBA1FE311E2001533F1 /* LimitLenght.swift */,
-				7558F8D01F5EA36000F56E71 /* RoundButton.swift */,
 				7558F8F01F5FF9F900F56E71 /* Roundlabel.swift */,
-				C0AF257B204574D000FD789C /* Alert.swift */,
 				75A742151F61548F00A7E932 /* MailButton.swift */,
 				C0AF25792045617B00FD789C /* Cell.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
 		};
-		C0AF257820455E9C00FD789C /* Views */ = {
+		C048623720AAC96D00A40967 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7531B8381FE2CF2F00FD7ED4 /* StartWindow.swift */,
-				75C864AA1F12CF7400661E82 /* MainWindow.swift */,
-				750A30941F15765F00EF4B33 /* AboutPage.swift */,
-				7531B83A1FE2D64100FD7ED4 /* TutorialViewController.swift */,
+				C0AF257B204574D000FD789C /* AlertExtension.swift */,
+				C048623520AAC95E00A40967 /* TextFieldExtension.swift */,
+				C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */,
+				C048623A20AACA6A00A40967 /* UploadDataExtension.swift */,
 			);
-			path = Views;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C048623E20AACB4500A40967 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C048623C20AACB3C00A40967 /* OfflineModeCalculation.swift */,
+				C048623F20AACBBF00A40967 /* NettoCalculation.swift */,
+				C048624120AACCE200A40967 /* TaxCalculation.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		C0AF257820455E9C00FD789C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				75C864AA1F12CF7400661E82 /* MainVC.swift */,
+				750A30941F15765F00EF4B33 /* AboutVC.swift */,
+				7531B83A1FE2D64100FD7ED4 /* TutorialVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C70DDA2006ADE0002B7AE4 /* click.mp3 in Resources */,
 				75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */,
 				75C864B01F12CF7400661E82 /* Assets.xcassets in Resources */,
 				75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */,
@@ -325,17 +336,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7558F8D11F5EA36000F56E71 /* RoundButton.swift in Sources */,
-				750A30951F15765F00EF4B33 /* AboutPage.swift in Sources */,
-				7527ADBB1FE311E2001533F1 /* LimitLenght.swift in Sources */,
-				7531B83B1FE2D64100FD7ED4 /* TutorialViewController.swift in Sources */,
+				C048623620AAC95E00A40967 /* TextFieldExtension.swift in Sources */,
+				C048623920AAC9CC00A40967 /* CurrenciesTableExtension.swift in Sources */,
+				C048624020AACBBF00A40967 /* NettoCalculation.swift in Sources */,
+				C048623D20AACB3C00A40967 /* OfflineModeCalculation.swift in Sources */,
+				750A30951F15765F00EF4B33 /* AboutVC.swift in Sources */,
+				7531B83B1FE2D64100FD7ED4 /* TutorialVC.swift in Sources */,
 				75A742161F61548F00A7E932 /* MailButton.swift in Sources */,
-				7531B8391FE2CF2F00FD7ED4 /* StartWindow.swift in Sources */,
-				75C864AB1F12CF7400661E82 /* MainWindow.swift in Sources */,
+				75C864AB1F12CF7400661E82 /* MainVC.swift in Sources */,
 				C0AF257A2045617B00FD789C /* Cell.swift in Sources */,
-				C0AF257C204574D000FD789C /* Alert.swift in Sources */,
+				C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */,
+				C048623B20AACA6A00A40967 /* UploadDataExtension.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
 				7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
+				C048624220AACCE200A40967 /* TaxCalculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7558F8D21F5EA36000F56E71 /* RoundButton.swift in Sources */,
 				7558F8F21F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 				75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */,
 			);
@@ -353,7 +366,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7558F8D31F5EA36000F56E71 /* RoundButton.swift in Sources */,
 				7558F8F31F5FF9F900F56E71 /* Roundlabel.swift in Sources */,
 				75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */,
 			);

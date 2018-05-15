@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax_Calculator_SE/Views/MainWindow.swift"
-            timestampString = "541533180.981896"
+            timestampString = "548065032.403775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1671"
-            endingLineNumber = "1671"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax_Calculator_SE/Views/MainWindow.swift"
-            timestampString = "541533180.98216"
+            timestampString = "548065032.403869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1749"
-            endingLineNumber = "1749"
-            landmarkName = "ViewController"
-            landmarkType = "21">
+            startingLineNumber = "376"
+            endingLineNumber = "376"
+            landmarkName = "MainVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

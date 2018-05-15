@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EUA-D2-irX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-            <string>Avenir-Light</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tax_Calculator_SE" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,425 +21,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new7" translatesAutoresizingMaskIntoConstraints="NO" id="6Hx-GD-r18">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
-                            </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urO-3k-Wiv" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="140" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="O25-eB-6HY"/>
-                                    <constraint firstAttribute="height" constant="40" id="olu-ne-cB5"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="skype"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="seventhBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XtT-qZ-0RL"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-US-5F3" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="93" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cFy-LG-VHq"/>
-                                    <constraint firstAttribute="width" constant="40" id="gAp-u7-cy0"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="spotifyIcon"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="thirdCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5c-rd-xyY"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-2N-qE1" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="234" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5QX-Sm-AZY"/>
-                                    <constraint firstAttribute="width" constant="40" id="X9F-AY-sXy"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="volvo"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="fourCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hf4-Xc-zQd"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St2-oQ-7Bo" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="281" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Gh2-PW-gxN"/>
-                                    <constraint firstAttribute="width" constant="40" id="mH6-u8-FZB"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sixthBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uNz-ZP-U53"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f55-08-EDe" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="46" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="MQI-9Q-k39"/>
-                                    <constraint firstAttribute="height" constant="40" id="yaQ-lc-DKH"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="google"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="fiveCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stQ-4Q-0JP"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net pay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-7H-ElE" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="14" y="199" width="105" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="q8P-0y-kCl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-SN-Exy" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="155" y="148" width="160" height="32"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual inc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-BE-SbM" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="14" y="250" width="133" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="RBq-fy-rfC"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="135" id="Xhb-Dv-Z77"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Income in kr." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-py-MBU" customClass="LimitLenght" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="84.5" y="98" width="151" height="30"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.09669306506849315" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2Z3-Gz-is8"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="VFX-cE-ZcK"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" smartInsertDeleteType="no"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your income:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ5-gX-gUq">
-                                <rect key="frame" x="67.5" y="72" width="185" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="hld-4J-jFn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-Qr-sbd" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="14" y="148" width="74" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="JzT-x8-Cs6"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="T7T-43-wuK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.83435894691780821" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average salary in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28U-v3-EJM" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="16" y="301" width="288" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="4VC-pN-RQK"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hH2-D8-vPY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-jK-ihf" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="gqG-GO-3S0"/>
-                                    <constraint firstAttribute="height" constant="40" id="hvd-mn-P1K"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="tradedoubler"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYw-3H-bXj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-zA-aiy">
-                                <rect key="frame" x="242.5" y="96" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="KVl-AR-wcu"/>
-                                    <constraint firstAttribute="width" constant="35" id="Vp8-nx-D1J"/>
-                                </constraints>
-                                <state key="normal" image="calculate"/>
-                                <connections>
-                                    <action selector="calculateAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nAl-ye-Nrb"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-vX-T7l" customClass="Roundlabel" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="155" y="200" width="160" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="YUl-Gm-p93"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-7g-dTZ">
-                                <rect key="frame" x="42.5" y="96" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="aMC-aZ-DY9"/>
-                                    <constraint firstAttribute="width" constant="35" id="j6Z-g2-fsO"/>
-                                </constraints>
-                                <state key="normal" image="clear"/>
-                                <connections>
-                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARm-cS-dVy"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-ET-jpM" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="187" y="340" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ZfO-mD-0Jm"/>
-                                    <constraint firstAttribute="width" constant="40" id="bdR-8P-64S"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="swedbank"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="secondCompBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YQx-R1-BEa"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Wz-92M">
-                                <rect key="frame" x="155" y="251" width="160" height="30"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uv7-xH-1aG">
-                                <rect key="frame" x="0.0" y="388" width="320" height="92"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="BAw-7Y-mbH" customClass="Cell" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="43"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BAw-7Y-mbH" id="xg1-qo-lJv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knP-aT-ynr">
-                                                    <rect key="frame" x="10" y="1" width="40" height="40.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="FAy-M8-j2R"/>
-                                                        <constraint firstAttribute="width" constant="40" id="tRi-zX-TS7"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3H-Oq-rkl">
-                                                    <rect key="frame" x="137" y="-4.5" width="168" height="51.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="168" id="REV-ED-H0N"/>
-                                                        <constraint firstAttribute="height" constant="51" id="ogw-jE-1I2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
-                                                    <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilS-xI-Uya">
-                                                    <rect key="frame" x="65" y="11" width="64" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="7UL-J4-QV8"/>
-                                                        <constraint firstAttribute="height" constant="21" id="kVN-O7-uRf"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="0.89956121575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXC-CM-kep">
-                                                    <rect key="frame" x="152" y="14.5" width="17.5" height="14"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
-                                                    <color key="textColor" white="1" alpha="0.55755029965753422" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ilS-xI-Uya" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="KrG-AN-NHf"/>
-                                                <constraint firstItem="knP-aT-ynr" firstAttribute="leading" secondItem="xg1-qo-lJv" secondAttribute="leading" constant="10" id="XEQ-m6-hbe"/>
-                                                <constraint firstAttribute="trailing" secondItem="C3H-Oq-rkl" secondAttribute="trailing" constant="15" id="Zz4-Ef-k3c"/>
-                                                <constraint firstItem="knP-aT-ynr" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="g96-Hr-KNO"/>
-                                                <constraint firstItem="ilS-xI-Uya" firstAttribute="leading" secondItem="knP-aT-ynr" secondAttribute="trailing" constant="15" id="i1a-zG-PeR"/>
-                                                <constraint firstItem="eXC-CM-kep" firstAttribute="centerX" secondItem="xg1-qo-lJv" secondAttribute="centerX" id="iHz-Ds-kh1"/>
-                                                <constraint firstItem="eXC-CM-kep" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="wjt-tV-c5g"/>
-                                                <constraint firstItem="C3H-Oq-rkl" firstAttribute="centerY" secondItem="xg1-qo-lJv" secondAttribute="centerY" id="xQe-Se-4kt"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="amountLabel" destination="C3H-Oq-rkl" id="Sqy-tx-AfL"/>
-                                            <outlet property="flagImage" destination="knP-aT-ynr" id="eIt-Pm-eNo"/>
-                                            <outlet property="nameOfCurrency" destination="ilS-xI-Uya" id="OUG-av-Byg"/>
-                                            <outlet property="rate" destination="eXC-CM-kep" id="iJg-io-QtU"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="urO-3k-Wiv" firstAttribute="leading" secondItem="Li0-US-5F3" secondAttribute="trailing" constant="7" id="1F2-Bj-WSY"/>
-                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="trailing" secondItem="rO4-vX-T7l" secondAttribute="trailing" id="1eu-3J-e1c"/>
-                            <constraint firstItem="f55-08-EDe" firstAttribute="leading" secondItem="MSH-jK-ihf" secondAttribute="trailing" constant="7" id="2yj-rG-gPf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="28U-v3-EJM" secondAttribute="trailing" id="3rv-OM-s3M"/>
-                            <constraint firstItem="rO4-vX-T7l" firstAttribute="top" secondItem="Fsn-SN-Exy" secondAttribute="bottom" constant="20" id="5zW-nu-3LU"/>
-                            <constraint firstItem="Uhb-BE-SbM" firstAttribute="top" secondItem="OzT-7H-ElE" secondAttribute="bottom" constant="20" id="6IE-Yh-AUh"/>
-                            <constraint firstItem="Li0-US-5F3" firstAttribute="leading" secondItem="f55-08-EDe" secondAttribute="trailing" constant="7" id="6ag-rU-9Jz"/>
-                            <constraint firstItem="6Hx-GD-r18" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="77W-c8-Fgb"/>
-                            <constraint firstAttribute="trailing" secondItem="6Hx-GD-r18" secondAttribute="trailing" id="99E-tA-Tlh"/>
-                            <constraint firstItem="6Hx-GD-r18" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="B31-Zv-1zt"/>
-                            <constraint firstItem="rO4-vX-T7l" firstAttribute="leading" secondItem="ciK-Wz-92M" secondAttribute="leading" id="Cp4-WB-xeK"/>
-                            <constraint firstItem="9RV-2N-qE1" firstAttribute="leading" secondItem="kB9-ET-jpM" secondAttribute="trailing" constant="7" id="EbA-bY-HaY"/>
-                            <constraint firstItem="OzT-7H-ElE" firstAttribute="leading" secondItem="Uhb-BE-SbM" secondAttribute="leading" id="FKq-sZ-fPS"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mRV-Qr-sbd" secondAttribute="trailing" constant="232" id="Gih-b4-CiH"/>
-                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="leading" secondItem="rO4-vX-T7l" secondAttribute="leading" id="HyY-vQ-fky"/>
-                            <constraint firstItem="28U-v3-EJM" firstAttribute="top" secondItem="Uhb-BE-SbM" secondAttribute="bottom" constant="20" id="LR6-Il-Dhd"/>
-                            <constraint firstItem="kB9-ET-jpM" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="MXk-yL-jk8"/>
-                            <constraint firstItem="urO-3k-Wiv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nza-XD-GhP"/>
-                            <constraint firstItem="mRV-Qr-sbd" firstAttribute="top" secondItem="Je0-py-MBU" secondAttribute="bottom" constant="20" id="SWg-0B-v6N"/>
-                            <constraint firstItem="St2-oQ-7Bo" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="THt-Fy-pw9"/>
-                            <constraint firstItem="TeZ-zA-aiy" firstAttribute="centerY" secondItem="Je0-py-MBU" secondAttribute="centerY" id="UxS-DC-uzU"/>
-                            <constraint firstAttribute="trailing" secondItem="Uhb-BE-SbM" secondAttribute="trailing" constant="173" id="V62-4C-XjF"/>
-                            <constraint firstItem="Wnr-7g-dTZ" firstAttribute="top" secondItem="TeZ-zA-aiy" secondAttribute="top" id="WE2-JY-xPV"/>
-                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="baseline" secondItem="mRV-Qr-sbd" secondAttribute="baseline" id="WN4-jv-921"/>
-                            <constraint firstItem="Je0-py-MBU" firstAttribute="top" secondItem="IJ5-gX-gUq" secondAttribute="bottom" constant="8" symbolic="YES" id="XYn-Np-wWi"/>
-                            <constraint firstItem="MSH-jK-ihf" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="XkA-PL-sUs"/>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Fsn-SN-Exy" secondAttribute="trailing" constant="-11" id="Ytw-dZ-xM7"/>
-                            <constraint firstItem="Je0-py-MBU" firstAttribute="leading" secondItem="Wnr-7g-dTZ" secondAttribute="trailing" constant="7" id="Z7i-PR-jLR"/>
-                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="aLc-O6-uoV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uv7-xH-1aG" secondAttribute="bottom" id="anL-Qg-Klb"/>
-                            <constraint firstItem="28U-v3-EJM" firstAttribute="top" secondItem="ciK-Wz-92M" secondAttribute="bottom" constant="20" id="bS8-rz-7Jq"/>
-                            <constraint firstItem="Je0-py-MBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1j-vg-HNA"/>
-                            <constraint firstItem="9RV-2N-qE1" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="eql-P5-nTu"/>
-                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="leading" secondItem="mRV-Qr-sbd" secondAttribute="trailing" constant="67" id="f5v-cD-GUo"/>
-                            <constraint firstItem="TeZ-zA-aiy" firstAttribute="leading" secondItem="Je0-py-MBU" secondAttribute="trailing" constant="7" id="f7d-eK-Lrh"/>
-                            <constraint firstItem="urO-3k-Wiv" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="fkf-8W-hef"/>
-                            <constraint firstItem="mRV-Qr-sbd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="gRw-UX-sgN"/>
-                            <constraint firstItem="28U-v3-EJM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="h89-Lc-RC1"/>
-                            <constraint firstItem="ciK-Wz-92M" firstAttribute="top" secondItem="rO4-vX-T7l" secondAttribute="bottom" constant="20" id="keX-Ph-R4D"/>
-                            <constraint firstItem="Uhb-BE-SbM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="lD8-HW-9hb"/>
-                            <constraint firstItem="OzT-7H-ElE" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="bottom" constant="20" id="mY1-tY-eUC"/>
-                            <constraint firstItem="IJ5-gX-gUq" firstAttribute="centerX" secondItem="Je0-py-MBU" secondAttribute="centerX" id="nLP-Y0-DSn"/>
-                            <constraint firstAttribute="trailing" secondItem="Uv7-xH-1aG" secondAttribute="trailing" id="pCv-T0-cYR"/>
-                            <constraint firstItem="Uv7-xH-1aG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pIM-6j-wIh"/>
-                            <constraint firstItem="St2-oQ-7Bo" firstAttribute="leading" secondItem="9RV-2N-qE1" secondAttribute="trailing" constant="7" id="r6o-YJ-QDb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Hx-GD-r18" secondAttribute="bottom" constant="-34" id="rNo-CO-l47"/>
-                            <constraint firstItem="f55-08-EDe" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="tSf-ah-4gY"/>
-                            <constraint firstItem="Uv7-xH-1aG" firstAttribute="top" secondItem="urO-3k-Wiv" secondAttribute="bottom" constant="8" id="uMT-1U-dGV"/>
-                            <constraint firstItem="28U-v3-EJM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVD-99-LQK"/>
-                            <constraint firstItem="kB9-ET-jpM" firstAttribute="leading" secondItem="urO-3k-Wiv" secondAttribute="trailing" constant="7" id="vcW-5J-2pt"/>
-                            <constraint firstItem="rO4-vX-T7l" firstAttribute="leading" secondItem="OzT-7H-ElE" secondAttribute="trailing" constant="36" id="vfB-L3-2I3"/>
-                            <constraint firstItem="rO4-vX-T7l" firstAttribute="trailing" secondItem="ciK-Wz-92M" secondAttribute="trailing" id="vrO-FS-det"/>
-                            <constraint firstItem="Li0-US-5F3" firstAttribute="top" secondItem="28U-v3-EJM" secondAttribute="bottom" constant="8" id="w35-mL-UsT"/>
-                            <constraint firstItem="Fsn-SN-Exy" firstAttribute="top" secondItem="mRV-Qr-sbd" secondAttribute="top" id="yGc-8i-gSe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PVs-aC-WNr">
                         <barButtonItem key="leftBarButtonItem" image="about" id="bOP-cn-H4U">
@@ -459,33 +36,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addInfo" destination="ciK-Wz-92M" id="VLS-KG-HFc"/>
-                        <outlet property="annualLbl" destination="Uhb-BE-SbM" id="nAe-gf-W5A"/>
-                        <outlet property="currencyTable" destination="Uv7-xH-1aG" id="z5n-PB-rhF"/>
-                        <outlet property="firstCompBut" destination="MSH-jK-ihf" id="bpc-zg-tkN"/>
-                        <outlet property="fiveCompBut" destination="f55-08-EDe" id="9F8-CD-pzu"/>
-                        <outlet property="fourCompBut" destination="9RV-2N-qE1" id="4ZT-mT-S3g"/>
-                        <outlet property="inputField" destination="Je0-py-MBU" id="Rh7-is-rMV"/>
-                        <outlet property="middleSalaryLbl" destination="28U-v3-EJM" id="Ped-7d-naQ"/>
-                        <outlet property="nettLabel" destination="OzT-7H-ElE" id="X7X-jM-CLT"/>
-                        <outlet property="output" destination="rO4-vX-T7l" id="Q0N-CX-jbl"/>
-                        <outlet property="secondCompBut" destination="kB9-ET-jpM" id="Z34-R3-U6L"/>
-                        <outlet property="seventhCompBut" destination="urO-3k-Wiv" id="cAy-fa-jMI"/>
-                        <outlet property="sixthCompBut" destination="St2-oQ-7Bo" id="vMQ-cR-Kk8"/>
-                        <outlet property="taxLbl" destination="Fsn-SN-Exy" id="F10-kf-SB9"/>
-                        <outlet property="taxResultLbl" destination="mRV-Qr-sbd" id="j88-CT-C7m"/>
-                        <outlet property="thirdCompBut" destination="Li0-US-5F3" id="Oeb-HR-xID"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.875" y="115"/>
+            <point key="canvasLocation" x="1644.375" y="115"/>
         </scene>
-        <!--Second View Controller-->
+        <!--AboutVC-->
         <scene sceneID="hxV-kE-hF7">
             <objects>
-                <viewController id="4al-CU-djJ" customClass="SecondViewController" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4al-CU-djJ" customClass="AboutVC" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JNB-aX-MpK"/>
                         <viewControllerLayoutGuide type="bottom" id="CRu-Hj-fUl"/>
@@ -494,9 +53,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new7" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-Dm-oD6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
                                 <rect key="frame" x="125" y="311" width="70" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878424657535" colorSpace="calibratedRGB"/>
@@ -636,14 +192,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qjx-iT-EGs" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="27z-6g-3ET"/>
                             <constraint firstItem="aGI-rr-QO5" firstAttribute="top" secondItem="1n0-bx-IRh" secondAttribute="bottom" constant="9" id="2EB-Cm-4WK"/>
-                            <constraint firstAttribute="trailing" secondItem="DjX-Dm-oD6" secondAttribute="trailing" id="49V-JK-7Wq"/>
                             <constraint firstItem="qjx-iT-EGs" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" constant="5" id="4e5-lT-OrJ"/>
                             <constraint firstItem="CRu-Hj-fUl" firstAttribute="top" secondItem="cMh-SQ-6cy" secondAttribute="bottom" constant="5" id="7jt-3p-Ovq"/>
-                            <constraint firstItem="DjX-Dm-oD6" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="EA4-R1-3s0"/>
                             <constraint firstItem="X5t-gF-dd5" firstAttribute="trailing" secondItem="Fjz-Z6-lhG" secondAttribute="trailingMargin" id="F1G-sK-mrB"/>
                             <constraint firstAttribute="trailing" secondItem="tqj-Kr-fdd" secondAttribute="trailing" id="Fuo-BO-X3t"/>
                             <constraint firstItem="tqj-Kr-fdd" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="GP5-3V-tko"/>
@@ -656,12 +209,10 @@
                             <constraint firstItem="X5t-gF-dd5" firstAttribute="top" secondItem="JNB-aX-MpK" secondAttribute="bottom" constant="20" id="TWt-VK-H1o"/>
                             <constraint firstItem="1n0-bx-IRh" firstAttribute="leading" secondItem="s4r-2F-l9k" secondAttribute="trailing" constant="30" id="VB8-pd-dNd"/>
                             <constraint firstItem="X5t-gF-dd5" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="cQ5-Dh-iPb"/>
-                            <constraint firstItem="DjX-Dm-oD6" firstAttribute="top" secondItem="Fjz-Z6-lhG" secondAttribute="top" id="jbf-xD-LIh"/>
                             <constraint firstItem="1n0-bx-IRh" firstAttribute="top" secondItem="qjx-iT-EGs" secondAttribute="bottom" constant="7.5" id="kR6-bg-Zwe"/>
                             <constraint firstItem="aGI-rr-QO5" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="ouO-mj-1OI"/>
                             <constraint firstItem="qjx-iT-EGs" firstAttribute="centerY" secondItem="Fjz-Z6-lhG" secondAttribute="centerY" id="umo-Xi-7wo"/>
                             <constraint firstItem="o8l-TC-dV3" firstAttribute="leading" secondItem="1n0-bx-IRh" secondAttribute="trailing" constant="30" id="xzl-Me-boZ"/>
-                            <constraint firstItem="CRu-Hj-fUl" firstAttribute="top" secondItem="DjX-Dm-oD6" secondAttribute="bottom" constant="-34" id="y2a-6G-IFK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -672,101 +223,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-LL-pS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400.625" y="91.25"/>
+            <point key="canvasLocation" x="2398.125" y="91.25"/>
         </scene>
-        <!--Start Window-->
-        <scene sceneID="CMW-bW-Ut0">
-            <objects>
-                <viewController id="02M-rW-obe" customClass="StartWindow" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tfB-Kb-OgT"/>
-                        <viewControllerLayoutGuide type="bottom" id="EUx-l6-Ja2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xp7-cO-Hgk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new7" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-Ha-kNG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp9-si-nnY">
-                                <rect key="frame" x="72.5" y="430" width="175" height="37"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Check out our tutorial">
-                                    <color key="titleColor" white="1" alpha="0.79799871575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tutorialButton:" destination="02M-rW-obe" eventType="touchUpInside" id="bGL-OB-soU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatter Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-vj-FIB">
-                                <rect key="frame" x="16" y="74" width="288" height="55"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="0.79588505993150682" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-AA-KWv" customClass="RoundButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="7" y="125" width="306" height="306"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.11277290239726027" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="306" id="5xE-j3-2Js"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="306" id="cNZ-uf-oYi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
-                                <state key="normal" title="Let's start..">
-                                    <color key="titleColor" white="1" alpha="0.77354452054794531" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="150"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.049309717465753425" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startButton:" destination="02M-rW-obe" eventType="touchUpInside" id="5cG-1J-6UP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="top" secondItem="Xp7-cO-Hgk" secondAttribute="top" id="27Q-XS-qHv"/>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="top" secondItem="Xp7-cO-Hgk" secondAttribute="top" id="9ln-hr-zt9"/>
-                            <constraint firstItem="qo6-vj-FIB" firstAttribute="top" secondItem="tfB-Kb-OgT" secondAttribute="bottom" constant="10" id="Tpd-KM-d1e"/>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="bottom" secondItem="EUx-l6-Ja2" secondAttribute="top" constant="34" id="YHh-iq-rCA"/>
-                            <constraint firstAttribute="trailing" secondItem="WnJ-Ha-kNG" secondAttribute="trailing" id="fiD-qm-lgd"/>
-                            <constraint firstItem="qo6-vj-FIB" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leadingMargin" id="g4W-Bq-toN"/>
-                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerY" secondItem="Xp7-cO-Hgk" secondAttribute="centerY" constant="38" id="jtC-Rp-Fqi"/>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leading" id="jxB-kC-k36"/>
-                            <constraint firstItem="lp9-si-nnY" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="k3W-p3-Pyv"/>
-                            <constraint firstItem="WnJ-Ha-kNG" firstAttribute="leading" secondItem="Xp7-cO-Hgk" secondAttribute="leading" id="mVf-yw-Ax4"/>
-                            <constraint firstItem="O2l-AA-KWv" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="nUr-5y-G40"/>
-                            <constraint firstItem="EUx-l6-Ja2" firstAttribute="top" secondItem="lp9-si-nnY" secondAttribute="bottom" constant="13" id="p25-Ue-gHV"/>
-                            <constraint firstItem="EUx-l6-Ja2" firstAttribute="top" secondItem="WnJ-Ha-kNG" secondAttribute="bottom" constant="-34" id="qIZ-bd-weC"/>
-                            <constraint firstItem="qo6-vj-FIB" firstAttribute="trailing" secondItem="Xp7-cO-Hgk" secondAttribute="trailingMargin" id="rdP-z2-hWG"/>
-                            <constraint firstItem="qo6-vj-FIB" firstAttribute="centerX" secondItem="Xp7-cO-Hgk" secondAttribute="centerX" id="sRM-KT-TWj"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="y9E-Dp-hXc"/>
-                    <connections>
-                        <outlet property="nameLabel" destination="qo6-vj-FIB" id="6i1-6H-nu7"/>
-                        <outlet property="startBut" destination="O2l-AA-KWv" id="guK-wa-Esh"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="start" id="W4G-gT-RxA"/>
-                        <segue destination="noJ-TF-c9Q" kind="show" identifier="tutorial" id="w0m-L9-eJw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3iO-zm-NaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-455.19999999999999" y="1013.0541871921183"/>
-        </scene>
-        <!--Tutorial View Controller-->
+        <!--TutorialVC-->
         <scene sceneID="AEL-X4-dsG">
             <objects>
-                <viewController id="noJ-TF-c9Q" customClass="TutorialViewController" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="noJ-TF-c9Q" customClass="TutorialVC" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="17E-xs-MmF"/>
                         <viewControllerLayoutGuide type="bottom" id="612-ZI-EyV"/>
@@ -775,9 +237,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new7" translatesAutoresizingMaskIntoConstraints="NO" id="KnL-BU-fTP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="684"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-w9-Ewp">
                                 <rect key="frame" x="0.0" y="88" width="320" height="596"/>
                                 <subviews>
@@ -881,15 +340,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KnL-BU-fTP" firstAttribute="leading" secondItem="01X-Ae-DnG" secondAttribute="leading" id="1CG-Bz-uaQ"/>
                             <constraint firstItem="GF5-BB-4pL" firstAttribute="width" secondItem="01X-Ae-DnG" secondAttribute="width" id="7q9-m9-5fJ"/>
                             <constraint firstItem="612-ZI-EyV" firstAttribute="top" secondItem="H0f-w9-Ewp" secondAttribute="bottom" constant="-34" id="DtE-Mr-Tpw"/>
                             <constraint firstItem="H0f-w9-Ewp" firstAttribute="leading" secondItem="01X-Ae-DnG" secondAttribute="leading" id="Ldp-2t-aCG"/>
-                            <constraint firstItem="KnL-BU-fTP" firstAttribute="top" secondItem="01X-Ae-DnG" secondAttribute="top" id="LnP-PU-boc"/>
                             <constraint firstItem="H0f-w9-Ewp" firstAttribute="top" secondItem="01X-Ae-DnG" secondAttribute="top" constant="88" id="Olw-aB-P3W"/>
-                            <constraint firstAttribute="trailing" secondItem="KnL-BU-fTP" secondAttribute="trailing" id="jHP-xk-agO"/>
                             <constraint firstAttribute="trailing" secondItem="H0f-w9-Ewp" secondAttribute="trailing" id="o7K-yr-Vd0"/>
-                            <constraint firstItem="612-ZI-EyV" firstAttribute="top" secondItem="KnL-BU-fTP" secondAttribute="bottom" constant="-34" id="stP-9E-5ZT"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="320" height="650"/>
@@ -910,22 +365,22 @@
             <point key="canvasLocation" x="529.60000000000002" y="1024.8768472906404"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="4x9-pS-5Pg">
+        <scene sceneID="MNp-ia-txa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EUA-D2-irX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cJf-bH-Lup" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNn-6c-9S7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gb3-EH-a1W">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="02M-rW-obe" kind="relationship" relationship="rootViewController" id="OfO-UR-VLi"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZT4-5c-RAK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bM9-MA-sxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMi-v4-mr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1183" y="1014"/>
+            <point key="canvasLocation" x="646.875" y="115"/>
         </scene>
     </scenes>
     <resources>
@@ -935,18 +390,9 @@
         <image name="clear" width="48" height="48"/>
         <image name="emailIcon" width="512" height="512"/>
         <image name="facebookIcon" width="600" height="600"/>
-        <image name="google" width="512" height="512"/>
-        <image name="new7" width="480" height="853"/>
         <image name="rate" width="96" height="96"/>
-        <image name="skype" width="300" height="300"/>
         <image name="spotifyIcon" width="150" height="150"/>
-        <image name="swedbank" width="300" height="300"/>
-        <image name="tradedoubler" width="192" height="192"/>
         <image name="twitterIcon" width="256" height="256"/>
-        <image name="volvo" width="660" height="660"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="w0m-L9-eJw"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
