@@ -26,7 +26,7 @@ class Cell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = UIColor.darkGray
         return label
     }()
@@ -43,8 +43,8 @@ class Cell: UITableViewCell {
     
     lazy var flagImage: UIImageView = {
         let image = UIImageView()
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 4
+        image.clipsToBounds = false
+        image.layer.cornerRadius = 10
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         return image

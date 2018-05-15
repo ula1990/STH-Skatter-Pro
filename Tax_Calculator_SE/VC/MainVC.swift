@@ -11,6 +11,7 @@ import ObjectiveC
 import Foundation
 
 
+
 @objc class MainVC: UIViewController {
     
     var receivedRates: [Double] = [0.77383000000000002, 0.41514000000000001, 3.8416999999999999, 0.19472, 0.15640999999999999, 0.46375, 0.42845, 0.39682000000000001, 0.74133000000000004, 0.087434999999999999, 6.8638000000000003, 0.11479, 12.316000000000001, 0.74109000000000003, 2.2818000000000001, 0.46421000000000001, 0.16156000000000001, 0.099561999999999998, 0.95881000000000005, 31.222000000000001, 0.16772999999999999, 0.12266000000000001, 0.47954000000000002, 1676.0, 131.44, 13.102, 7.9452999999999996, 6.3655999999999997, 2.528, 0.95965, 1.4219999999999999, 0.15548999999999999]
@@ -35,7 +36,7 @@ import Foundation
         field.font = UIFont.systemFont(ofSize: 20)
         field.textAlignment = .center
         field.layer.shadowOpacity = 0.2
-        field.layer.shadowRadius = 3
+        field.layer.shadowRadius = 5
         return field
         
     }()
@@ -45,9 +46,8 @@ import Foundation
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 25
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.backgroundColor = UIColor.lightGray
+        button.contentMode = .scaleAspectFill
+        button.setImage(UIImage(named: "go"), for: .normal)
         button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
         return button
     }()
@@ -58,9 +58,8 @@ import Foundation
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 25
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.backgroundColor = UIColor.lightGray
+
+        button.setImage(UIImage(named: "clear"), for: .normal)
         button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
         return button
     }()
@@ -71,9 +70,9 @@ import Foundation
        let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 85
-        view.layer.shadowRadius = 5
-        view.layer.shadowOpacity = 0.2
-        view.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        view.layer.shadowRadius = 7
+        view.layer.shadowOpacity = 0.3
+        view.backgroundColor = UIColor(named: "NewPink")?.withAlphaComponent(0.9)
         return view
     }()
     
@@ -81,9 +80,9 @@ import Foundation
         let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 85
-        view.layer.shadowRadius = 5
-        view.layer.shadowOpacity = 0.2
-        view.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        view.layer.shadowRadius = 7
+        view.layer.shadowOpacity = 0.3
+        view.backgroundColor = UIColor(named: "NewGreen")?.withAlphaComponent(0.9)
         return view
     }()
     
@@ -91,9 +90,9 @@ import Foundation
         let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 85
-        view.layer.shadowRadius = 5
-        view.layer.shadowOpacity = 0.2
-        view.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+        view.layer.shadowRadius = 7
+        view.layer.shadowOpacity = 0.3
+        view.backgroundColor = UIColor.purple.withAlphaComponent(0.7)
         return view
     }()
     
@@ -103,19 +102,18 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 25)
-        label.textColor = .white
-        label.text = "Taxes"
+        label.font = UIFont.systemFont(ofSize: 21)
+        label.textColor = UIColor.white
+        label.text = "Taxes amount"
         return label
     }()
     
     lazy var taxResult: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -123,10 +121,9 @@ import Foundation
     lazy var nettoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 25)
-        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 21)
         label.text = "Netto"
         return label
     }()
@@ -134,10 +131,9 @@ import Foundation
     lazy var nettoResult: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -146,21 +142,19 @@ import Foundation
     lazy var annualLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 25)
-        label.textColor = .white
-        label.text = "Annual"
+        label.font = UIFont.systemFont(ofSize: 21)
+        label.text = "Annual income"
         return label
     }()
     
     lazy var annualResult: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -170,7 +164,7 @@ import Foundation
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.shadowRadius = 5
         view.layer.cornerRadius = 5
-        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOpacity = 0.3
         view.backgroundColor = .white
         return view
     }()
@@ -189,7 +183,7 @@ import Foundation
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.shadowRadius = 5
         view.layer.cornerRadius = 5
-        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOpacity = 0.3
         view.backgroundColor = .white
         return view
     }()
@@ -504,7 +498,8 @@ import Foundation
 
     func calculateRates(){
         if inputTextField.text?.isEmpty == true {
-            print(Error.self)
+            currentAmount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            self.currenciesTable.reloadData()
         }else{
             currentAmount.removeAll()
             currentAmount = receivedRates.map{ $0 * Double(inputTextField.text!)! }
@@ -629,23 +624,23 @@ import Foundation
         
         companiesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         companiesView.topAnchor.constraint(equalTo: nettoView.bottomAnchor, constant: 20).isActive = true
-        companiesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-        companiesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
-        companiesView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        companiesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        companiesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        companiesView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         
         currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 30).isActive = true
-        currenciesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
-        currenciesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        currenciesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        currenciesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         currenciesView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         
         currenciesTable.centerXAnchor.constraint(equalTo: currenciesView.centerXAnchor).isActive = true
-        currenciesTable.leftAnchor.constraint(equalTo: currenciesView.leftAnchor).isActive = true
-        currenciesTable.rightAnchor.constraint(equalTo: currenciesView.rightAnchor).isActive = true
-        currenciesTable.topAnchor.constraint(equalTo: currenciesView.topAnchor).isActive = true
-        currenciesTable.bottomAnchor.constraint(equalTo: currenciesView.bottomAnchor).isActive = true
+        currenciesTable.leftAnchor.constraint(equalTo: currenciesView.leftAnchor, constant: 5).isActive = true
+        currenciesTable.rightAnchor.constraint(equalTo: currenciesView.rightAnchor, constant: -5).isActive = true
+        currenciesTable.topAnchor.constraint(equalTo: currenciesView.topAnchor, constant: 5).isActive = true
+        currenciesTable.bottomAnchor.constraint(equalTo: currenciesView.bottomAnchor, constant: -5).isActive = true
 
         
     }
@@ -654,7 +649,7 @@ import Foundation
         super.viewDidLoad()
         addViews()
         setupViews()
-        inputTextField.text = "0"
+   //     inputTextField.text = "0"
         getCurrencyRates(nameOfCurrency: "SEK")
         
         inputTextField.delegate = self
