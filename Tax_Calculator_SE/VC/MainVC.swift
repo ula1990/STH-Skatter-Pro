@@ -635,7 +635,7 @@ import Foundation
         
         
         currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 20).isActive = true
+        currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 30).isActive = true
         currenciesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         currenciesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         currenciesView.heightAnchor.constraint(equalToConstant: 200).isActive = true

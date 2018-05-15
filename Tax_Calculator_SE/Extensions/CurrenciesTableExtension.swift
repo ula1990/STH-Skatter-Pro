@@ -20,11 +20,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let ratesInfo = receivedRates[indexPath.row]
         
         let cell = currenciesTable.dequeueReusableCell(withIdentifier: cellId) as! Cell
-        cell.nameOfCurrency.text = title
+        cell.updateCellData(rate: ratesInfo, currencyTitle: title, amount: (formatter.string(from:rates as NSNumber))!)
         formatter.numberStyle = .decimal
-        cell.amountLabel.text = (formatter.string(from:rates as NSNumber))
-        cell.flagOfCurrency(image: title)
-        cell.rateInfo(Rate: ratesInfo)
         return cell
     }
     
