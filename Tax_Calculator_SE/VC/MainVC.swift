@@ -30,7 +30,7 @@ import Foundation
         field.placeholder = "Please put your income"
         field.textColor = UIColor.black
         field.layer.borderWidth = 1
-        field.layer.borderColor = UIColor.lightGray.cgColor.copy(alpha: 0.5)
+        field.layer.borderColor = UIColor.lightGray.cgColor.copy(alpha: 0.3)
         field.layer.cornerRadius = 5
         field.font = UIFont.systemFont(ofSize: 20)
         field.textAlignment = .center
@@ -103,7 +103,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 25)
+        label.textColor = .white
         label.text = "Taxes"
         return label
     }()
@@ -113,7 +114,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -123,7 +125,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 25)
+        label.textColor = .white
         label.text = "Netto"
         return label
     }()
@@ -133,7 +136,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -144,7 +148,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 25)
+        label.textColor = .white
         label.text = "Annual"
         return label
     }()
@@ -154,7 +159,8 @@ import Foundation
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = .white
         label.text = "Result"
         return label
     }()
@@ -165,6 +171,7 @@ import Foundation
         view.layer.shadowRadius = 5
         view.layer.cornerRadius = 5
         view.layer.shadowOpacity = 0.2
+        view.backgroundColor = .white
         return view
     }()
     
@@ -172,6 +179,7 @@ import Foundation
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.separatorStyle = UITableViewCellSeparatorStyle.none
+        table.layer.cornerRadius = 5
         table.register(Cell.self, forCellReuseIdentifier: cellId)
         return table
     }()
@@ -182,6 +190,7 @@ import Foundation
         view.layer.shadowRadius = 5
         view.layer.cornerRadius = 5
         view.layer.shadowOpacity = 0.2
+        view.backgroundColor = .white
         return view
     }()
     
@@ -539,6 +548,7 @@ import Foundation
         view.addSubview(calculateButton)
         view.addSubview(clearButton)
         view.addSubview(currenciesView)
+        view.addSubview(companiesView)
         nettoView.addSubview(nettoLabel)
         nettoView.addSubview(nettoResult)
         taxView.addSubview(taxResult)
@@ -561,8 +571,8 @@ import Foundation
         inputTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         inputTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputTextField.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        inputTextField.leftAnchor.constraint(equalTo: clearButton.rightAnchor, constant: 5).isActive = true
-        inputTextField.rightAnchor.constraint(equalTo: calculateButton.leftAnchor, constant: -5).isActive = true
+        inputTextField.leftAnchor.constraint(equalTo: clearButton.rightAnchor, constant: 10).isActive = true
+        inputTextField.rightAnchor.constraint(equalTo: calculateButton.leftAnchor, constant: -10).isActive = true
         
         calculateButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         calculateButton.centerYAnchor.constraint(equalTo: inputTextField.centerYAnchor).isActive = true
@@ -580,16 +590,62 @@ import Foundation
         taxView.widthAnchor.constraint(equalToConstant: 170).isActive = true
         taxView.heightAnchor.constraint(equalToConstant: 170).isActive = true
         
+        taxLabel.centerXAnchor.constraint(equalTo: taxView.centerXAnchor).isActive = true
+        taxLabel.centerYAnchor.constraint(equalTo: taxView.centerYAnchor, constant: -15).isActive = true
+        taxLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        taxResult.centerXAnchor.constraint(equalTo: taxView.centerXAnchor).isActive = true
+        taxResult.centerYAnchor.constraint(equalTo: taxView.centerYAnchor, constant: 15).isActive = true
+        taxResult.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         
         annualView.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 40).isActive = true
         annualView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         annualView.widthAnchor.constraint(equalToConstant: 170).isActive = true
         annualView.heightAnchor.constraint(equalToConstant: 170).isActive = true
         
+        
+        annualLabel.centerXAnchor.constraint(equalTo: annualView.centerXAnchor).isActive = true
+        annualLabel.centerYAnchor.constraint(equalTo: annualView.centerYAnchor, constant: -15).isActive = true
+        annualLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        annualResult.centerXAnchor.constraint(equalTo: annualView.centerXAnchor).isActive = true
+        annualResult.centerYAnchor.constraint(equalTo: annualView.centerYAnchor, constant: 15).isActive = true
+        annualResult.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         nettoView.topAnchor.constraint(equalTo: annualView.bottomAnchor, constant: 5).isActive = true
         nettoView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         nettoView.widthAnchor.constraint(equalToConstant: 170).isActive = true
         nettoView.heightAnchor.constraint(equalToConstant: 170).isActive = true
+        
+        
+        nettoLabel.centerXAnchor.constraint(equalTo: nettoView.centerXAnchor).isActive = true
+        nettoLabel.centerYAnchor.constraint(equalTo: nettoView.centerYAnchor, constant: -15).isActive = true
+        nettoLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        nettoResult.centerXAnchor.constraint(equalTo: nettoView.centerXAnchor).isActive = true
+        nettoResult.centerYAnchor.constraint(equalTo: nettoView.centerYAnchor, constant: 15).isActive = true
+        nettoResult.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        companiesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        companiesView.topAnchor.constraint(equalTo: nettoView.bottomAnchor, constant: 20).isActive = true
+        companiesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+        companiesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        companiesView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        
+        
+        currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 20).isActive = true
+        currenciesView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+        currenciesView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        currenciesView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        
+        currenciesTable.centerXAnchor.constraint(equalTo: currenciesView.centerXAnchor).isActive = true
+        currenciesTable.leftAnchor.constraint(equalTo: currenciesView.leftAnchor).isActive = true
+        currenciesTable.rightAnchor.constraint(equalTo: currenciesView.rightAnchor).isActive = true
+        currenciesTable.topAnchor.constraint(equalTo: currenciesView.topAnchor).isActive = true
+        currenciesTable.bottomAnchor.constraint(equalTo: currenciesView.bottomAnchor).isActive = true
 
         
     }
