@@ -43,7 +43,7 @@ class Cell: UITableViewCell {
     
     lazy var flagImage: UIImageView = {
         let image = UIImageView()
-        image.clipsToBounds = false
+        image.clipsToBounds = true
         image.layer.cornerRadius = 10
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
