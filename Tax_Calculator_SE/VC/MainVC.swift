@@ -48,7 +48,7 @@ import Foundation
         button.layer.cornerRadius = 25
         button.contentMode = .scaleAspectFill
         button.setImage(UIImage(named: "go"), for: .normal)
-        button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
+        button.addTarget(self, action: #selector(calculateAmount), for: .touchUpInside)
         return button
     }()
     
@@ -60,7 +60,7 @@ import Foundation
         button.layer.cornerRadius = 25
 
         button.setImage(UIImage(named: "clear"), for: .normal)
-        button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
+        button.addTarget(self, action: #selector(clearData), for: .touchUpInside)
         return button
     }()
     
@@ -82,7 +82,7 @@ import Foundation
         view.layer.cornerRadius = 85
         view.layer.shadowRadius = 7
         view.layer.shadowOpacity = 0.3
-        view.backgroundColor = UIColor(named: "NewGreen")?.withAlphaComponent(0.9)
+        view.backgroundColor = UIColor(named: "NewGreen")
         return view
     }()
     
@@ -447,19 +447,19 @@ import Foundation
     let taxL = "taxL"
     let addI = "addI"
     
-    fileprivate func updateCompaniesIcons() {
-        let amount = (Int(inputTextField.text!))!
-        if amount >= 35000 {
-            updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotifyIcon"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
-        }else if amount < 35000 && amount >= 24000 {
-            updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "social") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "sas"))
-            
-        }else if amount < 24000 && amount >= 1{
-            updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "burger"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "ubereats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "circleK") )
-        }else{
-            hideCompButtons()
-        }
-    }
+//    fileprivate func updateCompaniesIcons() {
+//        let amount = (Int(inputTextField.text!))!
+//        if amount >= 35000 {
+//            updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotifyIcon"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
+//        }else if amount < 35000 && amount >= 24000 {
+//            updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "social") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "sas"))
+//
+//        }else if amount < 24000 && amount >= 1{
+//            updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "burger"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "ubereats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "circleK") )
+//        }else{
+//            hideCompButtons()
+//        }
+//    }
     
     fileprivate func updateLabelsInfo() {
         formatter.numberStyle = NumberFormatter.Style.currency
@@ -471,14 +471,14 @@ import Foundation
         defaultsSaveForLabels()
     }
     
-    @IBAction func calculateAmount(_ sender: UIButton) {
+    @objc fileprivate func calculateAmount(_ sender: UIButton) {
         getCurrencyRates(nameOfCurrency: "SEK")
         inputTextField.resignFirstResponder()
-        updateCompaniesIcons()
+    //    updateCompaniesIcons()
         updateLabelsInfo()
     }
 
-    @IBAction func clearButton(_ sender: UIButton) {
+    @objc fileprivate func clearData(_ sender: UIButton) {
         formatter.numberStyle = NumberFormatter.Style.currency
         formatter.locale = NSLocale(localeIdentifier: "sv_SE") as Locale?
         formatter.currencyDecimalSeparator = "."
