@@ -69,8 +69,8 @@ class Cell: UITableViewCell {
         
         amountLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         amountLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-        amountLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        amountLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        amountLabel.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        amountLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
 
     }
 

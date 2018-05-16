@@ -32,18 +32,29 @@ import Foundation
         return view
     }()
     
+    lazy var inputAmountView: UIView = {
+        let view =  UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.shadowRadius = 5
+        view.layer.cornerRadius = 5
+        view.layer.shadowOpacity = 0.3
+        view.backgroundColor = .white
+        return view
+    }()
+    
     lazy var inputTextField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.placeholder = "Please put your income"
         field.textColor = UIColor.black
-        field.layer.borderWidth = 1
+        field.layer.borderWidth = 2
         field.layer.borderColor = UIColor.lightGray.cgColor.copy(alpha: 0.3)
         field.layer.cornerRadius = 5
-        field.font = UIFont.systemFont(ofSize: 20)
+        field.font = UIFont.systemFont(ofSize: 19)
         field.textAlignment = .center
         field.layer.shadowOpacity = 0.2
         field.layer.shadowRadius = 5
+        field.keyboardType = .numberPad
         return field
         
     }()
@@ -567,12 +578,13 @@ import Foundation
     
     fileprivate func addViews() {
         view.addSubview(scrollView)
-        scrollView.addSubview(inputTextField)
+        scrollView.addSubview(inputAmountView)
+        inputAmountView.addSubview(inputTextField)
+        inputAmountView.addSubview(calculateButton)
+        inputAmountView.addSubview(clearButton)
         scrollView.addSubview(nettoView)
         scrollView.addSubview(taxView)
         scrollView.addSubview(annualView)
-        scrollView.addSubview(calculateButton)
-        scrollView.addSubview(clearButton)
         scrollView.addSubview(currenciesView)
         scrollView.addSubview(companiesView)
         nettoView.addSubview(nettoLabel)
@@ -602,24 +614,30 @@ import Foundation
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 
-        inputTextField.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 80).isActive = true
+        inputAmountView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 80).isActive = true
+        inputAmountView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        inputAmountView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        inputAmountView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        inputAmountView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        
+        inputTextField.topAnchor.constraint(equalTo: inputAmountView.topAnchor, constant: 15).isActive = true
         inputTextField.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        inputTextField.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        inputTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         inputTextField.leftAnchor.constraint(equalTo: clearButton.rightAnchor, constant: 10).isActive = true
         inputTextField.rightAnchor.constraint(equalTo: calculateButton.leftAnchor, constant: -10).isActive = true
         
-        calculateButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
-        calculateButton.centerYAnchor.constraint(equalTo: inputTextField.centerYAnchor).isActive = true
+        calculateButton.rightAnchor.constraint(equalTo: inputAmountView.rightAnchor, constant: -5).isActive = true
+        calculateButton.centerYAnchor.constraint(equalTo: inputAmountView.centerYAnchor).isActive = true
         calculateButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         calculateButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
-        clearButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
+        clearButton.leftAnchor.constraint(equalTo: inputAmountView.leftAnchor, constant: 5).isActive = true
         clearButton.centerYAnchor.constraint(equalTo: inputTextField.centerYAnchor).isActive = true
         clearButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         clearButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
         
-        taxView.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 40).isActive = true
+        taxView.topAnchor.constraint(equalTo: inputAmountView.bottomAnchor, constant: 20).isActive = true
         taxView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         taxView.widthAnchor.constraint(equalToConstant: 160).isActive = true
         taxView.heightAnchor.constraint(equalToConstant: 160).isActive = true
@@ -633,7 +651,7 @@ import Foundation
         taxResult.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         
-        annualView.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 40).isActive = true
+        annualView.topAnchor.constraint(equalTo: inputAmountView.bottomAnchor, constant: 20).isActive = true
         annualView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         annualView.widthAnchor.constraint(equalToConstant: 170).isActive = true
         annualView.heightAnchor.constraint(equalToConstant: 170).isActive = true
