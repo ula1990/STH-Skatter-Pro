@@ -79,4 +79,65 @@ extension MainVC {
             openCareerUrl(urlStr: thirdLink)
         }
     }
+    
+    
+    @objc func firstCompLink(){
+        updateButtonLink(firstLink: "http://www.tradedoubler.com/en/careers-at-tradedoubler/current-vacancies/",
+                         secondLink: "http://www.ikea.com/ms/en_JP/the_ikea_story/jobs_at_ikea/index.html",
+                         thirdLink: "https://www.nordea.com/en/career/")
+        
+    }
+    
+    @objc func secondCompLink(){
+        updateButtonLink(firstLink: "https://www.swedbank.com/work-with-us/job-openings/index.htm",
+                         secondLink: "https://www.uber.com/en-SE/careers/",
+                         thirdLink: "https://www.mcdonalds.com/se/sv-se/jobb/sok-jobb.html")
+    }
+    
+    @objc func thirdCompLink() {
+        updateButtonLink(firstLink: "https://www.spotifyjobs.com/",
+                         secondLink: "https://www.hemkop.se/jobb",
+                         thirdLink: "https://burgerking.se/jobb")
+    }
+    
+    @objc func fourthCompLink() {
+        updateButtonLink(firstLink: "https://xjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25079&siteid=5171#home",
+                         secondLink: "https://www.blocket.career/jobs",
+                         thirdLink: "https://polisen.se/Aktuellt/Lediga-jobb/")
+        
+    }
+    
+    @objc func fifthCompLink() {
+        updateButtonLink(firstLink: "https://careers.google.com/locations/",
+                         secondLink: "https://www.ge.com/se/careers",
+                         thirdLink: "https://www.uber.com/info/careers/eats/")
+    }
+    
+    @objc func sixthCompLink() {
+        updateButtonLink(firstLink: "https://careers.microsoft.com/",
+                         secondLink: "https://saabgroup.com/career/vacancies/",
+                         thirdLink: "https://career.hm.com/content/hmcareer/en_se/findjob.html")
+    }
+    
+    
+    @objc func seventhCompLink() {
+        updateButtonLink(firstLink: "https://careers.microsoft.com/skype",
+                         secondLink: "https://www.sasgroup.net/en/category/career/",
+                         thirdLink: "https://www.circlek.se/sv_SE/pg1334072537742/privat/Jobba-hos-oss/circlek-lediga-jobb.html")
+    }
+    
+    func updateCompaniesIcons() {
+        let amount = (Int(inputTextField.text!))!
+        if amount >= 35000 {
+            updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotift"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
+        }else if amount < 35000 && amount >= 24000 {
+            updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "uber") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "saas"))
+        }else if amount < 24000 && amount >= 1{
+            updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "bk"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "uber_eats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "cirklek") )
+        }else{
+            hideCompButtons()
+        }
+    }
+    
+    
 }
