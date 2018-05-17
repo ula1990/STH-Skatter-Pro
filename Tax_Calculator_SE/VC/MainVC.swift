@@ -355,7 +355,6 @@ import Foundation
     //FUNCTION TO UPDATE THE LINKS OF THE BUTTONS
     
     func updateButtonLink(firstLink: String, secondLink:String, thirdLink: String){
-        
         if (Int(inputTextField.text!))! >= 35000 {
             openCareerUrl(urlStr: firstLink)
         }else if (Int(inputTextField.text!))! < 35000 && (Int(inputTextField.text!))! >= 24000{
@@ -753,7 +752,7 @@ import Foundation
         inputTextField.delegate = self
         currenciesTable.delegate = self
         currenciesTable.dataSource = self
-        
+        hideCompButtons()
         toolBarSetup()
         defaultsForLabels()
         
