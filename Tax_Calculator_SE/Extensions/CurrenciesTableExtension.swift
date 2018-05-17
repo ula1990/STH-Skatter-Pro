@@ -19,7 +19,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let rates = currentAmount[indexPath.row]
         let ratesInfo = receivedRates[indexPath.row]
         
-        let cell = currenciesTable.dequeueReusableCell(withIdentifier: cellId) as! Cell
+        let cell = currenciesTable.dequeueReusableCell(withIdentifier: currencieCellId) as! CurrencieCell
         cell.updateCellData(rate: ratesInfo, currencyTitle: title, amount: (formatter.string(from:rates as NSNumber))!)
         formatter.numberStyle = .decimal
         return cell
@@ -33,7 +33,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let closeAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             
-            let cell = self.currenciesTable.cellForRow(at: indexPath) as! Cell
+            let cell = self.currenciesTable.cellForRow(at: indexPath) as! CurrencieCell
             UIPasteboard.general.string = cell.amountLabel.text
             
             success(true)

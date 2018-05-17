@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Cell: UITableViewCell {
+class CurrencieCell: UITableViewCell {
     
     lazy var amountLabel: UILabel = {
         let label = UILabel()

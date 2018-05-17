@@ -20,7 +20,7 @@ import Foundation
     var currentAmount: [Double] = []
     let formatter = NumberFormatter()
     var justOnce: Bool =  true
-    let cellId = "cellId"
+    let currencieCellId = "currencieCellId"
     var menuShowing = false
     var menuRightAnchor: NSLayoutConstraint?
     
@@ -226,7 +226,7 @@ import Foundation
         table.translatesAutoresizingMaskIntoConstraints = false
         table.separatorStyle = UITableViewCellSeparatorStyle.none
         table.layer.cornerRadius = 5
-        table.register(Cell.self, forCellReuseIdentifier: cellId)
+        table.register(CurrencieCell.self, forCellReuseIdentifier: currencieCellId)
         return table
     }()
     
@@ -390,7 +390,7 @@ import Foundation
     }
     
     @objc fileprivate func calculateAmount(_ sender: UIButton) {
-        if inputTextField.text == ""{
+        if inputTextField.text?.isEmpty == true{
             Alert.showBasic(title: "Check input", msg: "Field can't be empty", vc: self)
         }else{
         getCurrencyRates(nameOfCurrency: "SEK")
