@@ -21,6 +21,8 @@ import Foundation
     let formatter = NumberFormatter()
     var justOnce: Bool =  true
     let cellId = "cellId"
+    var menuShowing = false
+    var menuRightAnchor: NSLayoutConstraint?
     
     
     lazy var scrollView: UIScrollView = {
@@ -29,6 +31,17 @@ import Foundation
         view.contentSize.height = 1000
         return view
     }()
+    
+    lazy var menuView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowRadius = 5
+        view.layer.cornerRadius = 5
+        return view
+    }()
+    
     
     lazy var inputAmountView: UIView = {
         let view =  UIView()
@@ -377,7 +390,7 @@ import Foundation
     }
     
     @objc fileprivate func calculateAmount(_ sender: UIButton) {
-        if inputTextField.text == "" {
+        if inputTextField.text == ""{
             Alert.showBasic(title: "Check input", msg: "Field can't be empty", vc: self)
         }else{
         getCurrencyRates(nameOfCurrency: "SEK")
@@ -401,7 +414,23 @@ import Foundation
     }
     
     @objc fileprivate func menu() {
-        
+        if (menuShowing){
+            UIView.animate(withDuration: 0.3) {
+                self.menuRightAnchor?.isActive = false
+                self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0)
+                self.menuRightAnchor?.isActive = true
+                self.view.layoutIfNeeded()
+            }
+        }else{
+            UIView.animate(withDuration: 0.3, animations: {
+                self.menuRightAnchor?.isActive = false
+                self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 150)
+                self.menuRightAnchor?.isActive = true
+                self.view.layoutIfNeeded()
+            }) { (true) in
+            }
+        }
+        menuShowing = !menuShowing
     }
 
     func calculateRates(){
@@ -444,6 +473,7 @@ import Foundation
     
     fileprivate func addViews() {
         view.addSubview(scrollView)
+        view.addSubview(menuView)
         scrollView.addSubview(inputAmountView)
         inputAmountView.addSubview(inputTextField)
         inputAmountView.addSubview(calculateButton)
@@ -474,6 +504,12 @@ import Foundation
     
     
     fileprivate func setupViews(){
+        
+        menuView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        menuView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        menuView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        menuRightAnchor = menuView.rightAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
+        menuRightAnchor?.isActive = true
         
         scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
