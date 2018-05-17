@@ -21,8 +21,10 @@ import Foundation
     let formatter = NumberFormatter()
     var justOnce: Bool =  true
     let currencieCellId = "currencieCellId"
+    let menuCellId = "menuCellId"
     var menuShowing = false
     var menuRightAnchor: NSLayoutConstraint?
+    var menuList: [String] = ["Main Screen", "Salary History", "Tutorial", "About"]
     
     
     lazy var scrollView: UIScrollView = {
@@ -35,11 +37,21 @@ import Foundation
     lazy var menuView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         view.layer.shadowOpacity = 0.2
         view.layer.shadowRadius = 5
         view.layer.cornerRadius = 5
         return view
+    }()
+    
+    lazy var menuTable: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.separatorStyle = UITableViewCellSeparatorStyle.none
+        table.layer.cornerRadius = 5
+        table.backgroundColor = UIColor.white.withAlphaComponent(0)
+        table.register(MenuCell.self, forCellReuseIdentifier: menuCellId)
+        return table
     }()
     
     
@@ -474,6 +486,7 @@ import Foundation
     fileprivate func addViews() {
         view.addSubview(scrollView)
         view.addSubview(menuView)
+        menuView.addSubview(menuTable)
         scrollView.addSubview(inputAmountView)
         inputAmountView.addSubview(inputTextField)
         inputAmountView.addSubview(calculateButton)
@@ -510,6 +523,12 @@ import Foundation
         menuView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuRightAnchor = menuView.rightAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
         menuRightAnchor?.isActive = true
+        
+        menuTable.centerXAnchor.constraint(equalTo: menuView.centerXAnchor).isActive = true
+        menuTable.topAnchor.constraint(equalTo: menuView.topAnchor).isActive = true
+        menuTable.bottomAnchor.constraint(equalTo: menuView.bottomAnchor).isActive = true
+        menuTable.leftAnchor.constraint(equalTo: menuView.leftAnchor).isActive = true
+        menuTable.rightAnchor.constraint(equalTo: menuView.rightAnchor).isActive = true
         
         scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -653,6 +672,8 @@ import Foundation
         inputTextField.delegate = self
         currenciesTable.delegate = self
         currenciesTable.dataSource = self
+        menuTable.delegate = self
+        menuTable.dataSource = self
     }
     
     fileprivate func configureNavBar(){

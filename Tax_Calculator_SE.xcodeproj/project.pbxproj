@@ -25,6 +25,7 @@
 		C0AF257A2045617B00FD789C /* CurrencieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF25792045617B00FD789C /* CurrencieCell.swift */; };
 		C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* AlertExtension.swift */; };
 		C0DBDE8C20AE171B0033EA16 /* UpdateCompaniesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */; };
+		C0DBDE8E20AE23540033EA16 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8D20AE23540033EA16 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C0AF25792045617B00FD789C /* CurrencieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencieCell.swift; sourceTree = "<group>"; };
 		C0AF257B204574D000FD789C /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCompaniesData.swift; sourceTree = "<group>"; };
+		C0DBDE8D20AE23540033EA16 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AF25792045617B00FD789C /* CurrencieCell.swift */,
+				C0DBDE8D20AE23540033EA16 /* MenuCell.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DBDE8E20AE23540033EA16 /* MenuCell.swift in Sources */,
 				C048623620AAC95E00A40967 /* TextFieldExtension.swift in Sources */,
 				C048623920AAC9CC00A40967 /* CurrenciesTableExtension.swift in Sources */,
 				C048624020AACBBF00A40967 /* NettoCalculation.swift in Sources */,
