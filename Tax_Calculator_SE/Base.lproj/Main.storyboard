@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cJf-bH-Lup">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,12 +24,14 @@
                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PVs-aC-WNr">
-                        <barButtonItem key="leftBarButtonItem" image="about" id="bOP-cn-H4U">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="bOP-cn-H4U">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="4al-CU-djJ" kind="show" identifier="about" id="R0f-YJ-uc7"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="kRX-Mg-cu1">
+                        <barButtonItem key="rightBarButtonItem" image="share" id="kRX-Mg-cu1">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="shareButton:" destination="BYZ-38-t0r" id="n4P-Q2-ohU"/>
                             </connections>
@@ -384,12 +386,13 @@
     </scenes>
     <resources>
         <image name="USD" width="96" height="96"/>
-        <image name="about" width="32" height="32"/>
         <image name="calculate" width="48" height="48"/>
         <image name="clear" width="96" height="96"/>
         <image name="emailIcon" width="512" height="512"/>
         <image name="facebookIcon" width="600" height="600"/>
+        <image name="menu" width="32" height="32"/>
         <image name="rate" width="96" height="96"/>
+        <image name="share" width="96" height="96"/>
         <image name="spotifyIcon" width="150" height="150"/>
         <image name="twitterIcon" width="256" height="256"/>
     </resources>

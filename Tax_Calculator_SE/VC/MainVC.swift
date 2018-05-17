@@ -88,7 +88,7 @@ import Foundation
        let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 80
-        view.layer.shadowRadius = 7
+        view.layer.shadowRadius = 5
         view.layer.shadowOpacity = 0.3
         view.backgroundColor = UIColor(named: "NewPink")?.withAlphaComponent(0.9)
         return view
@@ -98,7 +98,7 @@ import Foundation
         let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 90
-        view.layer.shadowRadius = 7
+        view.layer.shadowRadius = 5
         view.layer.shadowOpacity = 0.3
         view.backgroundColor = UIColor(named: "NewGreen")
         return view
@@ -108,7 +108,7 @@ import Foundation
         let view =  UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 85
-        view.layer.shadowRadius = 7
+        view.layer.shadowRadius = 5
         view.layer.shadowOpacity = 0.3
         view.backgroundColor = UIColor.purple.withAlphaComponent(0.7)
         return view
@@ -614,7 +614,7 @@ import Foundation
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 
-        inputAmountView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 80).isActive = true
+        inputAmountView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 30).isActive = true
         inputAmountView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
         inputAmountView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         inputAmountView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
@@ -689,6 +689,41 @@ import Foundation
         companiesViewLabel.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
         companiesViewLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+        firstCompanyBut.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 1).isActive = true
+        firstCompanyBut.centerXAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
+        firstCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        firstCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        secondCompanyBut.leftAnchor.constraint(equalTo: firstCompanyBut.rightAnchor, constant: 10).isActive = true
+        secondCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        secondCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        secondCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        thirdCompanyBut.leftAnchor.constraint(equalTo: secondCompanyBut.rightAnchor, constant: 10).isActive = true
+        thirdCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        thirdCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        thirdCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        fourthCompanyBut.leftAnchor.constraint(equalTo: thirdCompanyBut.rightAnchor, constant: 10).isActive = true
+        fourthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        fourthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        fourthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        fifthCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
+        fifthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        fifthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        fifthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        sixthCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
+        sixthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        sixthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        sixthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        seventhCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
+        seventhCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
+        seventhCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        seventhCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
         
         currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 30).isActive = true
@@ -723,15 +758,12 @@ import Foundation
         toolBarSetup()
         defaultsForLabels()
         
-        let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
-        self.navigationItem.titleView = iconImageView
+//        let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
+//        self.navigationItem.titleView = iconImageView
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
-    
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         view.endEditing(true)
