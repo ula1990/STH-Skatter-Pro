@@ -28,6 +28,7 @@
 		C048624220AACCE200A40967 /* TaxCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048624120AACCE200A40967 /* TaxCalculation.swift */; };
 		C0AF257A2045617B00FD789C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF25792045617B00FD789C /* Cell.swift */; };
 		C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* AlertExtension.swift */; };
+		C0DBDE8C20AE171B0033EA16 /* UpdateCompaniesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		C048624120AACCE200A40967 /* TaxCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculation.swift; sourceTree = "<group>"; };
 		C0AF25792045617B00FD789C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		C0AF257B204574D000FD789C /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCompaniesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				C048623C20AACB3C00A40967 /* OfflineModeCalculation.swift */,
 				C048623F20AACBBF00A40967 /* NettoCalculation.swift */,
 				C048624120AACCE200A40967 /* TaxCalculation.swift */,
+				C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				75C864AB1F12CF7400661E82 /* MainVC.swift in Sources */,
 				C0AF257A2045617B00FD789C /* Cell.swift in Sources */,
 				C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */,
+				C0DBDE8C20AE171B0033EA16 /* UpdateCompaniesData.swift in Sources */,
 				C048623B20AACA6A00A40967 /* UploadDataExtension.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
 				7558F8F11F5FF9F900F56E71 /* Roundlabel.swift in Sources */,

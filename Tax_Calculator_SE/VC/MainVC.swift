@@ -229,6 +229,13 @@ import Foundation
         return view
     }()
     
+    lazy var companiesScrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentSize.width = 350
+        return view
+    }()
+    
     lazy var firstCompanyBut: UIButton = {
        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -351,87 +358,8 @@ import Foundation
                          secondLink: "https://www.sasgroup.net/en/category/career/",
                          thirdLink: "https://www.circlek.se/sv_SE/pg1334072537742/privat/Jobba-hos-oss/circlek-lediga-jobb.html")
     }
-    
-    //FUNCTION TO UPDATE THE LINKS OF THE BUTTONS
-    
-    func updateButtonLink(firstLink: String, secondLink:String, thirdLink: String){
-        if (Int(inputTextField.text!))! >= 35000 {
-            openCareerUrl(urlStr: firstLink)
-        }else if (Int(inputTextField.text!))! < 35000 && (Int(inputTextField.text!))! >= 24000{
-            openCareerUrl(urlStr: secondLink)
-        }else{
-            
-            openCareerUrl(urlStr: thirdLink)
-        }
-        
-    }
-    
-    func updateButtonImage(image1: UIImage,
-                           image2: UIImage,
-                           image3: UIImage,
-                           image4: UIImage,
-                           image5: UIImage,
-                           image6: UIImage,
-                           image7: UIImage
-                           ){
-        
-        firstCompanyBut.alpha = 0
-        secondCompanyBut.alpha = 0
-        thirdCompanyBut.alpha = 0
-        fourthCompanyBut.alpha = 0
-        fifthCompanyBut.alpha = 0
-        sixthCompanyBut.alpha = 0
-        seventhCompanyBut.alpha = 0
-        
-        self.firstCompanyBut.isHidden = false
-        self.secondCompanyBut.isHidden = false
-        self.thirdCompanyBut.isHidden = false
-        self.fourthCompanyBut.isHidden = false
-        self.fifthCompanyBut.isHidden = false
-        self.sixthCompanyBut.isHidden = false
-        self.seventhCompanyBut.isHidden = false
-        
 
-        
-     UIView.animate(withDuration: 0.3, animations: {
-            self.firstCompanyBut.alpha = 1
-        }, completion: {(true) in
-            UIView.animate(withDuration: 0.3, animations: {
-                self.secondCompanyBut.alpha = 1
-            }, completion: {(true) in
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.thirdCompanyBut.alpha = 1 }, completion: {(true) in
-                        UIView.animate(withDuration: 0.3, animations: {
-                            self.fourthCompanyBut.alpha = 1
-                        }, completion: {(true) in
-                            UIView.animate(withDuration: 0.3, animations: {
-                                self.fifthCompanyBut.alpha = 1
-                            }, completion: {(true) in
-                                UIView.animate(withDuration: 0.3, animations: {
-                                    self.sixthCompanyBut.alpha = 1
-                                }, completion: {(true) in
-                                    UIView.animate(withDuration: 0.3, animations: {
-                                        self.seventhCompanyBut.alpha = 1
-                                    }, completion: {(true) in })
-                                })
-                            })
-                        })
-                })
-            })
-            
-        })
-        
-        self.firstCompanyBut.setBackgroundImage(image1, for: .normal)
-        self.secondCompanyBut.setBackgroundImage(image2, for: .normal)
-        self.thirdCompanyBut.setBackgroundImage(image3, for: .normal)
-        self.fourthCompanyBut.setBackgroundImage(image4, for: .normal)
-        self.fifthCompanyBut.setBackgroundImage(image5, for: .normal)
-        self.sixthCompanyBut.setBackgroundImage(image6, for: .normal)
-        self.seventhCompanyBut.setBackgroundImage(image7, for: .normal)
-
-    }
-
-    func hideCompButtons(){
+    fileprivate func hideCompButtons(){
 
         self.firstCompanyBut.isHidden = true
         self.secondCompanyBut.isHidden = true
@@ -445,7 +373,7 @@ import Foundation
     
     //FUNC TO SAVE DEFAULTS FOR LABELS
     
-    func defaultsSaveForLabels(){
+    fileprivate func defaultsSaveForLabels(){
         defaults.set(nettoResult.text!, forKey: outputL)
         defaults.set(taxResult.text!, forKey: taxL)
         defaults.set(annualResult.text!, forKey: addI)
@@ -454,7 +382,7 @@ import Foundation
     
     //SHARE BUTTON
     
-    @IBAction func shareButton(_ sender: Any) {
+    @objc fileprivate func share() {
         let activityVC = UIActivityViewController(activityItems: ["Take a look on this app. to calculate the Taxes in Stockholm area https://itunes.apple.com/us/app/skatter-pro/id1326491203?ls=1&mt=8"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
@@ -530,8 +458,7 @@ import Foundation
         defaultsSaveForLabels()
     }
     
-    @IBAction func aboutButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "view2", sender: self.navigationController)
+    @objc fileprivate func menu() {
         
     }
 
@@ -544,7 +471,6 @@ import Foundation
             currentAmount = receivedRates.map{ $0 * Double(inputTextField.text!)! }
             self.currenciesTable.reloadData()
         }
-        
     }
     
     //  TO MONITOR WHEN EDIT WILL BE FINISHED
@@ -593,14 +519,15 @@ import Foundation
         annualView.addSubview(annualResult)
         currenciesView.addSubview(currencyViewLabel)
         currenciesView.addSubview(currenciesTable)
+        companiesView.addSubview(companiesScrollView)
         companiesView.addSubview(companiesViewLabel)
-        companiesView.addSubview(firstCompanyBut)
-        companiesView.addSubview(secondCompanyBut)
-        companiesView.addSubview(thirdCompanyBut)
-        companiesView.addSubview(fourthCompanyBut)
-        companiesView.addSubview(fifthCompanyBut)
-        companiesView.addSubview(sixthCompanyBut)
-        companiesView.addSubview(seventhCompanyBut)
+        companiesScrollView.addSubview(firstCompanyBut)
+        companiesScrollView.addSubview(secondCompanyBut)
+        companiesScrollView.addSubview(thirdCompanyBut)
+        companiesScrollView.addSubview(fourthCompanyBut)
+        companiesScrollView.addSubview(fifthCompanyBut)
+        companiesScrollView.addSubview(sixthCompanyBut)
+        companiesScrollView.addSubview(seventhCompanyBut)
     }
     
     
@@ -687,8 +614,14 @@ import Foundation
         companiesViewLabel.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
         companiesViewLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        firstCompanyBut.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 5).isActive = true
-        firstCompanyBut.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 30).isActive = true
+        companiesScrollView.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 5).isActive = true
+        companiesScrollView.leftAnchor.constraint(equalTo: companiesView.leftAnchor).isActive = true
+        companiesScrollView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        companiesScrollView.rightAnchor.constraint(equalTo: companiesView.rightAnchor).isActive = true
+        
+        
+        firstCompanyBut.centerYAnchor.constraint(equalTo: companiesScrollView.centerYAnchor).isActive = true
+        firstCompanyBut.leftAnchor.constraint(equalTo: companiesScrollView.leftAnchor, constant: 20).isActive = true
         firstCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
         firstCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
@@ -743,23 +676,39 @@ import Foundation
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addViews()
-        setupViews()
-        getCurrencyRates(nameOfCurrency: "SEK")
-        
+    fileprivate func connectElements() {
         inputTextField.delegate = self
         currenciesTable.delegate = self
         currenciesTable.dataSource = self
+    }
+    
+    fileprivate func configureNavBar(){
+        let navBarLeftItemImage = UIImage(named: "menu")
+        let navBarRightItemImage = UIImage(named: "share")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: navBarRightItemImage, landscapeImagePhone: nil, style: UIBarButtonItemStyle.plain, target: self, action: #selector(share))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: navBarLeftItemImage, landscapeImagePhone: nil, style: UIBarButtonItemStyle.plain, target: self, action: #selector(menu))
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    fileprivate func runMainFunctions() {
+        configureNavBar()
+        addViews()
+        setupViews()
+        getCurrencyRates(nameOfCurrency: "SEK")
+        connectElements()
         hideCompButtons()
         toolBarSetup()
         defaultsForLabels()
-        
-//        let iconImageView = UIImageView(image: UIImage(named: "barTitle" ))
-//        self.navigationItem.titleView = iconImageView
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        runMainFunctions()
+        view.backgroundColor = .white
     }
 
     
