@@ -119,7 +119,7 @@ import Foundation
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.black
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 19)
         label.textColor = UIColor.white
         label.text = "Taxes amount"
@@ -161,7 +161,7 @@ import Foundation
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.white
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 19)
         label.text = "Annual income"
         return label
@@ -233,7 +233,7 @@ import Foundation
        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(firstCompLink), for: .touchUpInside)
@@ -244,7 +244,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(secondCompLink), for: .touchUpInside)
@@ -255,7 +255,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(thirdCompLink), for: .touchUpInside)
@@ -266,7 +266,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(fourthCompLink), for: .touchUpInside)
@@ -277,7 +277,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(fifthCompLink), for: .touchUpInside)
@@ -288,7 +288,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(sixthCompLink), for: .touchUpInside)
@@ -300,7 +300,7 @@ import Foundation
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 17.5
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.2
         button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
@@ -488,19 +488,18 @@ import Foundation
     let taxL = "taxL"
     let addI = "addI"
     
-//    fileprivate func updateCompaniesIcons() {
-//        let amount = (Int(inputTextField.text!))!
-//        if amount >= 35000 {
-//            updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotifyIcon"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
-//        }else if amount < 35000 && amount >= 24000 {
-//            updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "social") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "sas"))
-//
-//        }else if amount < 24000 && amount >= 1{
-//            updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "burger"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "ubereats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "circleK") )
-//        }else{
-//            hideCompButtons()
-//        }
-//    }
+    fileprivate func updateCompaniesIcons() {
+        let amount = (Int(inputTextField.text!))!
+        if amount >= 35000 {
+            updateButtonImage(image1: #imageLiteral(resourceName: "tradedoubler") , image2: #imageLiteral(resourceName: "swedbank"), image3: #imageLiteral(resourceName: "spotift"), image4: #imageLiteral(resourceName: "volvo"), image5: #imageLiteral(resourceName: "google"), image6: #imageLiteral(resourceName: "microsoft") , image7: #imageLiteral(resourceName: "skype"))
+        }else if amount < 35000 && amount >= 24000 {
+            updateButtonImage(image1: #imageLiteral(resourceName: "ikea"), image2: #imageLiteral(resourceName: "uber") , image3: #imageLiteral(resourceName: "hemkop"), image4: #imageLiteral(resourceName: "blocket"), image5: #imageLiteral(resourceName: "ge"), image6: #imageLiteral(resourceName: "saab"), image7: #imageLiteral(resourceName: "saas"))
+        }else if amount < 24000 && amount >= 1{
+            updateButtonImage(image1: #imageLiteral(resourceName: "nordea"), image2: #imageLiteral(resourceName: "mc") , image3: #imageLiteral(resourceName: "bk"), image4: #imageLiteral(resourceName: "polisen"), image5: #imageLiteral(resourceName: "uber_eats"), image6: #imageLiteral(resourceName: "hm"), image7: #imageLiteral(resourceName: "cirklek") )
+        }else{
+            hideCompButtons()
+        }
+    }
     
     fileprivate func updateLabelsInfo() {
         formatter.numberStyle = NumberFormatter.Style.currency
@@ -515,7 +514,7 @@ import Foundation
     @objc fileprivate func calculateAmount(_ sender: UIButton) {
         getCurrencyRates(nameOfCurrency: "SEK")
         inputTextField.resignFirstResponder()
-    //    updateCompaniesIcons()
+        updateCompaniesIcons()
         updateLabelsInfo()
     }
 
@@ -689,40 +688,40 @@ import Foundation
         companiesViewLabel.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
         companiesViewLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        firstCompanyBut.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 1).isActive = true
-        firstCompanyBut.centerXAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
-        firstCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        firstCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        firstCompanyBut.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 5).isActive = true
+        firstCompanyBut.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 30).isActive = true
+        firstCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        firstCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         secondCompanyBut.leftAnchor.constraint(equalTo: firstCompanyBut.rightAnchor, constant: 10).isActive = true
         secondCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        secondCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        secondCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        secondCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        secondCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         thirdCompanyBut.leftAnchor.constraint(equalTo: secondCompanyBut.rightAnchor, constant: 10).isActive = true
         thirdCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        thirdCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        thirdCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        thirdCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        thirdCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         fourthCompanyBut.leftAnchor.constraint(equalTo: thirdCompanyBut.rightAnchor, constant: 10).isActive = true
         fourthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        fourthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        fourthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        fourthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        fourthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         fifthCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
         fifthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        fifthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        fifthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        fifthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        fifthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
-        sixthCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
+        sixthCompanyBut.leftAnchor.constraint(equalTo: fifthCompanyBut.rightAnchor, constant: 10).isActive = true
         sixthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        sixthCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        sixthCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        sixthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        sixthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
-        seventhCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
+        seventhCompanyBut.leftAnchor.constraint(equalTo: sixthCompanyBut.rightAnchor, constant: 10).isActive = true
         seventhCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        seventhCompanyBut.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        seventhCompanyBut.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        seventhCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        seventhCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         
         currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
