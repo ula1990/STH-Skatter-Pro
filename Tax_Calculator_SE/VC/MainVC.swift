@@ -578,8 +578,7 @@ import Foundation
         annualView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         annualView.widthAnchor.constraint(equalToConstant: 170).isActive = true
         annualView.heightAnchor.constraint(equalToConstant: 170).isActive = true
-        
-        
+
         annualLabel.centerXAnchor.constraint(equalTo: annualView.centerXAnchor).isActive = true
         annualLabel.centerYAnchor.constraint(equalTo: annualView.centerYAnchor, constant: -25).isActive = true
         annualLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true

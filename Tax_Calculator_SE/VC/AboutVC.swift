@@ -174,7 +174,7 @@ import StoreKit
         emailButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         rateButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        rateButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 20).isActive = true
+        rateButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 30).isActive = true
         rateButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         rateButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -201,16 +201,20 @@ import StoreKit
         textInfoView.addSubview(infoText)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addViews()
-        setupView()
-        view.backgroundColor = UIColor.white
+    fileprivate func setupNavBar() {
         navigationItem.title = "About"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleBack))
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addViews()
+        setupView()
+        view.backgroundColor = UIColor.white
+        setupNavBar()
     }
 
     @objc fileprivate func handleBack(){
