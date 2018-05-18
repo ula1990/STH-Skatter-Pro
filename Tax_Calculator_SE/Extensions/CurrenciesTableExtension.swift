@@ -29,10 +29,10 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         formatter.numberStyle = .decimal
         return cell
          }else{
-            let title = menuList[indexPath.row]
+            let menu = menuList[indexPath.row]
             let cell = menuTable.dequeueReusableCell(withIdentifier: menuCellId) as! MenuCell
             cell.backgroundColor = UIColor.white.withAlphaComponent(0)
-            cell.menuLabel.text = title
+            cell.updateMenu(menuModel: menu)
             return cell
         }
     }
@@ -41,7 +41,15 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         if tableView == self.currenciesTable{
             currenciesTable.deselectRow(at: indexPath, animated: true)
         }else{
+            let menu = menuList[indexPath.row]
             menuTable.deselectRow(at: indexPath, animated: true)
+            present(menu.viewController!, animated: true, completion: nil)
+            UIView.animate(withDuration: 0.3) {
+                self.menuRightAnchor?.isActive = false
+                self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0)
+                self.menuRightAnchor?.isActive = true
+                self.view.layoutIfNeeded()
+            }
         }
     }
     

@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,189 +27,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1644.375" y="115"/>
-        </scene>
-        <!--AboutVC-->
-        <scene sceneID="hxV-kE-hF7">
-            <objects>
-                <viewController id="4al-CU-djJ" customClass="AboutVC" customModule="Tax_Calculator_SE" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JNB-aX-MpK"/>
-                        <viewControllerLayoutGuide type="bottom" id="CRu-Hj-fUl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fjz-Z6-lhG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-bx-IRh" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="125" y="311" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878424657535" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="4TP-Is-MSx"/>
-                                    <constraint firstAttribute="width" constant="70" id="cJV-kh-kKx"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="emailIcon"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.16877140410958905" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sendEmail:" destination="4al-CU-djJ" eventType="touchUpInside" id="puD-cH-3Mu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-TC-dV3" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="225" y="311" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1346586044520548" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="8jd-r6-sqX"/>
-                                    <constraint firstAttribute="height" constant="70" id="VJ9-RU-tFd"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="kJk-Ty-tgw"/>
-                                    <constraint firstAttribute="width" constant="70" id="rFp-zc-kHO"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="twitterIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.16877140410958905" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="twitterButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="buk-jW-Inc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-2F-l9k" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="25" y="311" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.12815710616438356" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="SDc-xS-blB"/>
-                                    <constraint firstAttribute="height" constant="70" id="oAe-ee-RwO"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="facebookIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.16877140410958905" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="facebookButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="T2c-OJ-usZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uladzislau Daratsiuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-Kr-fdd">
-                                <rect key="frame" x="0.0" y="78" width="320" height="28"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gF-dd5">
-                                <rect key="frame" x="16" y="40" width="288" height="28"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-SQ-6cy">
-                                <rect key="frame" x="82.5" y="456" width="156" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="Z0O-wI-7WN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Check out our tutorial">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="tutorialFromAbout:" destination="4al-CU-djJ" eventType="touchUpInside" id="xp8-Az-h7A"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="qjx-iT-EGs">
-                                <rect key="frame" x="5" y="176.5" width="310" height="127"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="0Ds-VH-pzI"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="uev-Rn-Izy"/>
-                                </constraints>
-                                <string key="text">Information about the rates was provided by lightweight API for current and historical foreign exchange (forex) rates published by the European Central Bank. If Stockholm is not your area,just let us know and we can made the same for your area.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.99195677039999997" green="0.9962289929" blue="0.99192315340000003" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-rr-QO5" customClass="MailButton" customModule="Tax_Calculator_SE" customModuleProvider="target">
-                                <rect key="frame" x="125" y="390" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.13168878419999999" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="6ah-7y-AQh"/>
-                                    <constraint firstAttribute="width" constant="70" id="Iu5-51-dGT"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="rate"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="0.16877140410958905" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="rateButton:" destination="4al-CU-djJ" eventType="touchUpInside" id="iN9-pV-KuY"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="qjx-iT-EGs" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="27z-6g-3ET"/>
-                            <constraint firstItem="aGI-rr-QO5" firstAttribute="top" secondItem="1n0-bx-IRh" secondAttribute="bottom" constant="9" id="2EB-Cm-4WK"/>
-                            <constraint firstItem="qjx-iT-EGs" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" constant="5" id="4e5-lT-OrJ"/>
-                            <constraint firstItem="CRu-Hj-fUl" firstAttribute="top" secondItem="cMh-SQ-6cy" secondAttribute="bottom" constant="5" id="7jt-3p-Ovq"/>
-                            <constraint firstItem="X5t-gF-dd5" firstAttribute="trailing" secondItem="Fjz-Z6-lhG" secondAttribute="trailingMargin" id="F1G-sK-mrB"/>
-                            <constraint firstAttribute="trailing" secondItem="tqj-Kr-fdd" secondAttribute="trailing" id="Fuo-BO-X3t"/>
-                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leading" id="GP5-3V-tko"/>
-                            <constraint firstAttribute="trailing" secondItem="qjx-iT-EGs" secondAttribute="trailing" constant="5" id="Gie-4g-0Dh"/>
-                            <constraint firstItem="cMh-SQ-6cy" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="Oq0-jR-f5a"/>
-                            <constraint firstItem="1n0-bx-IRh" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="POu-A9-iBs"/>
-                            <constraint firstItem="tqj-Kr-fdd" firstAttribute="top" secondItem="X5t-gF-dd5" secondAttribute="bottom" constant="10" id="RFD-Aa-l82"/>
-                            <constraint firstItem="o8l-TC-dV3" firstAttribute="top" secondItem="qjx-iT-EGs" secondAttribute="bottom" constant="7.5" id="Rkd-Zv-z8G"/>
-                            <constraint firstItem="s4r-2F-l9k" firstAttribute="top" secondItem="qjx-iT-EGs" secondAttribute="bottom" constant="7.5" id="SA8-1C-vEq"/>
-                            <constraint firstItem="X5t-gF-dd5" firstAttribute="top" secondItem="JNB-aX-MpK" secondAttribute="bottom" constant="20" id="TWt-VK-H1o"/>
-                            <constraint firstItem="1n0-bx-IRh" firstAttribute="leading" secondItem="s4r-2F-l9k" secondAttribute="trailing" constant="30" id="VB8-pd-dNd"/>
-                            <constraint firstItem="X5t-gF-dd5" firstAttribute="leading" secondItem="Fjz-Z6-lhG" secondAttribute="leadingMargin" id="cQ5-Dh-iPb"/>
-                            <constraint firstItem="1n0-bx-IRh" firstAttribute="top" secondItem="qjx-iT-EGs" secondAttribute="bottom" constant="7.5" id="kR6-bg-Zwe"/>
-                            <constraint firstItem="aGI-rr-QO5" firstAttribute="centerX" secondItem="Fjz-Z6-lhG" secondAttribute="centerX" id="ouO-mj-1OI"/>
-                            <constraint firstItem="qjx-iT-EGs" firstAttribute="centerY" secondItem="Fjz-Z6-lhG" secondAttribute="centerY" id="umo-Xi-7wo"/>
-                            <constraint firstItem="o8l-TC-dV3" firstAttribute="leading" secondItem="1n0-bx-IRh" secondAttribute="trailing" constant="30" id="xzl-Me-boZ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="createdlbl" destination="X5t-gF-dd5" id="gdN-zc-bLf"/>
-                        <outlet property="nameLbl" destination="tqj-Kr-fdd" id="evz-d0-jFQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-LL-pS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2398.125" y="91.25"/>
         </scene>
         <!--TutorialVC-->
         <scene sceneID="AEL-X4-dsG">
@@ -349,18 +165,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uu2-wU-ftm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529.60000000000002" y="1024.8768472906404"/>
+            <point key="canvasLocation" x="1738" y="1016"/>
         </scene>
     </scenes>
     <resources>
         <image name="USD" width="96" height="96"/>
         <image name="calculate" width="48" height="48"/>
         <image name="clear" width="96" height="96"/>
-        <image name="emailIcon" width="512" height="512"/>
-        <image name="facebookIcon" width="600" height="600"/>
-        <image name="rate" width="96" height="96"/>
         <image name="spotifyIcon" width="150" height="150"/>
-        <image name="twitterIcon" width="256" height="256"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

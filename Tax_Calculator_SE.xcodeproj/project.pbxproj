@@ -26,6 +26,9 @@
 		C0AF257C204574D000FD789C /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF257B204574D000FD789C /* AlertExtension.swift */; };
 		C0DBDE8C20AE171B0033EA16 /* UpdateCompaniesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */; };
 		C0DBDE8E20AE23540033EA16 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8D20AE23540033EA16 /* MenuCell.swift */; };
+		C0DBDE9020AEAFFC0033EA16 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8F20AEAFFC0033EA16 /* MenuModel.swift */; };
+		C0DBDE9320AEB5630033EA16 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE9220AEB5620033EA16 /* HistoryVC.swift */; };
+		C0DBDE9520AEC0DF0033EA16 /* OpenUrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE9420AEC0DF0033EA16 /* OpenUrlExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		C0AF257B204574D000FD789C /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		C0DBDE8B20AE171B0033EA16 /* UpdateCompaniesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCompaniesData.swift; sourceTree = "<group>"; };
 		C0DBDE8D20AE23540033EA16 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		C0DBDE8F20AEAFFC0033EA16 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		C0DBDE9220AEB5620033EA16 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		C0DBDE9420AEC0DF0033EA16 /* OpenUrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenUrlExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 				75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */,
 				75C864AC1F12CF7400661E82 /* Main.storyboard */,
 				75C864A81F12CF7400661E82 /* AppDelegate.swift */,
+				C0DBDE9120AEB3820033EA16 /* Models */,
 				C048623E20AACB4500A40967 /* Functions */,
 				C048623720AAC96D00A40967 /* Extensions */,
 				C0AF257820455E9C00FD789C /* VC */,
@@ -169,6 +176,7 @@
 				C048623520AAC95E00A40967 /* TextFieldExtension.swift */,
 				C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */,
 				C048623A20AACA6A00A40967 /* UploadDataExtension.swift */,
+				C0DBDE9420AEC0DF0033EA16 /* OpenUrlExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,8 +198,17 @@
 				75C864AA1F12CF7400661E82 /* MainVC.swift */,
 				750A30941F15765F00EF4B33 /* AboutVC.swift */,
 				7531B83A1FE2D64100FD7ED4 /* TutorialVC.swift */,
+				C0DBDE9220AEB5620033EA16 /* HistoryVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		C0DBDE9120AEB3820033EA16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0DBDE8F20AEAFFC0033EA16 /* MenuModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,8 +353,10 @@
 			files = (
 				C0DBDE8E20AE23540033EA16 /* MenuCell.swift in Sources */,
 				C048623620AAC95E00A40967 /* TextFieldExtension.swift in Sources */,
+				C0DBDE9020AEAFFC0033EA16 /* MenuModel.swift in Sources */,
 				C048623920AAC9CC00A40967 /* CurrenciesTableExtension.swift in Sources */,
 				C048624020AACBBF00A40967 /* NettoCalculation.swift in Sources */,
+				C0DBDE9320AEB5630033EA16 /* HistoryVC.swift in Sources */,
 				C048623D20AACB3C00A40967 /* OfflineModeCalculation.swift in Sources */,
 				750A30951F15765F00EF4B33 /* AboutVC.swift in Sources */,
 				7531B83B1FE2D64100FD7ED4 /* TutorialVC.swift in Sources */,
@@ -347,6 +366,7 @@
 				C0DBDE8C20AE171B0033EA16 /* UpdateCompaniesData.swift in Sources */,
 				C048623B20AACA6A00A40967 /* UploadDataExtension.swift in Sources */,
 				75C864A91F12CF7400661E82 /* AppDelegate.swift in Sources */,
+				C0DBDE9520AEC0DF0033EA16 /* OpenUrlExtension.swift in Sources */,
 				C048624220AACCE200A40967 /* TaxCalculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

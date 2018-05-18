@@ -24,7 +24,7 @@ import Foundation
     let menuCellId = "menuCellId"
     var menuShowing = false
     var menuRightAnchor: NSLayoutConstraint?
-    var menuList: [String] = ["Main Screen", "Salary History", "Tutorial", "About"]
+    var menuList: [MenuModel] = []
     
     
     lazy var scrollView: UIScrollView = {
@@ -50,6 +50,7 @@ import Foundation
         table.separatorStyle = UITableViewCellSeparatorStyle.none
         table.layer.cornerRadius = 5
         table.backgroundColor = UIColor.white.withAlphaComponent(0)
+        table.isScrollEnabled = false
         table.register(MenuCell.self, forCellReuseIdentifier: menuCellId)
         return table
     }()
@@ -436,7 +437,7 @@ import Foundation
         }else{
             UIView.animate(withDuration: 0.3, animations: {
                 self.menuRightAnchor?.isActive = false
-                self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 150)
+                self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 120)
                 self.menuRightAnchor?.isActive = true
                 self.view.layoutIfNeeded()
             }) { (true) in
@@ -518,7 +519,7 @@ import Foundation
     
     fileprivate func setupViews(){
         
-        menuView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        menuView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         menuView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         menuView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuRightAnchor = menuView.rightAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
@@ -686,7 +687,25 @@ import Foundation
         navigationController?.navigationBar.shadowImage = UIImage()
     }
     
+    fileprivate func creatMenuArray()->[MenuModel]{
+        var array:[MenuModel] = []
+        
+        
+        let menuItem1 = MenuModel(title: "Main", icon: UIImage(named: "main"), viewController: MainVC())
+        let menuItem2 = MenuModel(title: "History", icon: UIImage(named: "history"), viewController: HistoryVC())
+        let menuItem3 = MenuModel(title: "Tutorial", icon: UIImage(named: "tutorial"), viewController: TutorialVC())
+        let menuItem4 = MenuModel(title: "About", icon: UIImage(named: "about"), viewController: AboutVC() )
+        
+        array.append(menuItem1)
+        array.append(menuItem2)
+        array.append(menuItem3)
+        array.append(menuItem4)
+        
+        return array
+    }
+    
     fileprivate func runMainFunctions() {
+        menuList = creatMenuArray()
         configureNavBar()
         addViews()
         setupViews()
@@ -703,7 +722,6 @@ import Foundation
         view.backgroundColor = .white
     }
 
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         view.endEditing(true)
     }
