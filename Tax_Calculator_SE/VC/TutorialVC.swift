@@ -19,8 +19,7 @@ class TutorialVC: UIViewController {
         view.backgroundColor = UIColor.white
         return view
     }()
-    
-    
+
     lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false

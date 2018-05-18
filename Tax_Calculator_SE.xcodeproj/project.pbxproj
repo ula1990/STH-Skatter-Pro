@@ -16,6 +16,7 @@
 		75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C864B11F12CF7400661E82 /* LaunchScreen.storyboard */; };
 		75C864BE1F12CF7400661E82 /* Tax_Calculator_SETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864BD1F12CF7400661E82 /* Tax_Calculator_SETests.swift */; };
 		75C864C91F12CF7400661E82 /* Tax_Calculator_SEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */; };
+		930465568E9E22B2A611EAB2 /* Pods_Tax_Calculator_SE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB8BDB44E984878F97783D3 /* Pods_Tax_Calculator_SE.framework */; };
 		C048623620AAC95E00A40967 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623520AAC95E00A40967 /* TextFieldExtension.swift */; };
 		C048623920AAC9CC00A40967 /* CurrenciesTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */; };
 		C048623B20AACA6A00A40967 /* UploadDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C048623A20AACA6A00A40967 /* UploadDataExtension.swift */; };
@@ -29,6 +30,7 @@
 		C0DBDE9020AEAFFC0033EA16 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE8F20AEAFFC0033EA16 /* MenuModel.swift */; };
 		C0DBDE9320AEB5630033EA16 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE9220AEB5620033EA16 /* HistoryVC.swift */; };
 		C0DBDE9520AEC0DF0033EA16 /* OpenUrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE9420AEC0DF0033EA16 /* OpenUrlExtension.swift */; };
+		C0DBDE9720AF09940033EA16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0DBDE9620AF09940033EA16 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FE28DB62902BDE5D97E177C /* Pods-Tax_Calculator_SE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tax_Calculator_SE.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tax_Calculator_SE/Pods-Tax_Calculator_SE.release.xcconfig"; sourceTree = "<group>"; };
 		750A30941F15765F00EF4B33 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		7531B83A1FE2D64100FD7ED4 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		75C864A51F12CF7400661E82 /* Tax_Calculator_SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tax_Calculator_SE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +68,8 @@
 		75C864C81F12CF7400661E82 /* Tax_Calculator_SEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Calculator_SEUITests.swift; sourceTree = "<group>"; };
 		75C864CA1F12CF7400661E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C865011F13AD8600661E82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		7F372C9C91E2FBD6880B5C40 /* Pods-Tax_Calculator_SE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tax_Calculator_SE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tax_Calculator_SE/Pods-Tax_Calculator_SE.debug.xcconfig"; sourceTree = "<group>"; };
+		8BB8BDB44E984878F97783D3 /* Pods_Tax_Calculator_SE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tax_Calculator_SE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C048623520AAC95E00A40967 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		C048623820AAC9CC00A40967 /* CurrenciesTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableExtension.swift; sourceTree = "<group>"; };
 		C048623A20AACA6A00A40967 /* UploadDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataExtension.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		C0DBDE8F20AEAFFC0033EA16 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		C0DBDE9220AEB5620033EA16 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		C0DBDE9420AEC0DF0033EA16 /* OpenUrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenUrlExtension.swift; sourceTree = "<group>"; };
+		C0DBDE9620AF09940033EA16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930465568E9E22B2A611EAB2 /* Pods_Tax_Calculator_SE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A5D3FAB654E126BC0993509 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F372C9C91E2FBD6880B5C40 /* Pods-Tax_Calculator_SE.debug.xcconfig */,
+				6FE28DB62902BDE5D97E177C /* Pods-Tax_Calculator_SE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		631BB0E1C3036592DC9BCF5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8BDB44E984878F97783D3 /* Pods_Tax_Calculator_SE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75C8649C1F12CF7400661E82 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +136,8 @@
 				75C864BC1F12CF7400661E82 /* Tax_Calculator_SETests */,
 				75C864C71F12CF7400661E82 /* Tax_Calculator_SEUITests */,
 				75C864A61F12CF7400661E82 /* Products */,
+				1A5D3FAB654E126BC0993509 /* Pods */,
+				631BB0E1C3036592DC9BCF5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +164,7 @@
 				75F419581FFAE47F00463BA6 /* SubClasses */,
 				75C864AF1F12CF7400661E82 /* Assets.xcassets */,
 				75C864B41F12CF7400661E82 /* Info.plist */,
+				C0DBDE9620AF09940033EA16 /* GoogleService-Info.plist */,
 			);
 			path = Tax_Calculator_SE;
 			sourceTree = "<group>";
@@ -218,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75C864CD1F12CF7400661E82 /* Build configuration list for PBXNativeTarget "Tax_Calculator_SE" */;
 			buildPhases = (
+				0599BD4191170E161C93DEE3 /* [CP] Check Pods Manifest.lock */,
 				75C864A11F12CF7400661E82 /* Sources */,
 				75C864A21F12CF7400661E82 /* Frameworks */,
 				75C864A31F12CF7400661E82 /* Resources */,
+				C74246B9B68B5797958ACDE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C864B31F12CF7400661E82 /* LaunchScreen.storyboard in Resources */,
+				C0DBDE9720AF09940033EA16 /* GoogleService-Info.plist in Resources */,
 				75C864B01F12CF7400661E82 /* Assets.xcassets in Resources */,
 				75C864AE1F12CF7400661E82 /* Main.storyboard in Resources */,
 			);
@@ -345,6 +375,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0599BD4191170E161C93DEE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tax_Calculator_SE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74246B9B68B5797958ACDE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tax_Calculator_SE/Pods-Tax_Calculator_SE-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tax_Calculator_SE/Pods-Tax_Calculator_SE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75C864A11F12CF7400661E82 /* Sources */ = {
@@ -536,6 +613,7 @@
 		};
 		75C864CE1F12CF7400661E82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F372C9C91E2FBD6880B5C40 /* Pods-Tax_Calculator_SE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
@@ -551,6 +629,7 @@
 		};
 		75C864CF1F12CF7400661E82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE28DB62902BDE5D97E177C /* Pods-Tax_Calculator_SE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z4NGAZXKWW;
