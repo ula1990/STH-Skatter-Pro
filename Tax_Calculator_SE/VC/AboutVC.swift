@@ -12,8 +12,6 @@ import StoreKit
 
 @objc class AboutVC: UIViewController, MFMailComposeViewControllerDelegate {
 
-    
-    
     lazy var developerInfoView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -60,21 +58,51 @@ import StoreKit
         button.clipsToBounds = true
         button.layer.cornerRadius = 25
         button.contentMode = .scaleAspectFill
-        button.setImage(UIImage(named: "go"), for: .normal)
+        button.setImage(UIImage(named: "email"), for: .normal)
         button.addTarget(self, action: #selector(sendEmailButton), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var facebookButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 25
+        button.contentMode = .scaleAspectFill
+        button.setImage(UIImage(named: "facebook"), for: .normal)
+        button.addTarget(self, action: #selector(openFacebookButton), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var twitterButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 25
+        button.contentMode = .scaleAspectFill
+        button.setImage(UIImage(named: "twitter"), for: .normal)
+        button.addTarget(self, action: #selector(openTwitterButton), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var rateButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 25
+        button.contentMode = .scaleAspectFill
+        button.setImage(UIImage(named: "rate"), for: .normal)
+        button.addTarget(self, action: #selector(makeRateButton), for: .touchUpInside)
         return button
     }()
 
     
     
-    @IBAction func facebookButton(_ sender: Any) {
-
+    @objc fileprivate func openFacebookButton() {
        openButtonUrl(urlStr: "https://www.facebook.com/sthtaxes")
-        
     }
     
-    @IBAction func twitterButton(_ sender: Any) {
-
+    @objc fileprivate func openTwitterButton() {
         openButtonUrl(urlStr: "https://twitter.com/TaxesSth")
     }
     
@@ -88,14 +116,12 @@ import StoreKit
             Alert.showBasic(title: "Could not send email", msg: "Your device could not send email", vc: self ) }
             }
     
-    @IBAction func rateButton(_ sender: Any) {
-        
+    @objc fileprivate func makeRateButton() {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
             Alert.showBasic(title: "Option not available", msg: "Minimum requirements for this function,that's iOS 10.3. Please update your device", vc: self)
         }
-        
     }
     
     fileprivate   func configureMailController()-> MFMailComposeViewController {
@@ -144,18 +170,45 @@ import StoreKit
         infoText.heightAnchor.constraint(equalTo: textInfoView.heightAnchor).isActive = true
         
         
+        emailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        emailButton.topAnchor.constraint(equalTo: textInfoView.bottomAnchor, constant: 40).isActive = true
+        emailButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        emailButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        rateButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        rateButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 20).isActive = true
+        rateButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        rateButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        facebookButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 10).isActive = true
+        facebookButton.rightAnchor.constraint(equalTo: emailButton.leftAnchor, constant: -40).isActive = true
+        facebookButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        facebookButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        twitterButton.topAnchor.constraint(equalTo: emailButton.bottomAnchor, constant: 10).isActive = true
+        twitterButton.leftAnchor.constraint(equalTo: emailButton.rightAnchor, constant: 40).isActive = true
+        twitterButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        twitterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        
+        
+    }
+    
+    fileprivate func addViews() {
+        view.addSubview(developerInfoView)
+        view.addSubview(textInfoView)
+        view.addSubview(emailButton)
+        view.addSubview(facebookButton)
+        view.addSubview(twitterButton)
+        view.addSubview(rateButton)
+        developerInfoView.addSubview(developerInfoLabel)
+        textInfoView.addSubview(infoText)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(developerInfoView)
-        developerInfoView.addSubview(developerInfoLabel)
-        view.addSubview(textInfoView)
-        textInfoView.addSubview(infoText)
-        view.backgroundColor = UIColor.white
+        addViews()
         setupView()
-        
+        view.backgroundColor = UIColor.white
     }
 }
