@@ -43,7 +43,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         }else{
             let menu = menuList[indexPath.row]
             menuTable.deselectRow(at: indexPath, animated: true)
-            present(menu.viewController!, animated: true, completion: nil)
+            let page = UINavigationController(rootViewController: menu.viewController!)
+            present(page, animated: true, completion: nil)
             UIView.animate(withDuration: 0.3) {
                 self.menuRightAnchor?.isActive = false
                 self.menuRightAnchor = self.menuView.rightAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0)

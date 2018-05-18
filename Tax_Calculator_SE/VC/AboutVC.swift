@@ -27,7 +27,7 @@ import StoreKit
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 2
         label.text = "Devloped by Uladzislau Daratsiuk"
         return label
@@ -46,9 +46,10 @@ import StoreKit
     lazy var infoText: UITextView = {
        let text = UITextView()
         text.translatesAutoresizingMaskIntoConstraints = false
-        text.font = UIFont.systemFont(ofSize: 16)
+        text.font = UIFont.systemFont(ofSize: 15)
         text.textColor = UIColor.black
-        text.text = "Application currencies rates based on historical foreign exchange (Forex) rates published by the European Central Bank."
+        text.textAlignment = .center
+        text.text = "Application currencies rates based on historical foreign exchange (Forex) rates published by the European Central Bank.Data regarding rates updating each time when you online, to make sure that you have last rates for this day"
         return text
     }()
     
@@ -56,7 +57,7 @@ import StoreKit
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 15
         button.contentMode = .scaleAspectFill
         button.setImage(UIImage(named: "email"), for: .normal)
         button.addTarget(self, action: #selector(sendEmailButton), for: .touchUpInside)
@@ -139,28 +140,25 @@ import StoreKit
     }
     
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
-    
     fileprivate func setupView(){
         
-        developerInfoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        developerInfoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
         developerInfoView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        developerInfoView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        developerInfoView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         developerInfoView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         developerInfoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         
         
         developerInfoLabel.centerXAnchor.constraint(equalTo: developerInfoView.centerXAnchor).isActive = true
         developerInfoLabel.centerYAnchor.constraint(equalTo: developerInfoView.centerYAnchor).isActive = true
-        developerInfoLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        developerInfoLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         developerInfoLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         textInfoView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        textInfoView.topAnchor.constraint(equalTo: developerInfoView.bottomAnchor, constant: 80).isActive = true
-        textInfoView.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        textInfoView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        textInfoView.topAnchor.constraint(equalTo: developerInfoView.bottomAnchor, constant: 30).isActive = true
+        textInfoView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        textInfoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        textInfoView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         
         infoText.centerXAnchor.constraint(equalTo: textInfoView.centerXAnchor).isActive = true
@@ -171,7 +169,7 @@ import StoreKit
         
         
         emailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        emailButton.topAnchor.constraint(equalTo: textInfoView.bottomAnchor, constant: 40).isActive = true
+        emailButton.topAnchor.constraint(equalTo: textInfoView.bottomAnchor, constant: 100).isActive = true
         emailButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         emailButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -189,8 +187,6 @@ import StoreKit
         twitterButton.leftAnchor.constraint(equalTo: emailButton.rightAnchor, constant: 40).isActive = true
         twitterButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         twitterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        
         
     }
     
@@ -210,5 +206,16 @@ import StoreKit
         addViews()
         setupView()
         view.backgroundColor = UIColor.white
+        navigationItem.title = "About"
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(handleBack))
+        
     }
+
+    @objc fileprivate func handleBack(){
+        self.present(MainVC(), animated: true, completion: nil)
+    }
+
 }
