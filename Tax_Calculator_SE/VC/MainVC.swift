@@ -75,6 +75,7 @@ import Foundation
         field.layer.borderColor = UIColor.lightGray.cgColor.copy(alpha: 0.3)
         field.layer.cornerRadius = 5
         field.font = UIFont.systemFont(ofSize: 19)
+        field.minimumFontSize = 14
         field.textAlignment = .center
         field.layer.shadowOpacity = 0.2
         field.layer.shadowRadius = 5

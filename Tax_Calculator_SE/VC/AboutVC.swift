@@ -142,7 +142,7 @@ import StoreKit
     
     fileprivate func setupView(){
         
-        developerInfoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        developerInfoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         developerInfoView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         developerInfoView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         developerInfoView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
@@ -158,18 +158,18 @@ import StoreKit
         textInfoView.topAnchor.constraint(equalTo: developerInfoView.bottomAnchor, constant: 30).isActive = true
         textInfoView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
         textInfoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
-        textInfoView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        textInfoView.heightAnchor.constraint(equalToConstant: 170).isActive = true
         
         
         infoText.centerXAnchor.constraint(equalTo: textInfoView.centerXAnchor).isActive = true
         infoText.centerYAnchor.constraint(equalTo: textInfoView.centerYAnchor).isActive = true
-        infoText.topAnchor.constraint(equalTo: developerInfoView.bottomAnchor, constant: 80).isActive = true
-        infoText.widthAnchor.constraint(equalTo: textInfoView.widthAnchor).isActive = true
-        infoText.heightAnchor.constraint(equalTo: textInfoView.heightAnchor).isActive = true
-        
+        infoText.topAnchor.constraint(equalTo: textInfoView.topAnchor, constant: 20).isActive = true
+        infoText.rightAnchor.constraint(equalTo: textInfoView.rightAnchor, constant: -15).isActive = true
+        infoText.leftAnchor.constraint(equalTo: textInfoView.leftAnchor, constant: 15).isActive = true
+        infoText.heightAnchor.constraint(equalToConstant: 140).isActive = true
         
         emailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        emailButton.topAnchor.constraint(equalTo: textInfoView.bottomAnchor, constant: 100).isActive = true
+        emailButton.topAnchor.constraint(equalTo: textInfoView.bottomAnchor, constant: 60).isActive = true
         emailButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         emailButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -210,12 +210,12 @@ import StoreKit
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(handleBack))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleBack))
     }
 
     @objc fileprivate func handleBack(){
-        self.present(MainVC(), animated: true, completion: nil)
+        let main = UINavigationController(rootViewController: MainVC())
+        self.present(main, animated: true, completion: nil)
     }
 
 }
