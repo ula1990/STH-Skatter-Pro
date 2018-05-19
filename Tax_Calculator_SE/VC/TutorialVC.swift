@@ -158,8 +158,7 @@ class TutorialVC: UIViewController {
         thirdIcon.widthAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func addViews() {
         view.addSubview(mainView)
         mainView.addSubview(scrollView)
         scrollView.addSubview(firstTextlabel)
@@ -168,6 +167,11 @@ class TutorialVC: UIViewController {
         scrollView.addSubview(secondIcon)
         scrollView.addSubview(thirdTextlabel)
         scrollView.addSubview(thirdIcon)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addViews()
         view.backgroundColor = UIColor.white
         setupView()
         setupNavBar()

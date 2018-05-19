@@ -155,7 +155,6 @@ import Foundation
         label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Result"
         return label
     }()
     
@@ -176,7 +175,6 @@ import Foundation
         label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Result"
         return label
     }()
     
@@ -198,7 +196,6 @@ import Foundation
         label.textColor = UIColor.white
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Result"
         return label
     }()
     
