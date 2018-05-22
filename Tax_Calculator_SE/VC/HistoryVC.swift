@@ -38,26 +38,23 @@ class HistoryVC: UIViewController {
         dataSet1.lineDashLengths = [5, 2.5]
         dataSet1.highlightLineDashLengths = [5, 2.5]
         dataSet1.setColor(.black)
-        dataSet1.lineWidth = 2
+        dataSet1.lineWidth = 1
         dataSet1.circleRadius = 7
         dataSet1.drawCircleHoleEnabled = false
-        dataSet1.valueFont = .systemFont(ofSize: 9)
+        dataSet1.valueFont = .systemFont(ofSize: 15)
         dataSet1.formLineDashLengths = [5, 2.5]
         dataSet1.formLineWidth = 0
-        dataSet1.formSize = 15
+        dataSet1.formSize = 17
         dataSet1.colors = [.purple]
         data.addDataSet(dataSet1)
-        data.setDrawValues(false)
+        data.setDrawValues(true)
         lineChartView.data = data
         lineChartView.xAxis.yOffset = 0
-//        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xArray.map {
-//            "\($0 / 2):\($0 % 2 == 0 ? "00" : "30")"
-//        })
         
         lineChartView.xAxis.granularity = 12
         lineChartView.gridBackgroundColor = .white
         lineChartView.chartDescription = nil
-        lineChartView.data?.highlightEnabled = false
+        lineChartView.data?.highlightEnabled = true
         lineChartView.doubleTapToZoomEnabled = true
         lineChartView.leftAxis.enabled = false
         lineChartView.rightAxis.enabled = true
