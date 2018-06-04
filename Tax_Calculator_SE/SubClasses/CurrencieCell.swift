@@ -92,9 +92,8 @@ class CurrencieCell: UITableViewCell {
         self.flagImage.image = UIImage(named: currencyTitle)
         nameOfCurrency.text = currencyTitle
         rateLabel.text = String(rate)
-        amountLabel.text = amount
+        amountLabel.text = amount + "-"
     }
-
     
     override func awakeFromNib() {
         super.awakeFromNib()

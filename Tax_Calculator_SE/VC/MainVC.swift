@@ -22,9 +22,11 @@ import Foundation
     var justOnce: Bool =  true
     let currencieCellId = "currencieCellId"
     let menuCellId = "menuCellId"
+    let companyCellId = "companyCellId"
     var menuShowing = false
     var menuRightAnchor: NSLayoutConstraint?
     var menuList: [MenuModel] = []
+    var compCurrentArray: [Company] = []
     
     
     lazy var scrollView: UIScrollView = {
@@ -210,6 +212,20 @@ import Foundation
         return label
     }()
     
+    lazy var companyCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 1, right: 5)
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.register(ComapnyCell.self, forCellWithReuseIdentifier: companyCellId)
+        view.backgroundColor = UIColor(named: "darkBackground")
+        view.isScrollEnabled = true
+        return view
+    }()
+    
     
     lazy var currencyViewLabel: UILabel = {
         let label = UILabel()
@@ -251,101 +267,6 @@ import Foundation
         return view
     }()
     
-    lazy var companiesScrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentSize.width = 350
-        return view
-    }()
-    
-    lazy var firstCompanyBut: UIButton = {
-       let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(firstCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var secondCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(secondCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var thirdCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(thirdCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var fourthCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(fourthCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var fifthCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(fifthCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var sixthCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(sixthCompLink), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var seventhCompanyBut: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 17.5
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.2
-        button.addTarget(self, action: #selector(seventhCompLink), for: .touchUpInside)
-        return button
-    }()
-
-    public func hideCompButtons(){
-
-        self.firstCompanyBut.isHidden = true
-        self.secondCompanyBut.isHidden = true
-        self.thirdCompanyBut.isHidden = true
-        self.fourthCompanyBut.isHidden = true
-        self.fifthCompanyBut.isHidden = true
-        self.sixthCompanyBut.isHidden = true
-        self.seventhCompanyBut.isHidden = true
-        
-    }
     
     fileprivate func defaultsSaveForLabels(){
         defaults.set(nettoResult.text!, forKey: outputL)
@@ -377,13 +298,6 @@ import Foundation
     let taxResultL = "taxResultL"
     let nettL = "nettL"
     let annualL = "annualL"
-    let firstCompB = "firstCompB"
-    let secondCompB = "secondCompB"
-    let thirdCompB = "thirdCompB"
-    let fourCompB = "fourCompB"
-    let fiveCompB = "fiveCompB"
-    let sixthB = "sixthB"
-    let seventhB = "seventhB"
     let mSL = "mSL"
     let outputL = "outputL"
     let taxL = "taxL"
@@ -420,7 +334,6 @@ import Foundation
         taxResult.text = nettoResult.text
         annualResult.text = nettoResult.text
         inputTextField.text = ""
-        hideCompButtons()
         defaultsSaveForLabels()
     }
     
@@ -503,15 +416,9 @@ import Foundation
         annualView.addSubview(annualResult)
         currenciesView.addSubview(currencyViewLabel)
         currenciesView.addSubview(currenciesTable)
-        companiesView.addSubview(companiesScrollView)
         companiesView.addSubview(companiesViewLabel)
-        companiesScrollView.addSubview(firstCompanyBut)
-        companiesScrollView.addSubview(secondCompanyBut)
-        companiesScrollView.addSubview(thirdCompanyBut)
-        companiesScrollView.addSubview(fourthCompanyBut)
-        companiesScrollView.addSubview(fifthCompanyBut)
-        companiesScrollView.addSubview(sixthCompanyBut)
-        companiesScrollView.addSubview(seventhCompanyBut)
+        companiesView.addSubview(companyCollectionView)
+
     }
     
     
@@ -608,45 +515,11 @@ import Foundation
         companiesViewLabel.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 10).isActive = true
         companiesViewLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        companiesScrollView.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 5).isActive = true
-        companiesScrollView.leftAnchor.constraint(equalTo: companiesView.leftAnchor).isActive = true
-        companiesScrollView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        companiesScrollView.rightAnchor.constraint(equalTo: companiesView.rightAnchor).isActive = true
+        companyCollectionView.topAnchor.constraint(equalTo: companiesViewLabel.bottomAnchor, constant: 5).isActive = true
+        companyCollectionView.leftAnchor.constraint(equalTo: companiesView.leftAnchor, constant: 20).isActive = true
+        companyCollectionView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        companyCollectionView.rightAnchor.constraint(equalTo: companiesView.rightAnchor, constant: -20).isActive = true
 
-        firstCompanyBut.centerYAnchor.constraint(equalTo: companiesScrollView.centerYAnchor).isActive = true
-        firstCompanyBut.leftAnchor.constraint(equalTo: companiesScrollView.leftAnchor, constant: 20).isActive = true
-        firstCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        firstCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        secondCompanyBut.leftAnchor.constraint(equalTo: firstCompanyBut.rightAnchor, constant: 10).isActive = true
-        secondCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        secondCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        secondCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        thirdCompanyBut.leftAnchor.constraint(equalTo: secondCompanyBut.rightAnchor, constant: 10).isActive = true
-        thirdCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        thirdCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        thirdCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        fourthCompanyBut.leftAnchor.constraint(equalTo: thirdCompanyBut.rightAnchor, constant: 10).isActive = true
-        fourthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        fourthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        fourthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        fifthCompanyBut.leftAnchor.constraint(equalTo: fourthCompanyBut.rightAnchor, constant: 10).isActive = true
-        fifthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        fifthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        fifthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        sixthCompanyBut.leftAnchor.constraint(equalTo: fifthCompanyBut.rightAnchor, constant: 10).isActive = true
-        sixthCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        sixthCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        sixthCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        seventhCompanyBut.leftAnchor.constraint(equalTo: sixthCompanyBut.rightAnchor, constant: 10).isActive = true
-        seventhCompanyBut.centerYAnchor.constraint(equalTo: firstCompanyBut.centerYAnchor).isActive = true
-        seventhCompanyBut.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        seventhCompanyBut.widthAnchor.constraint(equalToConstant: 35).isActive = true
 
         currenciesView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         currenciesView.topAnchor.constraint(equalTo: companiesView.bottomAnchor, constant: 30).isActive = true
@@ -708,7 +581,6 @@ import Foundation
         setupViews()
         getCurrencyRates(nameOfCurrency: "SEK")
         connectElements()
-        hideCompButtons()
         toolBarSetup()
         defaultsForLabels()
     }
@@ -717,6 +589,8 @@ import Foundation
         super.viewDidLoad()
         runMainFunctions()
         view.backgroundColor = .white
+        companyCollectionView.delegate = self
+        companyCollectionView.dataSource = self
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
