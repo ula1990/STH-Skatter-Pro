@@ -13,7 +13,7 @@ extension MainVC {
     func getCurrencyRates (nameOfCurrency: String?){
         receivedRates.removeAll()
         receivedTitle.removeAll()
-        let url = URL(string: "https://api.fixer.io/latest?base=" + nameOfCurrency!)
+        let url = URL(string: "https://exchangeratesapi.io/api/latest?base=" + nameOfCurrency!)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.async {
                 if error != nil
@@ -45,7 +45,7 @@ extension MainVC {
                                 for (key,value ) in rates
                                 {
                                     self.receivedTitle.append((key as? String)!)
-                                    self.receivedRates.append((value as? Double)!)
+                                    self.receivedRates.append(round(((value as? Double)!)*1000)/1000)
                                     self.calculateRates()
                                     self.justOnce = true
                                 }
